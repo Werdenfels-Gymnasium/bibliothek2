@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_q3-84TjeEeey9KW5s0uqHA" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_q3-84jjeEeey9KW5s0uqHA" bindingContexts="_q3-85DjeEeey9KW5s0uqHA">
-  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.jdt.ui.ClassFileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.ClassFileEditor&quot; name=&quot;Class.class&quot; tooltip=&quot;java.lang.Class&quot;>&#xD;&#xA;&lt;persistable org.eclipse.jdt.ui.ClassFileIdentifier=&quot;=Datenbank-Versuche/C:\/Program Files\/Java\/jre1.8.0_131\/lib\/rt.jar&amp;lt;java.lang(Class.class&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;App.java&quot; tooltip=&quot;Datenbank-Versuche/src/App.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Datenbank-Versuche/src/App.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;SQLite.java&quot; tooltip=&quot;Datenbank-Versuche/src/SQLite.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Datenbank-Versuche/src/SQLite.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;App.java&quot; tooltip=&quot;Datenbank-Versuche/src/App.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Datenbank-Versuche/src/App.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;SQLiteTest1.db&quot; tooltip=&quot;Datenbank-Versuche/SQLiteTest1.db&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Datenbank-Versuche/SQLiteTest1.db&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;SQLite.java&quot; tooltip=&quot;Bibliothek 0.1/src/Bibliothek/SQLite.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Bibliothek 0.1/src/Bibliothek/SQLite.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.jdt.ui.ClassFileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.ClassFileEditor&quot; name=&quot;Class.class&quot; tooltip=&quot;java.lang.Class&quot;>&#xD;&#xA;&lt;persistable org.eclipse.jdt.ui.ClassFileIdentifier=&quot;=Datenbank-Versuche/C:\/Program Files\/Java\/jre1.8.0_131\/lib\/rt.jar&amp;lt;java.lang(Class.class&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;SQLite.java&quot; tooltip=&quot;Datenbank-Versuche/src/SQLite.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Datenbank-Versuche/src/SQLite.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <tags>ModelMigrationProcessor.001</tags>
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_q3-84jjeEeey9KW5s0uqHA" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_rPy_8jjeEeey9KW5s0uqHA" label="%trimmedwindow.label.eclipseSDK" x="2337" y="-25" width="1024" height="768">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_q3-84jjeEeey9KW5s0uqHA" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_rPy_8jjeEeey9KW5s0uqHA" label="%trimmedwindow.label.eclipseSDK" x="496" y="-18" width="1024" height="768">
     <persistedState key="coolBarVisible" value="true"/>
     <persistedState key="perspectiveBarVisible" value="true"/>
     <persistedState key="isRestored" value="true"/>
@@ -111,6 +111,16 @@
               </children>
             </children>
           </children>
+          <windows xsi:type="basic:TrimmedWindow" xmi:id="_WptakDl_Eee5Re4i0ni42w" selectedElement="_WptakTl_Eee5Re4i0ni42w" x="1917" y="71" width="1313" height="719">
+            <children xsi:type="basic:PartStack" xmi:id="_WptakTl_Eee5Re4i0ni42w" elementId="PartStack@2f3484ef" selectedElement="_BL6JIDlnEeeP4KDJ1C3F7g">
+              <children xsi:type="basic:Part" xmi:id="_BL6JIDlnEeeP4KDJ1C3F7g" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="SQLite.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
+                <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;SQLite.java&quot; partName=&quot;SQLite.java&quot; title=&quot;SQLite.java&quot; tooltip=&quot;Datenbank-Versuche/src/SQLite.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Datenbank-Versuche/src/SQLite.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;1&quot; selectionOffset=&quot;985&quot; selectionTopPixel=&quot;315&quot;/>&#xD;&#xA;&lt;/editor>"/>
+                <tags>Editor</tags>
+                <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
+                <tags>removeOnHide</tags>
+              </children>
+            </children>
+          </windows>
         </children>
       </children>
       <children xsi:type="basic:PartStack" xmi:id="_rPznATjeEeey9KW5s0uqHA" elementId="stickyFolderRight" toBeRendered="false" containerData="2500">
@@ -143,23 +153,17 @@
       <toolbar xmi:id="_sLNfUTjeEeey9KW5s0uqHA" elementId="org.eclipse.ui.internal.introview" visible="false"/>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_rdkWMDjeEeey9KW5s0uqHA" elementId="org.eclipse.ui.editorss" selectedElement="_rdkWMTjeEeey9KW5s0uqHA">
-      <children xsi:type="basic:PartStack" xmi:id="_rdkWMTjeEeey9KW5s0uqHA" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_BL6JIDlnEeeP4KDJ1C3F7g">
+      <children xsi:type="basic:PartStack" xmi:id="_rdkWMTjeEeey9KW5s0uqHA" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_z7kkYDl6Eee5Re4i0ni42w">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
         <tags>active</tags>
-        <children xsi:type="basic:Part" xmi:id="_BL6JIDlnEeeP4KDJ1C3F7g" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="SQLite.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;SQLite.java&quot; partName=&quot;SQLite.java&quot; title=&quot;SQLite.java&quot; tooltip=&quot;Datenbank-Versuche/src/SQLite.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Datenbank-Versuche/src/SQLite.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;967&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
+        <children xsi:type="basic:Part" xmi:id="_z7kkYDl6Eee5Re4i0ni42w" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="SQLite.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;SQLite.java&quot; partName=&quot;SQLite.java&quot; title=&quot;SQLite.java&quot; tooltip=&quot;Bibliothek 0.1/src/Bibliothek/SQLite.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Bibliothek 0.1/src/Bibliothek/SQLite.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;632&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
           <tags>removeOnHide</tags>
           <tags>active</tags>
           <tags>activeOnClose</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_IivlEDltEeeP4KDJ1C3F7g" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="App.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;App.java&quot; partName=&quot;App.java&quot; title=&quot;App.java&quot; tooltip=&quot;Datenbank-Versuche/src/App.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Datenbank-Versuche/src/App.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;28&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-          <tags>removeOnHide</tags>
         </children>
       </children>
     </sharedElements>
@@ -314,7 +318,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_rSsi8DjeEeey9KW5s0uqHA" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_rQASgDlmEeeP4KDJ1C3F7g" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_q4q5djjeEeey9KW5s0uqHA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_YyHgQDl5Eee5Re4i0ni42w" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_q4q5djjeEeey9KW5s0uqHA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_rSsi8TjeEeey9KW5s0uqHA" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -338,7 +342,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_rStKAjjeEeey9KW5s0uqHA" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_rQEj8DlmEeeP4KDJ1C3F7g" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_q4pEeDjeEeey9KW5s0uqHA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_YyLKoDl5Eee5Re4i0ni42w" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_q4pEeDjeEeey9KW5s0uqHA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_rStKAzjeEeey9KW5s0uqHA" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -2190,7 +2194,7 @@
   <addons xmi:id="_q3-88zjeEeey9KW5s0uqHA" elementId="MinMax Addon" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon"/>
   <addons xmi:id="_q3-89DjeEeey9KW5s0uqHA" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <addons xmi:id="_q4J8ADjeEeey9KW5s0uqHA" elementId="SplitterAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.splitteraddon.SplitterAddon"/>
-  <addons xmi:id="_q9pXMTlmEeeP4KDJ1C3F7g" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
+  <addons xmi:id="_IYS0IKimEeS11vbz3f9ezw" elementId="org.eclipse.ui.ide.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
   <addons xmi:id="_dz0JgGOlEeSMMaPQU2nlzw" elementId="org.eclipse.ui.ide.application.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.ide.application/org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon"/>
   <categories xmi:id="_q4lZ0DjeEeey9KW5s0uqHA" elementId="org.eclipse.team.ui.category.team" name="Team" description="Actions that apply when working with a Team"/>
   <categories xmi:id="_q4lZ0TjeEeey9KW5s0uqHA" elementId="org.eclipse.ui.category.views" name="Views" description="Commands for opening views"/>
