@@ -22,6 +22,8 @@ public class SQLite {
 			hasData = true;
 			initialiseBuch();
 			initialiseEinzelperson();
+			initialiseAuftrag();
+			initialiseExterner();
 			}
 		}
 	
@@ -37,8 +39,19 @@ public class SQLite {
 			//0 beide
 			//1 NW
 			//2 SG
-			state2.executeQuery("Create Table buch (iSBN integer," + "zweig integer," + "jahrgangsstufe integer," + "titel varchar (60)," + "kurztitel varchar (20)," + "primary key(iSBN));");
+			state2.executeQuery("Create Table buch (iSBN INTEGER PRIMARY KEY," + "zweig INTEGER," + "jahrgangsstufe INTEGER," + "titel varchar (60)," + "kurztitel varchar (20);");
 			}
+	}
+	
+	private void initialiseAuftrag() throws SQLException {
+		Statement state = con.createStatement();
+		ResultSet res = state.executeQuery("SELECT name FROM sqlite_master WHERE type='table' AND name = 'auftrag'");
+		
+		if (!res.next()) {
+			//Tabelle nicht vorhanden --> Muss erstellt werden
+			Statement state2 = con.createStatement();
+			state2.executeQuery("Create Table auftrag (auftragID INTEGER PRIMARY KEY AUTOINCREMENT," + "iSBN INTEGER);");
+		}
 	}
 	
 	private void initialiseEinzelperson() throws SQLException {
@@ -49,9 +62,19 @@ public class SQLite {
 		if (!res.next()) {
 			//Tabelle nicht vorhanden --> Muss erstellt werden
 			Statement state2 = con.createStatement();
-			state2.executeQuery("Create Table einzelperson (id integer);");
+			state2.executeQuery("Create Table einzelperson (einzelpersonID INTEGER PRIMARY KEY AUTOINCREMENT," + "art VARCHAR (20));");
 			}
 	}
 	
+	private void initialiseExterner() throws SQLException {
+		Statement state = con.createStatement();
+		ResultSet res = state.executeQuery("SELECT name FROM sqlite_master WHERE type='table' AND name = 'externer'");
+		
+		if (!res.next()) {
+			//Tabelle nicht vorhanden --> Muss erstellt werden
+			Statement state2 = con.createStatement();
+			state2.executeQuery("Create Table externer (einzelpersonID INTEGER PRIMARY KEY," + "nachname VARCHAR (20)," + "vorname VARCHAR (20)," + "postleitzahl INTEGER (10)," + "stadt VARCHAR (50)," + "telefonnummer INTEGER);");
+			}
+	}
 	
 }
