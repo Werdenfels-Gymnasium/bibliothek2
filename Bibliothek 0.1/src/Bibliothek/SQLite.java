@@ -28,7 +28,7 @@ public class SQLite {
 	
 	private void initialiseBuch() throws SQLException {
 		Statement state = con.createStatement();
-		ResultSet res = state.executeQuery("SELECT name FRIM sqlite_master WHERE type='table' AND name = 'buch'");
+		ResultSet res = state.executeQuery("SELECT name FROM sqlite_master WHERE type='table' AND name = 'buch'");
 		
 		if (!res.next()) {
 			//Tabelle nicht vorhanden --> Muss erstellt werden
@@ -44,7 +44,7 @@ public class SQLite {
 	private void initialiseEinzelperson() throws SQLException {
 
 		Statement state = con.createStatement();
-		ResultSet res = state.executeQuery("SELECT name FRIM sqlite_master WHERE type='table' AND name = 'einzelperson'");
+		ResultSet res = state.executeQuery("SELECT name FROM sqlite_master WHERE type='table' AND name = 'einzelperson'");
 		
 		if (!res.next()) {
 			//Tabelle nicht vorhanden --> Muss erstellt werden
