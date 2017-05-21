@@ -1,0 +1,84 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.BoxLayout;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import java.awt.Color;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class Ausleihfenster extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Ausleihfenster frame = new Ausleihfenster();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Ausleihfenster() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblTitel1 = new JLabel("Wilkommen zum Buchverleih");
+		lblTitel1.setBackground(Color.GRAY);
+		lblTitel1.setBounds(145, 11, 140, 25);
+		contentPane.add(lblTitel1);
+		
+		JButton btnUnter = new JButton("Unterstufe");
+		btnUnter.setBackground(Color.GREEN);
+		btnUnter.setBounds(26, 155, 89, 23);
+		contentPane.add(btnUnter);
+		
+		JButton btnOber = new JButton("Oberstufe");
+		btnOber.setBackground(Color.BLUE);
+		btnOber.setBounds(168, 155, 89, 23);
+		contentPane.add(btnOber);
+		
+		JButton btnExtern = new JButton("Einzeln");
+		btnExtern.setBackground(Color.RED);
+		btnExtern.setBounds(303, 155, 89, 23);
+		contentPane.add(btnExtern);
+		
+		JLabel lblText1 = new JLabel("Für wen wollen sie Bücher ausleihen?");
+		lblText1.setBounds(26, 65, 177, 25);
+		contentPane.add(lblText1);
+		
+		JButton btnback1 = new JButton("Zurück");
+		btnback1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			contentPane.setVisible(false);
+			dispose();
+			hauptfenster.main(null);
+			}
+		});
+		btnback1.setBounds(10, 12, 89, 23);
+		contentPane.add(btnback1);
+	}
+
+}
