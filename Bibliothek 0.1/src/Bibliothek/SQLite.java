@@ -39,7 +39,7 @@ public class SQLite {
 			//0 beide
 			//1 NW
 			//2 SG
-			state2.executeQuery("Create Table buch (iSBN INTEGER PRIMARY KEY," + "zweig INTEGER," + "jahrgangsstufe INTEGER," + "titel varchar (60)," + "kurztitel varchar (20);");
+			state2.executeQuery("Create Table buch (iSBN INTEGER PRIMARY KEY," + "zweig INTEGER," + "jahrgangsstufe INTEGER," + "titel varchar (60)," + "kurztitel varchar (20)," + "fach varchar (20);");
 			}
 	}
 	
