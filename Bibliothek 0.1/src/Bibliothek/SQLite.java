@@ -39,7 +39,7 @@ public class SQLite {
 			//0 beide
 			//1 NW
 			//2 SG
-			state2.executeQuery("Create Table buch (iSBN INTEGER PRIMARY KEY," + "zweig INTEGER," + "jahrgangsstufe INTEGER," + "titel varchar (60)," + "kurztitel varchar (20)," + "fach varchar (20);");
+			state2.executeQuery("Create Table buch (titel VARCHAR (60)," + "kurztitel VARCHAR (20)," + "fach VARCHAR (20)," + "jahrgangsstufe INTEGER," + "iSBN INTEGER PRIMARY KEY," + "zweig INTEGER,");
 			}
 	}
 	
@@ -54,26 +54,26 @@ public class SQLite {
 		}
 	}
 	
-	private void initialiseEinzelperson() throws SQLException {
+	private void initialiseEntleiher() throws SQLException {
 
+		Statement state = con.createStatement();
+		ResultSet res = state.executeQuery("SELECT name FROM sqlite_master WHERE type='table' AND name = 'entleiher'");
+		
+		if (!res.next()) {
+			//Tabelle nicht vorhanden --> Muss erstellt werden
+			Statement state2 = con.createStatement();
+			state2.executeQuery("Create Table entleiher (entleiherID INTEGER PRIMARY KEY AUTOINCREMENT," + "art VARCHAR (20));");
+			}
+	}
+	
+	private void initialiseEinzelperson() throws SQLException {
 		Statement state = con.createStatement();
 		ResultSet res = state.executeQuery("SELECT name FROM sqlite_master WHERE type='table' AND name = 'einzelperson'");
 		
 		if (!res.next()) {
 			//Tabelle nicht vorhanden --> Muss erstellt werden
 			Statement state2 = con.createStatement();
-			state2.executeQuery("Create Table einzelperson (einzelpersonID INTEGER PRIMARY KEY AUTOINCREMENT," + "art VARCHAR (20));");
-			}
-	}
-	
-	private void initialiseExterner() throws SQLException {
-		Statement state = con.createStatement();
-		ResultSet res = state.executeQuery("SELECT name FROM sqlite_master WHERE type='table' AND name = 'externer'");
-		
-		if (!res.next()) {
-			//Tabelle nicht vorhanden --> Muss erstellt werden
-			Statement state2 = con.createStatement();
-			state2.executeQuery("Create Table externer (einzelpersonID INTEGER PRIMARY KEY," + "nachname VARCHAR (20)," + "vorname VARCHAR (20)," + "postleitzahl INTEGER (10)," + "stadt VARCHAR (50)," + "telefonnummer INTEGER);");
+			state2.executeQuery("Create Table einzelperson (entleiherID INTEGER PRIMARY KEY," + "nachname VARCHAR (20)," + "vorname VARCHAR (20)," + "adresse VARCHAR (80)," + "telefonnummer INTEGER);");
 			}
 	}
 	
