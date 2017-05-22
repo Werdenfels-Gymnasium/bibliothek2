@@ -54,15 +54,15 @@ public class hauptfenster {
 				ausl1.setVisible(true);
 			}
 		});
-		btnVerleih.setBounds(286, 190, 120, 25);
+		btnVerleih.setBounds(270, 190, 166, 25);
 		frame.getContentPane().add(btnVerleih);
 		
 		JButton btnZuDenDatenbanken = new JButton("Zu den Datenbanken");
-		btnZuDenDatenbanken.setBounds(28, 190, 135, 25);
+		btnZuDenDatenbanken.setBounds(12, 190, 184, 25);
 		frame.getContentPane().add(btnZuDenDatenbanken);
 		
 		JLabel lblAnfang = new JLabel("Wilkommen im Programm");
-		lblAnfang.setBounds(154, 11, 135, 14);
+		lblAnfang.setBounds(130, 12, 177, 15);
 		frame.getContentPane().add(lblAnfang);
 	}
 
