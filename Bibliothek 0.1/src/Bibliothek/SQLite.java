@@ -50,7 +50,7 @@ public class SQLite {
 		if (!res.next()) {
 			//Tabelle nicht vorhanden --> Muss erstellt werden
 			Statement state2 = con.createStatement();
-			state2.executeQuery("Create Table auftrag (auftragID INTEGER PRIMARY KEY AUTOINCREMENT," + "iSBN INTEGER);");
+			state2.executeQuery("Create Table auftrag (auftragID INTEGER PRIMARY KEY AUTOINCREMENT," + "iSBN INTEGER" + "entleiherID INTEGER" + "abgabe VARCHAR (10));");
 		}
 	}
 	
