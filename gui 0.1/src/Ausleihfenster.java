@@ -43,42 +43,19 @@ public class Ausleihfenster extends JFrame {
 	 */
 	public Ausleihfenster() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 800, 450);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+			
 		JLabel lblTitel1 = new JLabel("Wilkommen zum Buchverleih");
 		lblTitel1.setBackground(Color.GRAY);
-		lblTitel1.setBounds(145, 11, 200, 15);
+		lblTitel1.setBounds(266, 12, 200, 33);
 		contentPane.add(lblTitel1);
 		
-		JButton btnOber = new JButton("Oberstufe");
-		btnOber.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				Ausfull1 ausf=new Ausfull1();
-				dispose();
-				ausf.setVisible(true);
-			}
-		});
-		btnOber.setBackground(Color.YELLOW);
-		Image img = new ImageIcon(this.getClass().getResource("/path3776.png")).getImage();
-		btnOber.setIcon(new ImageIcon(img));
-		btnOber.setBounds(135, 158, 158, 64);
-		contentPane.add(btnOber);
-		
-		JButton btnExtern = new JButton("Einzeln");
-		btnExtern.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
-		btnExtern.setBackground(Color.RED);
-		btnExtern.setBounds(320, 155, 85, 70);
-		contentPane.add(btnExtern);
-		
 		JLabel lblText1 = new JLabel("Für wen wollen sie Bücher ausleihen?");
-		lblText1.setBounds(26, 65, 267, 15);
+		lblText1.setBounds(266, 96, 267, 23);
 		contentPane.add(lblText1);
 		
 		JButton btnback1 = new JButton("Zurück");
@@ -92,18 +69,18 @@ public class Ausleihfenster extends JFrame {
 		btnback1.setBounds(10, 12, 89, 23);
 		contentPane.add(btnback1);
 		
-		JLabel lblUnterstufe = new JLabel("");
-		Image img2 = new ImageIcon(this.getClass().getResource("/path3776.png")).getImage();
-		lblUnterstufe.setIcon(new ImageIcon(img2));
-		lblUnterstufe.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent arg0) {
-				//Zum Auswahlfenster
-				lblUnterstufe.setText("Hallo?");
-				
-			}
-		});
-		lblUnterstufe.setBounds(26, 158, 85, 65);
-		contentPane.add(lblUnterstufe);
+		JLabel lblU = new JLabel("Unterstufe");
+		Image img1 = new ImageIcon(this.getClass().getResource("/path3776.png")).getImage();
+		lblU.setIcon(new ImageIcon(img1));
+		lblU.setBounds(62, 263, 104, 54);
+		contentPane.add(lblU);
+		
+		JLabel lblO = new JLabel("Oberstufe");
+		lblO.setBounds(372, 283, 46, 14);
+		contentPane.add(lblO);
+		
+		JLabel lblE = new JLabel("Einzeln");
+		lblE.setBounds(636, 283, 46, 14);
+		contentPane.add(lblE);
 	}
 }

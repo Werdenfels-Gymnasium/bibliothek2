@@ -9,6 +9,8 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
 
 public class hauptfenster {
 
@@ -42,9 +44,8 @@ public class hauptfenster {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
+		frame.setBounds(100, 100, 800, 450);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
 		
 		JButton btnVerleih = new JButton("Zum Bücherverleih");
 		btnVerleih.addActionListener(new ActionListener() {
@@ -54,16 +55,36 @@ public class hauptfenster {
 				ausl1.setVisible(true);
 			}
 		});
-		btnVerleih.setBounds(270, 190, 166, 25);
-		frame.getContentPane().add(btnVerleih);
 		
 		JButton btnZuDenDatenbanken = new JButton("Zu den Datenbanken");
-		btnZuDenDatenbanken.setBounds(12, 190, 184, 25);
-		frame.getContentPane().add(btnZuDenDatenbanken);
 		
 		JLabel lblAnfang = new JLabel("Wilkommen im Programm");
-		lblAnfang.setBounds(130, 12, 177, 15);
-		frame.getContentPane().add(lblAnfang);
+		GroupLayout groupLayout = new GroupLayout(frame.getContentPane());
+		groupLayout.setHorizontalGroup(
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(56)
+					.addComponent(btnZuDenDatenbanken, GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)
+					.addGap(306)
+					.addComponent(btnVerleih, GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+					.addGap(72))
+				.addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
+					.addGap(306)
+					.addComponent(lblAnfang, GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE)
+					.addGap(301))
+		);
+		groupLayout.setVerticalGroup(
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addGroup(groupLayout.createSequentialGroup()
+					.addContainerGap()
+					.addComponent(lblAnfang, GroupLayout.PREFERRED_SIZE, 37, GroupLayout.PREFERRED_SIZE)
+					.addGap(199)
+					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
+						.addComponent(btnZuDenDatenbanken, GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
+						.addComponent(btnVerleih, GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE))
+					.addGap(139))
+		);
+		frame.getContentPane().setLayout(groupLayout);
 	}
 
 }
