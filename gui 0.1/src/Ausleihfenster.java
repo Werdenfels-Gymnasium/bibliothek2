@@ -11,6 +11,7 @@ import javax.swing.GroupLayout.Alignment;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import javax.swing.ImageIcon;
+import javax.imageio.*;
 import java.awt.Color;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
@@ -48,6 +49,7 @@ public class Ausleihfenster extends JFrame {
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
+	
 			
 		JLabel lblTitel1 = new JLabel("Wilkommen zum Buchverleih");
 		lblTitel1.setBackground(Color.GRAY);
@@ -63,7 +65,7 @@ public class Ausleihfenster extends JFrame {
 			}
 		});
 		
-		JLabel lblU = new JLabel("Unterstufe");
+		JLabel lblU = new JLabel("");
 		lblU.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
@@ -72,33 +74,55 @@ public class Ausleihfenster extends JFrame {
 				ausfu1.setVisible(true);
 			}
 		});
-		Image img1 = new ImageIcon(this.getClass().getResource("/path3776.png")).getImage();
+		Image img1 = new ImageIcon(this.getClass().getResource("/gelb.png")).getImage();
 		lblU.setIcon(new ImageIcon(img1));
 		
-		JLabel lblO = new JLabel("Oberstufe");
+		JLabel lblO = new JLabel("");
+		Image img2 = new ImageIcon(this.getClass().getResource("/rot.png")).getImage();
+		lblO.setIcon(new ImageIcon(img2));
+
+		lblO.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				AusfOber ausfu2=new AusfOber();
+				dispose();
+				ausfu2.setVisible(true);
+				
+			}
+		});
 		
-		JLabel lblE = new JLabel("Einzeln");
+		JLabel lblE = new JLabel("");
+		Image img3 = new ImageIcon(this.getClass().getResource("/blau.png")).getImage();
+		lblE.setIcon(new ImageIcon(img3));
+		lblE.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				AusfEinzel ausfu3=new AusfEinzel();
+				dispose();
+				ausfu3.setVisible(true);
+			}
+		});
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addContainerGap()
 					.addComponent(btnback1, GroupLayout.PREFERRED_SIZE, 89, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.RELATED, 207, Short.MAX_VALUE)
-					.addComponent(lblTitel1, GroupLayout.PREFERRED_SIZE, 188, GroupLayout.PREFERRED_SIZE)
-					.addGap(280))
+					.addGap(158)
+					.addComponent(lblTitel1, GroupLayout.PREFERRED_SIZE, 211, GroupLayout.PREFERRED_SIZE)
+					.addContainerGap(318, Short.MAX_VALUE))
 				.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
-					.addGap(233)
-					.addComponent(lblText1, GroupLayout.DEFAULT_SIZE, 435, Short.MAX_VALUE)
-					.addGap(177))
+					.addGap(74)
+					.addComponent(lblU, GroupLayout.PREFERRED_SIZE, 123, GroupLayout.PREFERRED_SIZE)
+					.addGap(117)
+					.addComponent(lblO, GroupLayout.PREFERRED_SIZE, 134, GroupLayout.PREFERRED_SIZE)
+					.addPreferredGap(ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
+					.addComponent(lblE, GroupLayout.PREFERRED_SIZE, 135, GroupLayout.PREFERRED_SIZE)
+					.addGap(110))
 				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(63)
-					.addComponent(lblU, GroupLayout.PREFERRED_SIZE, 99, Short.MAX_VALUE)
-					.addGap(141)
-					.addComponent(lblO, GroupLayout.PREFERRED_SIZE, 115, GroupLayout.PREFERRED_SIZE)
-					.addGap(111)
-					.addComponent(lblE, GroupLayout.PREFERRED_SIZE, 113, GroupLayout.PREFERRED_SIZE)
-					.addGap(132))
+					.addGap(224)
+					.addComponent(lblText1, GroupLayout.DEFAULT_SIZE, 463, Short.MAX_VALUE)
+					.addGap(186))
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
@@ -107,15 +131,14 @@ public class Ausleihfenster extends JFrame {
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 						.addComponent(btnback1)
 						.addComponent(lblTitel1, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE))
-					.addGap(42)
+					.addGap(45)
 					.addComponent(lblText1, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)
-					.addGap(130)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addComponent(lblU)
-						.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-							.addComponent(lblO, GroupLayout.PREFERRED_SIZE, 54, GroupLayout.PREFERRED_SIZE)
-							.addComponent(lblE, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)))
-					.addGap(113))
+					.addGap(127)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
+						.addComponent(lblO, GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
+						.addComponent(lblU, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
+						.addComponent(lblE, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+					.addGap(97))
 		);
 		contentPane.setLayout(gl_contentPane);
 	}
