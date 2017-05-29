@@ -22,8 +22,14 @@ public class SQLite {
 			hasData = true;
 			initialiseBuch();
 			initialiseEinzelperson();
-			initialiseAuftrag();
-			initialiseExterner();
+			initialiseAusleihe();
+			initialiseEntleiher();
+			initialiseUnterMittelstufenschüler();
+			initialiseEntleiherstandort();
+			initialiseKurs();
+			initialiseOberstufenschüler();
+			initialiseKlasse();
+			
 			}
 		}
 	
@@ -43,14 +49,15 @@ public class SQLite {
 			}
 	}
 	
-	private void initialiseAuftrag() throws SQLException {
+	private void initialiseAusleihe() throws SQLException {
 		Statement state = con.createStatement();
-		ResultSet res = state.executeQuery("SELECT name FROM sqlite_master WHERE type='table' AND name = 'auftrag'");
+		ResultSet res = state.executeQuery("SELECT name FROM sqlite_master WHERE type='table' AND name = 'ausleihe'");
 		
 		if (!res.next()) {
 			//Tabelle nicht vorhanden --> Muss erstellt werden
 			Statement state2 = con.createStatement();
-			state2.executeQuery("Create Table auftrag (auftragID INTEGER PRIMARY KEY AUTOINCREMENT," + "iSBN INTEGER" + "entleiherID INTEGER" + "abgabe VARCHAR (10));");
+			state2.executeQuery("Create Table auftrag (IDausleihe INTEGER PRIMARY KEY AUTOINCREMENT," + "iSBN INTEGER," + "IDentleiher INTEGER," + "abgabedatum  VARCHAR(15));");
+			//ISBN und IDentleiher als Fremdschlüssel
 		}
 	}
 	
@@ -62,7 +69,7 @@ public class SQLite {
 		if (!res.next()) {
 			//Tabelle nicht vorhanden --> Muss erstellt werden
 			Statement state2 = con.createStatement();
-			state2.executeQuery("Create Table entleiher (entleiherID INTEGER PRIMARY KEY AUTOINCREMENT," + "art VARCHAR (20));");
+			state2.executeQuery("Create Table entleiher (IDentleiher INTEGER PRIMARY KEY AUTOINCREMENT," + "art VARCHAR (20));");
 			}
 	}
 	
@@ -73,8 +80,64 @@ public class SQLite {
 		if (!res.next()) {
 			//Tabelle nicht vorhanden --> Muss erstellt werden
 			Statement state2 = con.createStatement();
-			state2.executeQuery("Create Table einzelperson (entleiherID INTEGER PRIMARY KEY," + "nachname VARCHAR (20)," + "vorname VARCHAR (20)," + "adresse VARCHAR (80)," + "telefonnummer INTEGER);");
+			state2.executeQuery("Create Table einzelperson (IDentleiher INTEGER PRIMARY KEY," + "nachname VARCHAR (20)," + "vorname VARCHAR (20)," + "adresse VARCHAR (80)," + "telefonnummer INTEGER);");
 			}
 	}
 	
+	private void initialiseUnterMittelstufenschüler() throws SQLException {
+		Statement state = con.createStatement();
+		ResultSet res = state.executeQuery("SELECT name FROM sqlite_master WHERE type='table' AND name = 'untermittelstufenschüler'");
+		
+		if (!res.next()) {
+			//Tabelle nicht vorhanden --> Muss erstellt werden
+			Statement state2 = con.createStatement();
+			state2.executeQuery("Create Table einzelperson (IDentleiher INTEGER PRIMARY KEY," + "nachname VARCHAR (20)," + "vorname VARCHAR (20)," + "abiturjahrgang INTEGER," + "IDklasse INTEGER);");
+			//IDklasse als Fremdschlüssel
+			}
+	}
+	
+	private void initialiseEntleiherstandort() throws SQLException {
+		Statement state = con.createStatement();
+		ResultSet res = state.executeQuery("SELECT name FROM sqlite_master WHERE type='table' AND name = 'entleiherstandort'");
+		
+		if (!res.next()) {
+			//Tabelle nicht vorhanden --> Muss erstellt werden
+			Statement state2 = con.createStatement();
+			state2.executeQuery("Create Table einzelperson (IDentleiher INTEGER PRIMARY KEY," + "standort varchar(30);");
+			}
+	}
+	
+	private void initialiseKurs() throws SQLException {
+		Statement state = con.createStatement();
+		ResultSet res = state.executeQuery("SELECT name FROM sqlite_master WHERE type='table' AND name = 'kurs'");
+		
+		if (!res.next()) {
+			//Tabelle nicht vorhanden --> Muss erstellt werden
+			Statement state2 = con.createStatement();
+			state2.executeQuery("Create Table einzelperson (IDkurs INTEGER PRIMARY KEY," + "anzahl INTEGER);");
+			}
+	}
+	
+	private void initialiseOberstufenschüler() throws SQLException {
+		Statement state = con.createStatement();
+		ResultSet res = state.executeQuery("SELECT name FROM sqlite_master WHERE type='table' AND name = 'oberstufenschüler'");
+		
+		if (!res.next()) {
+			//Tabelle nicht vorhanden --> Muss erstellt werden
+			Statement state2 = con.createStatement();
+			state2.executeQuery("Create Table einzelperson (IDentleiher INTEGER PRIMARY KEY," + "nachname VARCHAR (20)," + "vorname VARCHAR (20)," + "abiturjahrgang INTEGER," + "IDkurs INTEGER);");
+			//IDkurs als Fremdschlüssel
+			}
+	}
+	
+	private void initialiseKlasse() throws SQLException {
+		Statement state = con.createStatement();
+		ResultSet res = state.executeQuery("SELECT name FROM sqlite_master WHERE type='table' AND name = 'klasse'");
+		
+		if (!res.next()) {
+			//Tabelle nicht vorhanden --> Muss erstellt werden
+			Statement state2 = con.createStatement();
+			state2.executeQuery("Create Table einzelperson (IDklasse INTEGER PRIMARY KEY," + "anzahl INTEGER);");
+			}
+	}
 }
