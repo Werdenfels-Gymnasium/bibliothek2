@@ -17,7 +17,7 @@ public class SQLite {
 		initialise();
 	}
 
-	private void initialise() throws SQLException {
+	public void initialise() throws SQLException, ClassNotFoundException {
 		if (!hasData) {
 			hasData = true;
 			initialiseBuch();
@@ -39,13 +39,13 @@ public class SQLite {
 		ResultSet res = state.executeQuery("SELECT name FROM sqlite_master WHERE type='table' AND name = 'buch'");
 		
 		if (!res.next()) {
-			//Tabelle nicht vorhanden --> Muss erstellt werden
+			//Tabelle nicht vorhanden --> Muss erstellt werden.
 			Statement state2 = con.createStatement();
 			//int Zweig
 			//0 beide
 			//1 NW
 			//2 SG
-			state2.executeQuery("Create Table buch (titel VARCHAR (60)," + "kurztitel VARCHAR (20)," + "fach VARCHAR (20)," + "jahrgangsstufe INTEGER," + "iSBN INTEGER PRIMARY KEY," + "zweig INTEGER,");
+			state2.executeQuery("Create Table buch (titel VARCHAR (60)," + "kurztitel VARCHAR (20)," + "fach VARCHAR (20)," + "jahrgangsstufe INTEGER," + "ISBN INTEGER PRIMARY KEY," + "zweig INTEGER,");
 			}
 	}
 	
@@ -56,7 +56,7 @@ public class SQLite {
 		if (!res.next()) {
 			//Tabelle nicht vorhanden --> Muss erstellt werden
 			Statement state2 = con.createStatement();
-			state2.executeQuery("Create Table auftrag (IDausleihe INTEGER PRIMARY KEY AUTOINCREMENT," + "iSBN INTEGER," + "IDentleiher INTEGER," + "abgabedatum  VARCHAR(15));");
+			state2.executeQuery("Create Table auftrag (IDausleihe INTEGER PRIMARY KEY AUTOINCREMENT," + "FOREIGN KEY(ISBN) REFERENCES Buch(ISBN)," + "FOREIGN KEY(IDentleiher) REFERENCES Entleiher(IDentleiher)," + "abgabedatum  VARCHAR(15));");
 			//ISBN und IDentleiher als Fremdschlüssel
 		}
 	}
@@ -91,7 +91,7 @@ public class SQLite {
 		if (!res.next()) {
 			//Tabelle nicht vorhanden --> Muss erstellt werden
 			Statement state2 = con.createStatement();
-			state2.executeQuery("Create Table einzelperson (IDentleiher INTEGER PRIMARY KEY," + "nachname VARCHAR (20)," + "vorname VARCHAR (20)," + "abiturjahrgang INTEGER," + "IDklasse INTEGER);");
+			state2.executeQuery("Create Table einzelperson (IDentleiher INTEGER PRIMARY KEY," + "nachname VARCHAR (20)," + "vorname VARCHAR (20)," + "abiturjahrgang INTEGER," + "FOREIGN KEY(IDklasse) REFERENCES Klasse(IDklasse));");
 			//IDklasse als Fremdschlüssel
 			}
 	}
@@ -125,7 +125,7 @@ public class SQLite {
 		if (!res.next()) {
 			//Tabelle nicht vorhanden --> Muss erstellt werden
 			Statement state2 = con.createStatement();
-			state2.executeQuery("Create Table einzelperson (IDentleiher INTEGER PRIMARY KEY," + "nachname VARCHAR (20)," + "vorname VARCHAR (20)," + "abiturjahrgang INTEGER," + "IDkurs INTEGER);");
+			state2.executeQuery("Create Table einzelperson (IDentleiher INTEGER PRIMARY KEY," + "nachname VARCHAR (20)," + "vorname VARCHAR (20)," + "abiturjahrgang INTEGER," + "FOREIGN KEY(IDkurs) REFERENCES Kurs(IDkurs));");
 			//IDkurs als Fremdschlüssel
 			}
 	}
