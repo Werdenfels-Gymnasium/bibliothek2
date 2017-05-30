@@ -12,12 +12,12 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JComboBox;
 
 public class AusfUnter extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
-	private JTextField textField_1;
 	private JTextField textField_2;
 	private JTextField textField_3;
 	private JTextField textField_4;
@@ -54,9 +54,6 @@ public class AusfUnter extends JFrame {
 		
 		textField = new JTextField();
 		textField.setColumns(10);
-		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
 		
 		JLabel lblNewLabel_1 = new JLabel("Klasse");
 		
@@ -97,6 +94,8 @@ public class AusfUnter extends JFrame {
 				Ausleihfenster.main(null);
 			}
 		});
+		String[] Klassen= {"10a","10b","10c"};
+		JComboBox comboBox = new JComboBox(Klassen);
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
@@ -122,19 +121,15 @@ public class AusfUnter extends JFrame {
 									.addComponent(lblAnzahlKatholisch, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 									.addComponent(lblAnzahlFranzsisch, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
 					.addPreferredGap(ComponentPlacement.RELATED)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-								.addComponent(textField_5, 212, 212, 212)
-								.addComponent(textField_2, 212, 212, 212)
-								.addComponent(textField, 212, 212, 212)
-								.addComponent(textField_1, GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
-								.addComponent(textField_3, 212, 212, 212)
-								.addComponent(textField_4, 212, 212, 212))
-							.addGap(100))
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addComponent(textField_6, GroupLayout.PREFERRED_SIZE, 212, GroupLayout.PREFERRED_SIZE)
-							.addContainerGap())))
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
+						.addComponent(textField_5, 212, 212, Short.MAX_VALUE)
+						.addComponent(textField_2, 212, 212, Short.MAX_VALUE)
+						.addComponent(textField, 212, 212, Short.MAX_VALUE)
+						.addComponent(textField_3, 212, 212, Short.MAX_VALUE)
+						.addComponent(textField_4, 212, 212, Short.MAX_VALUE)
+						.addComponent(textField_6, GroupLayout.DEFAULT_SIZE, 212, Short.MAX_VALUE)
+						.addComponent(comboBox, 0, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+					.addContainerGap(102, Short.MAX_VALUE))
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addGap(316)
 					.addComponent(btnAuftragErstellen, GroupLayout.PREFERRED_SIZE, 162, GroupLayout.PREFERRED_SIZE)
@@ -151,10 +146,10 @@ public class AusfUnter extends JFrame {
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 						.addComponent(lblNewLabel)
 						.addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(18)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+					.addGap(9)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
 						.addComponent(lblNewLabel_1)
-						.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+						.addComponent(comboBox, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 					.addGap(18)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 						.addComponent(lblNewLabel_2)
@@ -175,7 +170,7 @@ public class AusfUnter extends JFrame {
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 						.addComponent(lblAnzahlEthik)
 						.addComponent(textField_6, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addPreferredGap(ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+					.addPreferredGap(ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
 					.addComponent(btnAuftragErstellen, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
 					.addContainerGap())
 		);
