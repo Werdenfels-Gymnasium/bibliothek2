@@ -1,10 +1,12 @@
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.Image;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.GroupLayout;
+import javax.swing.ImageIcon;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
@@ -51,42 +53,64 @@ public class AusfUnter extends JFrame {
 		setContentPane(contentPane);
 		
 		JLabel lblNewLabel = new JLabel("Lehrerkürzel");
+		lblNewLabel.setBounds(70, 83, 228, 14);
 		
 		textField = new JTextField();
+		textField.setBounds(468, 80, 212, 20);
 		textField.setColumns(10);
 		
 		JLabel lblNewLabel_1 = new JLabel("Klasse");
+		lblNewLabel_1.setBounds(70, 115, 228, 14);
 		
 		JLabel lblNewLabel_2 = new JLabel("Anzahl Latein");
+		lblNewLabel_2.setBounds(70, 150, 394, 14);
 		
 		textField_2 = new JTextField();
+		textField_2.setBounds(468, 147, 212, 20);
 		textField_2.setColumns(10);
 		
 		JLabel lblBitteGebenSie = new JLabel("Bitte geben sie ihre Daten ein!");
+		lblBitteGebenSie.setBounds(285, 20, 302, 14);
 		
 		JLabel lblAnzahlFranzsisch = new JLabel("Anzahl Französisch");
+		lblAnzahlFranzsisch.setBounds(70, 188, 91, 14);
 		
 		JLabel lblAnzahlKatholisch = new JLabel("Anzahl katholisch");
+		lblAnzahlKatholisch.setBounds(70, 226, 91, 14);
 		
 		textField_3 = new JTextField();
+		textField_3.setBounds(468, 185, 212, 20);
 		textField_3.setColumns(10);
 		
 		textField_4 = new JTextField();
+		textField_4.setBounds(468, 223, 212, 20);
 		textField_4.setColumns(10);
 		
 		JLabel lblAnzahlEvangelisch = new JLabel("Anzahl evangelisch");
+		lblAnzahlEvangelisch.setBounds(70, 264, 140, 14);
 		
 		JLabel lblAnzahlEthik = new JLabel("Anzahl Ethik");
+		lblAnzahlEthik.setBounds(70, 302, 119, 14);
 		
 		textField_5 = new JTextField();
+		textField_5.setBounds(468, 261, 212, 20);
 		textField_5.setColumns(10);
 		
 		textField_6 = new JTextField();
+		textField_6.setBounds(468, 299, 212, 20);
 		textField_6.setColumns(10);
 		
 		JButton btnAuftragErstellen = new JButton("Auftrag erstellen");
+		btnAuftragErstellen.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				AuftragOK ok=new AuftragOK();
+				ok.setVisible(true);
+			}
+		});
+		btnAuftragErstellen.setBounds(321, 377, 162, 18);
 		
 		JButton btnZurck = new JButton("Zurück");
+		btnZurck.setBounds(15, 16, 96, 23);
 		btnZurck.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				contentPane.setVisible(false);
@@ -96,84 +120,30 @@ public class AusfUnter extends JFrame {
 		});
 		String[] Klassen= {"10a","10b","10c"};
 		JComboBox comboBox = new JComboBox(Klassen);
-		GroupLayout gl_contentPane = new GroupLayout(contentPane);
-		gl_contentPane.setHorizontalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addContainerGap()
-							.addComponent(btnZurck, GroupLayout.PREFERRED_SIZE, 96, GroupLayout.PREFERRED_SIZE)
-							.addPreferredGap(ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
-							.addComponent(lblBitteGebenSie, GroupLayout.PREFERRED_SIZE, 302, GroupLayout.PREFERRED_SIZE))
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(65)
-							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-								.addGroup(gl_contentPane.createSequentialGroup()
-									.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
-										.addComponent(lblNewLabel_1, GroupLayout.DEFAULT_SIZE, 231, Short.MAX_VALUE)
-										.addComponent(lblNewLabel, GroupLayout.DEFAULT_SIZE, 231, Short.MAX_VALUE))
-									.addGap(166))
-								.addComponent(lblNewLabel_2, GroupLayout.DEFAULT_SIZE, 397, Short.MAX_VALUE)
-								.addComponent(lblAnzahlEvangelisch, GroupLayout.PREFERRED_SIZE, 140, GroupLayout.PREFERRED_SIZE)
-								.addComponent(lblAnzahlEthik, GroupLayout.PREFERRED_SIZE, 119, GroupLayout.PREFERRED_SIZE)
-								.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING, false)
-									.addComponent(lblAnzahlKatholisch, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-									.addComponent(lblAnzahlFranzsisch, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
-						.addComponent(textField_5, 212, 212, Short.MAX_VALUE)
-						.addComponent(textField_2, 212, 212, Short.MAX_VALUE)
-						.addComponent(textField, 212, 212, Short.MAX_VALUE)
-						.addComponent(textField_3, 212, 212, Short.MAX_VALUE)
-						.addComponent(textField_4, 212, 212, Short.MAX_VALUE)
-						.addComponent(textField_6, GroupLayout.DEFAULT_SIZE, 212, Short.MAX_VALUE)
-						.addComponent(comboBox, 0, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-					.addContainerGap(102, Short.MAX_VALUE))
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(316)
-					.addComponent(btnAuftragErstellen, GroupLayout.PREFERRED_SIZE, 162, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(310, Short.MAX_VALUE))
-		);
-		gl_contentPane.setVerticalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addContainerGap()
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(btnZurck)
-						.addComponent(lblBitteGebenSie))
-					.addGap(41)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblNewLabel)
-						.addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(9)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
-						.addComponent(lblNewLabel_1)
-						.addComponent(comboBox, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(18)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblNewLabel_2)
-						.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(18)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblAnzahlFranzsisch)
-						.addComponent(textField_3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(18)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblAnzahlKatholisch)
-						.addComponent(textField_4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(18)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblAnzahlEvangelisch)
-						.addComponent(textField_5, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(18)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblAnzahlEthik)
-						.addComponent(textField_6, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addPreferredGap(ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
-					.addComponent(btnAuftragErstellen, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap())
-		);
-		contentPane.setLayout(gl_contentPane);
+		comboBox.setBounds(468, 109, 212, 20);
+		contentPane.setLayout(null);
+		contentPane.add(btnZurck);
+		contentPane.add(lblBitteGebenSie);
+		contentPane.add(lblNewLabel_1);
+		contentPane.add(lblNewLabel);
+		contentPane.add(lblNewLabel_2);
+		contentPane.add(lblAnzahlEvangelisch);
+		contentPane.add(lblAnzahlEthik);
+		contentPane.add(lblAnzahlKatholisch);
+		contentPane.add(lblAnzahlFranzsisch);
+		contentPane.add(textField_5);
+		contentPane.add(textField_2);
+		contentPane.add(textField);
+		contentPane.add(textField_3);
+		contentPane.add(textField_4);
+		contentPane.add(textField_6);
+		contentPane.add(comboBox);
+		contentPane.add(btnAuftragErstellen);
+		
+		JLabel lblBack = new JLabel("");
+		lblBack.setBounds(0, 0, 784, 450);
+		contentPane.add(lblBack);
+		Image img0 = new ImageIcon(this.getClass().getResource("/Hintergrund 800p.png")).getImage();
+		lblBack.setIcon(new ImageIcon(img0));
 	}
 }

@@ -7,9 +7,11 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 import java.awt.GridBagLayout;
+import java.awt.Image;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
 import javax.swing.GroupLayout;
+import javax.swing.ImageIcon;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JButton;
@@ -51,28 +53,38 @@ public class AusfOber extends JFrame {
 		setContentPane(contentPane);
 		
 		JLabel lblBitteGebenSie = new JLabel("Bitte geben Sie ihre Daten ein!");
+		lblBitteGebenSie.setBounds(272, 20, 248, 14);
 		
 		JLabel lblNewLabel = new JLabel("Lehrerkürzel");
+		lblNewLabel.setBounds(82, 138, 383, 14);
 		
 		JLabel lblNewLabel_1 = new JLabel("Kurs");
+		lblNewLabel_1.setBounds(82, 176, 383, 14);
 		
 		JLabel lblNewLabel_2 = new JLabel("Anzahl");
+		lblNewLabel_2.setBounds(82, 214, 383, 14);
 		
 		textField = new JTextField();
+		textField.setBounds(469, 135, 248, 20);
 		textField.setColumns(10);
 		
 		textField_1 = new JTextField();
+		textField_1.setBounds(469, 173, 248, 20);
 		textField_1.setColumns(10);
 		
 		textField_2 = new JTextField();
+		textField_2.setBounds(469, 211, 248, 20);
 		textField_2.setColumns(10);
 		
 		JLabel lblBuch = new JLabel("Buch");
+		lblBuch.setBounds(82, 252, 383, 14);
 		
 		textField_3 = new JTextField();
+		textField_3.setBounds(469, 249, 248, 20);
 		textField_3.setColumns(10);
 		
 		JButton btnZurck = new JButton("Zurück");
+		btnZurck.setBounds(15, 16, 94, 23);
 		btnZurck.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				contentPane.setVisible(false);
@@ -82,61 +94,30 @@ public class AusfOber extends JFrame {
 		});
 		
 		JButton btnAuftragErstellen = new JButton("Auftrag erstellen");
-		GroupLayout gl_contentPane = new GroupLayout(contentPane);
-		gl_contentPane.setHorizontalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addContainerGap()
-					.addComponent(btnZurck, GroupLayout.PREFERRED_SIZE, 83, GroupLayout.PREFERRED_SIZE)
-					.addGap(80)
-					.addComponent(lblBitteGebenSie, GroupLayout.PREFERRED_SIZE, 248, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(365, Short.MAX_VALUE))
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(77)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addComponent(lblNewLabel_2, GroupLayout.DEFAULT_SIZE, 393, Short.MAX_VALUE)
-						.addComponent(lblBuch, GroupLayout.DEFAULT_SIZE, 393, Short.MAX_VALUE)
-						.addComponent(lblNewLabel_1, GroupLayout.DEFAULT_SIZE, 393, Short.MAX_VALUE)
-						.addComponent(lblNewLabel, GroupLayout.DEFAULT_SIZE, 393, Short.MAX_VALUE))
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
-						.addComponent(textField_2)
-						.addComponent(textField)
-						.addComponent(textField_3, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 248, Short.MAX_VALUE)
-						.addComponent(textField_1, Alignment.TRAILING))
-					.addGap(62))
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(301)
-					.addComponent(btnAuftragErstellen, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-					.addGap(336))
-		);
-		gl_contentPane.setVerticalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addContainerGap()
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(btnZurck)
-						.addComponent(lblBitteGebenSie))
-					.addGap(96)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addComponent(lblNewLabel))
-					.addGap(18)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addComponent(lblNewLabel_1))
-					.addGap(18)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addComponent(lblNewLabel_2))
-					.addGap(18)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(textField_3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addComponent(lblBuch))
-					.addPreferredGap(ComponentPlacement.RELATED, 115, Short.MAX_VALUE)
-					.addComponent(btnAuftragErstellen)
-					.addContainerGap())
-		);
-		contentPane.setLayout(gl_contentPane);
+		btnAuftragErstellen.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				AuftragOK ok=new AuftragOK();
+				ok.setVisible(true);
+			}
+		});
+		btnAuftragErstellen.setBounds(306, 372, 137, 23);
+		contentPane.setLayout(null);
+		contentPane.add(btnZurck);
+		contentPane.add(lblBitteGebenSie);
+		contentPane.add(lblNewLabel_2);
+		contentPane.add(lblBuch);
+		contentPane.add(lblNewLabel_1);
+		contentPane.add(lblNewLabel);
+		contentPane.add(textField_2);
+		contentPane.add(textField);
+		contentPane.add(textField_3);
+		contentPane.add(textField_1);
+		contentPane.add(btnAuftragErstellen);
+		
+		JLabel lblBack = new JLabel("");
+		lblBack.setBounds(0, 0, 784, 450);
+		contentPane.add(lblBack);
+		Image img0 = new ImageIcon(this.getClass().getResource("/Hintergrund 800p.png")).getImage();
+		lblBack.setIcon(new ImageIcon(img0));
 	}
 }

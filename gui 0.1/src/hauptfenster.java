@@ -3,6 +3,8 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
+import java.awt.Image;
+
 import javax.swing.JTextField;
 import java.awt.BorderLayout;
 import javax.swing.JButton;
@@ -10,7 +12,9 @@ import javax.swing.JLabel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.GroupLayout;
+import javax.swing.ImageIcon;
 import javax.swing.GroupLayout.Alignment;
+import java.awt.Font;
 
 public class hauptfenster {
 
@@ -48,6 +52,8 @@ public class hauptfenster {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JButton btnVerleih = new JButton("Zum Bücherverleih");
+		btnVerleih.setFont(new Font("Arial", Font.PLAIN, 11));
+		btnVerleih.setBounds(546, 247, 166, 25);
 		btnVerleih.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Ausleihfenster ausl1=new Ausleihfenster();
@@ -57,34 +63,29 @@ public class hauptfenster {
 		});
 		
 		JButton btnZuDenDatenbanken = new JButton("Zu den Datenbanken");
+		btnZuDenDatenbanken.setFont(new Font("Arial", Font.PLAIN, 11));
+		btnZuDenDatenbanken.setBounds(56, 247, 184, 25);
+		btnZuDenDatenbanken.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Datenbank bank1=new Datenbank();
+				frame.dispose();
+				bank1.setVisible(true);
+			}
+		});
 		
-		JLabel lblAnfang = new JLabel("Wilkommen im Programm");
-		GroupLayout groupLayout = new GroupLayout(frame.getContentPane());
-		groupLayout.setHorizontalGroup(
-			groupLayout.createParallelGroup(Alignment.LEADING)
-				.addGroup(groupLayout.createSequentialGroup()
-					.addGap(56)
-					.addComponent(btnZuDenDatenbanken, GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)
-					.addGap(306)
-					.addComponent(btnVerleih, GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
-					.addGap(72))
-				.addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
-					.addGap(306)
-					.addComponent(lblAnfang, GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE)
-					.addGap(301))
-		);
-		groupLayout.setVerticalGroup(
-			groupLayout.createParallelGroup(Alignment.LEADING)
-				.addGroup(groupLayout.createSequentialGroup()
-					.addContainerGap()
-					.addComponent(lblAnfang, GroupLayout.PREFERRED_SIZE, 37, GroupLayout.PREFERRED_SIZE)
-					.addGap(199)
-					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
-						.addComponent(btnZuDenDatenbanken, GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
-						.addComponent(btnVerleih, GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE))
-					.addGap(139))
-		);
-		frame.getContentPane().setLayout(groupLayout);
+		JLabel lblAnfang = new JLabel("Wilkommen zur Bibliothek-Software v0.1");
+		lblAnfang.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblAnfang.setBounds(282, 11, 221, 37);
+		frame.getContentPane().setLayout(null);
+		frame.getContentPane().add(btnZuDenDatenbanken);
+		frame.getContentPane().add(btnVerleih);
+		frame.getContentPane().add(lblAnfang);
+		
+		JLabel lblBack = new JLabel("");
+		lblBack.setBounds(0, 0, 784, 450);
+		frame.getContentPane().add(lblBack);
+		Image img0 = new ImageIcon(this.getClass().getResource("/Hintergrund 800p.png")).getImage();
+		lblBack.setIcon(new ImageIcon(img0));
 	}
 
 }

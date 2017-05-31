@@ -19,6 +19,7 @@ import javax.swing.JButton;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Font;
 
 public class AusfEinzel extends JFrame {
 
@@ -27,6 +28,7 @@ public class AusfEinzel extends JFrame {
 	private JTextField textField_1;
 	private JTextField textField_2;
 	private JTextField textField_3;
+	private JTextField textField_4;
 
 	/**
 	 * Launch the application.
@@ -55,8 +57,12 @@ public class AusfEinzel extends JFrame {
 		setContentPane(contentPane);
 		
 		JLabel lblBitteGebenSie = new JLabel("Bitte geben Sie Ihre Daten ein!");
+		lblBitteGebenSie.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblBitteGebenSie.setBounds(302, 21, 260, 14);
 		
 		JButton btnZurck = new JButton("Zurück");
+		btnZurck.setFont(new Font("Arial", Font.PLAIN, 11));
+		btnZurck.setBounds(10, 17, 102, 23);
 		btnZurck.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				contentPane.setVisible(false);
@@ -66,94 +72,75 @@ public class AusfEinzel extends JFrame {
 		});
 		
 		JLabel lblNewLabel = new JLabel("Nachname");
+		lblNewLabel.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblNewLabel.setBounds(59, 122, 92, 14);
 		
 		JLabel lblNewLabel_1 = new JLabel("Vorname");
+		lblNewLabel_1.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblNewLabel_1.setBounds(59, 160, 92, 14);
 		
 		textField = new JTextField();
+		textField.setBounds(435, 119, 251, 20);
 		textField.setColumns(10);
 		
 		textField_1 = new JTextField();
+		textField_1.setBounds(435, 157, 251, 20);
 		textField_1.setColumns(10);
 		
 		textField_2 = new JTextField();
+		textField_2.setBounds(435, 195, 251, 20);
 		textField_2.setColumns(10);
 		
 		JLabel lblNewLabel_2 = new JLabel("Adresse");
+		lblNewLabel_2.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblNewLabel_2.setBounds(59, 198, 92, 14);
 		
 		JLabel lblNewLabel_3 = new JLabel("Telefonnummer");
+		lblNewLabel_3.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblNewLabel_3.setBounds(59, 236, 92, 14);
 		
 		textField_3 = new JTextField();
+		textField_3.setBounds(435, 233, 251, 20);
 		textField_3.setColumns(10);
 		
 		JButton btnAuftragErstellen = new JButton("Auftrag erstellen");
-		GroupLayout gl_contentPane = new GroupLayout(contentPane);
-		gl_contentPane.setHorizontalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(12)
-					.addComponent(btnZurck, GroupLayout.PREFERRED_SIZE, 102, GroupLayout.PREFERRED_SIZE)
-					.addGap(145)
-					.addComponent(lblBitteGebenSie, GroupLayout.PREFERRED_SIZE, 260, GroupLayout.PREFERRED_SIZE))
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(167)
-					.addComponent(lblNewLabel)
-					.addGap(278)
-					.addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(167)
-					.addComponent(lblNewLabel_1)
-					.addGap(289)
-					.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(167)
-					.addComponent(lblNewLabel_2)
-					.addGap(294)
-					.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(167)
-					.addComponent(lblNewLabel_3)
-					.addGap(242)
-					.addComponent(textField_3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(317)
-					.addComponent(btnAuftragErstellen))
-		);
-		gl_contentPane.setVerticalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(12)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addComponent(btnZurck)
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(5)
-							.addComponent(lblBitteGebenSie)))
-					.addGap(116)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(2)
-							.addComponent(lblNewLabel))
-						.addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(18)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(2)
-							.addComponent(lblNewLabel_1))
-						.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(18)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(4)
-							.addComponent(lblNewLabel_2))
-						.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(18)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(2)
-							.addComponent(lblNewLabel_3))
-						.addComponent(textField_3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(95)
-					.addComponent(btnAuftragErstellen))
-		);
-		contentPane.setLayout(gl_contentPane);
+		btnAuftragErstellen.setFont(new Font("Arial", Font.PLAIN, 11));
+		btnAuftragErstellen.setBounds(318, 377, 134, 23);
+		btnAuftragErstellen.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				AuftragOK ok=new AuftragOK();
+				ok.setVisible(true);
+				
+			}
+		});
+		
+		JLabel lblBuch = new JLabel("Buch");
+		lblBuch.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblBuch.setBounds(59, 274, 92, 14);
+		
+		textField_4 = new JTextField();
+		textField_4.setBounds(435, 271, 251, 20);
+		textField_4.setColumns(10);
+		Image img0 = new ImageIcon(this.getClass().getResource("/Hintergrund 800p.png")).getImage();
+		contentPane.setLayout(null);
+		contentPane.add(lblBuch);
+		contentPane.add(textField_4);
+		contentPane.add(btnZurck);
+		contentPane.add(lblBitteGebenSie);
+		contentPane.add(lblNewLabel);
+		contentPane.add(textField);
+		contentPane.add(lblNewLabel_1);
+		contentPane.add(textField_1);
+		contentPane.add(lblNewLabel_2);
+		contentPane.add(textField_2);
+		contentPane.add(lblNewLabel_3);
+		contentPane.add(textField_3);
+		contentPane.add(btnAuftragErstellen);
+		
+		JLabel lblBack = new JLabel("");
+		lblBack.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblBack.setBounds(0, 0, 784, 450);
+		lblBack.setIcon(new ImageIcon(img0));
+		contentPane.add(lblBack);
 	}
 }

@@ -19,6 +19,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.LayoutStyle.ComponentPlacement;
+import java.awt.Font;
 
 public class Ausleihfenster extends JFrame {
 
@@ -52,11 +53,17 @@ public class Ausleihfenster extends JFrame {
 	
 			
 		JLabel lblTitel1 = new JLabel("Wilkommen zum Buchverleih");
+		lblTitel1.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblTitel1.setBounds(310, 11, 211, 33);
 		lblTitel1.setBackground(Color.GRAY);
 		
 		JLabel lblText1 = new JLabel("Für wen wollen sie Bücher ausleihen?");
+		lblText1.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblText1.setBounds(281, 92, 292, 23);
 		
 		JButton btnback1 = new JButton("Zurück");
+		btnback1.setFont(new Font("Arial", Font.PLAIN, 11));
+		btnback1.setBounds(15, 16, 89, 23);
 		btnback1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			contentPane.setVisible(false);
@@ -66,6 +73,7 @@ public class Ausleihfenster extends JFrame {
 		});
 		
 		JLabel lblU = new JLabel("");
+		lblU.setBounds(79, 239, 123, 124);
 		lblU.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
@@ -78,6 +86,7 @@ public class Ausleihfenster extends JFrame {
 		lblU.setIcon(new ImageIcon(img1));
 		
 		JLabel lblO = new JLabel("");
+		lblO.setBounds(319, 239, 134, 124);
 		Image img2 = new ImageIcon(this.getClass().getResource("/rot.png")).getImage();
 		lblO.setIcon(new ImageIcon(img2));
 
@@ -92,6 +101,7 @@ public class Ausleihfenster extends JFrame {
 		});
 		
 		JLabel lblE = new JLabel("");
+		lblE.setBounds(534, 239, 135, 124);
 		Image img3 = new ImageIcon(this.getClass().getResource("/blau.png")).getImage();
 		lblE.setIcon(new ImageIcon(img3));
 		lblE.addMouseListener(new MouseAdapter() {
@@ -102,44 +112,18 @@ public class Ausleihfenster extends JFrame {
 				ausfu3.setVisible(true);
 			}
 		});
-		GroupLayout gl_contentPane = new GroupLayout(contentPane);
-		gl_contentPane.setHorizontalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addContainerGap()
-					.addComponent(btnback1, GroupLayout.PREFERRED_SIZE, 89, GroupLayout.PREFERRED_SIZE)
-					.addGap(158)
-					.addComponent(lblTitel1, GroupLayout.PREFERRED_SIZE, 211, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(318, Short.MAX_VALUE))
-				.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
-					.addGap(74)
-					.addComponent(lblU, GroupLayout.PREFERRED_SIZE, 123, GroupLayout.PREFERRED_SIZE)
-					.addGap(117)
-					.addComponent(lblO, GroupLayout.PREFERRED_SIZE, 134, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
-					.addComponent(lblE, GroupLayout.PREFERRED_SIZE, 135, GroupLayout.PREFERRED_SIZE)
-					.addGap(110))
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(224)
-					.addComponent(lblText1, GroupLayout.DEFAULT_SIZE, 463, Short.MAX_VALUE)
-					.addGap(186))
-		);
-		gl_contentPane.setVerticalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(6)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(btnback1)
-						.addComponent(lblTitel1, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE))
-					.addGap(45)
-					.addComponent(lblText1, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)
-					.addGap(127)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
-						.addComponent(lblO, GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
-						.addComponent(lblU, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
-						.addComponent(lblE, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-					.addGap(97))
-		);
-		contentPane.setLayout(gl_contentPane);
+		contentPane.setLayout(null);
+		contentPane.add(btnback1);
+		contentPane.add(lblTitel1);
+		contentPane.add(lblU);
+		contentPane.add(lblO);
+		contentPane.add(lblE);
+		contentPane.add(lblText1);
+		
+		JLabel lblBack = new JLabel("");
+		lblBack.setBounds(0, 0, 784, 450);
+		contentPane.add(lblBack);
+		Image img0 = new ImageIcon(this.getClass().getResource("/Hintergrund 800p.png")).getImage();
+		lblBack.setIcon(new ImageIcon(img0));
 	}
 }
