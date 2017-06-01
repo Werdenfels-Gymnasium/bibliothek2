@@ -5,6 +5,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.GroupLayout;
+import javax.swing.ImageIcon;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
@@ -13,12 +14,13 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
+import java.awt.Image;
 
 public class Buch extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textFieldTitel;
-	private JTextField textKurztitel;
+	private JTextField textfieldKurz;
 	private JTextField textFieldFach;
 	private JTextField textFieldJgst;
 	private JTextField textFieldISBN;
@@ -51,126 +53,99 @@ public class Buch extends JFrame {
 		setContentPane(contentPane);
 		
 		JLabel lblNeuerEintragFr = new JLabel("Neuer Eintrag für Buch");
+		lblNeuerEintragFr.setBounds(331, 20, 136, 14);
 		lblNeuerEintragFr.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		JLabel lblTitel = new JLabel("Titel");
+		lblTitel.setBounds(209, 102, 100, 14);
 		lblTitel.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		JLabel lblkurzTitel = new JLabel("Kurztitel");
+		lblkurzTitel.setBounds(209, 140, 100, 14);
 		lblkurzTitel.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		JLabel lblFach = new JLabel("Fach");
+		lblFach.setBounds(209, 178, 100, 14);
 		lblFach.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		JLabel lblJahrgang = new JLabel("Jahrgangsstufe");
+		lblJahrgang.setBounds(209, 216, 100, 14);
 		lblJahrgang.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		JLabel lblISBN = new JLabel("ISBN");
+		lblISBN.setBounds(209, 254, 100, 14);
 		lblISBN.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		JLabel lblZweig = new JLabel("Zweig");
+		lblZweig.setBounds(209, 292, 100, 14);
 		lblZweig.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		textFieldTitel = new JTextField();
+		textFieldTitel.setBounds(454, 99, 145, 20);
 		textFieldTitel.setColumns(10);
 		
-		textKurztitel = new JTextField();
-		textKurztitel.setColumns(10);
+		textfieldKurz = new JTextField();
+		textfieldKurz.setBounds(454, 137, 145, 20);
+		textfieldKurz.setColumns(10);
 		
 		textFieldFach = new JTextField();
+		textFieldFach.setBounds(454, 175, 145, 20);
 		textFieldFach.setColumns(10);
 		
 		textFieldJgst = new JTextField();
+		textFieldJgst.setBounds(454, 213, 145, 20);
 		textFieldJgst.setColumns(10);
 		
 		textFieldISBN = new JTextField();
+		textFieldISBN.setBounds(454, 251, 145, 20);
 		textFieldISBN.setColumns(10);
 		
 		textFieldZweig = new JTextField();
+		textFieldZweig.setBounds(454, 289, 145, 20);
 		textFieldZweig.setColumns(10);
 		
 		JButton btnAuftragErstellen = new JButton("Eintrag erstellen");
+		btnAuftragErstellen.setBounds(331, 372, 135, 23);
 		btnAuftragErstellen.setFont(new Font("Arial", Font.PLAIN, 11));
 		btnAuftragErstellen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				//Eintrag für Buch in die Datenbank
+				EintragOK ok= new EintragOK();
+				ok.setVisible(true);
+				
 				
 			}
 		});
 		
 		JButton btnZurck = new JButton("Zurück");
+		btnZurck.setBounds(15, 16, 78, 23);
 		btnZurck.setFont(new Font("Arial", Font.PLAIN, 11));
 		btnZurck.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
 			}
 		});
-		GroupLayout gl_contentPane = new GroupLayout(contentPane);
-		gl_contentPane.setHorizontalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addContainerGap()
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addComponent(btnZurck, GroupLayout.PREFERRED_SIZE, 78, GroupLayout.PREFERRED_SIZE)
-							.addPreferredGap(ComponentPlacement.RELATED, 238, Short.MAX_VALUE)
-							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-								.addComponent(btnAuftragErstellen, GroupLayout.PREFERRED_SIZE, 135, GroupLayout.PREFERRED_SIZE)
-								.addComponent(lblNeuerEintragFr, GroupLayout.PREFERRED_SIZE, 136, GroupLayout.PREFERRED_SIZE))
-							.addGap(312))
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
-								.addComponent(lblJahrgang, GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-								.addComponent(lblFach, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-								.addComponent(lblkurzTitel, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-								.addComponent(lblTitel, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-								.addComponent(lblISBN, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-								.addComponent(lblZweig, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-							.addGap(145)
-							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
-								.addComponent(textFieldTitel, GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE)
-								.addComponent(textKurztitel)
-								.addComponent(textFieldFach)
-								.addComponent(textFieldJgst)
-								.addComponent(textFieldISBN)
-								.addComponent(textFieldZweig))
-							.addGap(180))))
-		);
-		gl_contentPane.setVerticalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addContainerGap()
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblNeuerEintragFr)
-						.addComponent(btnZurck))
-					.addPreferredGap(ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblTitel)
-						.addComponent(textFieldTitel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(18)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblkurzTitel)
-						.addComponent(textKurztitel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(18)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblFach)
-						.addComponent(textFieldFach, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(18)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblJahrgang)
-						.addComponent(textFieldJgst, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(18)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblISBN)
-						.addComponent(textFieldISBN, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(18)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblZweig)
-						.addComponent(textFieldZweig, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(63)
-					.addComponent(btnAuftragErstellen)
-					.addContainerGap())
-		);
-		contentPane.setLayout(gl_contentPane);
+		contentPane.setLayout(null);
+		contentPane.add(btnZurck);
+		contentPane.add(btnAuftragErstellen);
+		contentPane.add(lblNeuerEintragFr);
+		contentPane.add(lblJahrgang);
+		contentPane.add(lblFach);
+		contentPane.add(lblkurzTitel);
+		contentPane.add(lblTitel);
+		contentPane.add(lblISBN);
+		contentPane.add(lblZweig);
+		contentPane.add(textFieldTitel);
+		contentPane.add(textfieldKurz);
+		contentPane.add(textFieldFach);
+		contentPane.add(textFieldJgst);
+		contentPane.add(textFieldISBN);
+		contentPane.add(textFieldZweig);
+		
+		JLabel lblBack = new JLabel("");
+		lblBack.setBounds(0, 0, 784, 450);
+		Image img0 = new ImageIcon(this.getClass().getResource("/Hintergrund 800p.png")).getImage();
+		lblBack.setIcon(new ImageIcon(img0));
+		contentPane.add(lblBack);
 	}
 }

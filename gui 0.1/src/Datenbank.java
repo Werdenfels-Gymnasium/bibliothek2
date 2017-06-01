@@ -64,13 +64,17 @@ public class Datenbank extends JFrame {
 			}
 		});
 		String[] Datenbanken= {"Bitte wählen sie die Datenbank aus","Buch","Entleiher","Einzelperson","Oberstufenschüler","Unter-/Mittelstufenschüler","Aufträge","Kurs","Klasse","Lehrer"};
-		//Namen der Datenbank als String in die ComboBox laden
 		JComboBox comboBox = new JComboBox(Datenbanken);
 		comboBox.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		JScrollPane scrollPane = new JScrollPane();
 		
 		JButton btnNewButton = new JButton("Datenbank laden");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				//Die Datenbank laden, die in der combobox ausgewählt ist
+			}
+		});
 		btnNewButton.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		JButton btnNewButton_1 = new JButton("Neuer Eintrag");
@@ -84,14 +88,22 @@ public class Datenbank extends JFrame {
 		
 		JButton btnNewButton_2 = new JButton("Eintrag löschen");
 		btnNewButton_2.setFont(new Font("Arial", Font.PLAIN, 11));
+		
+		JButton btnDatenbankenLaden = new JButton("Datenbanken laden");
+		btnDatenbankenLaden.setFont(new Font("Arial", Font.PLAIN, 11));
+		
+		JButton btnDatenbankenSpeichern = new JButton("Datenbanken speichern");
+		btnDatenbankenSpeichern.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.TRAILING)
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addContainerGap()
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addComponent(btnZurck, GroupLayout.PREFERRED_SIZE, 90, GroupLayout.PREFERRED_SIZE)
-						.addGroup(gl_contentPane.createSequentialGroup()
+						.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 								.addComponent(comboBox, GroupLayout.PREFERRED_SIZE, 255, GroupLayout.PREFERRED_SIZE)
 								.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING, false)
@@ -99,14 +111,23 @@ public class Datenbank extends JFrame {
 									.addComponent(btnNewButton_1, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 									.addComponent(btnNewButton, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE)))
 							.addPreferredGap(ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
-							.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 684, GroupLayout.PREFERRED_SIZE)))
+							.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 684, GroupLayout.PREFERRED_SIZE))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addComponent(btnZurck, GroupLayout.PREFERRED_SIZE, 90, GroupLayout.PREFERRED_SIZE)
+							.addGap(307)
+							.addComponent(btnDatenbankenLaden, GroupLayout.PREFERRED_SIZE, 141, GroupLayout.PREFERRED_SIZE)
+							.addGap(124)
+							.addComponent(btnDatenbankenSpeichern, GroupLayout.PREFERRED_SIZE, 165, GroupLayout.PREFERRED_SIZE)))
 					.addContainerGap())
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addContainerGap()
-					.addComponent(btnZurck)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+						.addComponent(btnZurck)
+						.addComponent(btnDatenbankenLaden)
+						.addComponent(btnDatenbankenSpeichern))
 					.addGap(34)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 						.addComponent(scrollPane, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 472, Short.MAX_VALUE)
@@ -122,6 +143,7 @@ public class Datenbank extends JFrame {
 		);
 		
 		table = new JTable();
+		table.setFont(new Font("Arial", Font.PLAIN, 11));
 		scrollPane.setViewportView(table);
 		contentPane.setLayout(gl_contentPane);
 	}

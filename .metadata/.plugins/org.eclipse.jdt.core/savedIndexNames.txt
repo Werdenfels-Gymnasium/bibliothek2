@@ -1,6 +1,6 @@
 INDEX VERSION 1.130+E:\github\bibliothek2\.metadata\.plugins\org.eclipse.jdt.core
 1497768745.index
-2916449560.index
+544887866.index
 3139048649.index
 317133978.index
 1348685835.index
@@ -23,4 +23,4 @@ INDEX VERSION 1.130+E:\github\bibliothek2\.metadata\.plugins\org.eclipse.jdt.cor
 3135130809.index
 3804319801.index
 3784383295.index
-544887866.index
+2916449560.index

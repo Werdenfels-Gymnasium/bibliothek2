@@ -5,10 +5,13 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.GroupLayout;
+import javax.swing.ImageIcon;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.Image;
+
 import javax.swing.JTextField;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.event.ActionListener;
@@ -17,7 +20,7 @@ import java.awt.event.ActionEvent;
 public class Kurs extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
+	private JTextField textFieldAnz;
 
 	/**
 	 * Launch the application.
@@ -46,6 +49,7 @@ public class Kurs extends JFrame {
 		setContentPane(contentPane);
 		
 		JButton btnZurck = new JButton("Zurück");
+		btnZurck.setBounds(15, 16, 81, 23);
 		btnZurck.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
@@ -54,51 +58,39 @@ public class Kurs extends JFrame {
 		btnZurck.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		JLabel lblNeuerEintragFr = new JLabel("Neuer Eintrag für Kurs");
+		lblNeuerEintragFr.setBounds(342, 20, 128, 14);
 		lblNeuerEintragFr.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		JLabel lblAnzahlSchler = new JLabel("Anzahl Schüler");
+		lblAnzahlSchler.setBounds(233, 196, 100, 14);
 		lblAnzahlSchler.setFont(new Font("Arial", Font.PLAIN, 11));
 		
-		textField = new JTextField();
-		textField.setColumns(10);
+		textFieldAnz = new JTextField();
+		textFieldAnz.setBounds(446, 193, 113, 20);
+		textFieldAnz.setColumns(10);
 		
 		JButton btnNewButton = new JButton("Eintrag erstellen");
+		btnNewButton.setBounds(342, 372, 109, 23);
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				EintragOK ok= new EintragOK();
+				ok.setVisible(true);
+			}
+		});
 		btnNewButton.setFont(new Font("Arial", Font.PLAIN, 11));
-		GroupLayout gl_contentPane = new GroupLayout(contentPane);
-		gl_contentPane.setHorizontalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(228)
-							.addComponent(lblAnzahlSchler, GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SIZE)
-							.addGap(113)
-							.addComponent(textField, GroupLayout.PREFERRED_SIZE, 113, GroupLayout.PREFERRED_SIZE))
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addContainerGap()
-							.addComponent(btnZurck, GroupLayout.PREFERRED_SIZE, 81, GroupLayout.PREFERRED_SIZE)
-							.addGap(246)
-							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-								.addComponent(lblNeuerEintragFr, GroupLayout.PREFERRED_SIZE, 128, GroupLayout.PREFERRED_SIZE)
-								.addComponent(btnNewButton))))
-					.addContainerGap(220, Short.MAX_VALUE))
-		);
-		gl_contentPane.setVerticalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addContainerGap()
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(btnZurck)
-						.addComponent(lblNeuerEintragFr))
-					.addGap(154)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblAnzahlSchler)
-						.addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addPreferredGap(ComponentPlacement.RELATED, 159, Short.MAX_VALUE)
-					.addComponent(btnNewButton)
-					.addContainerGap())
-		);
-		contentPane.setLayout(gl_contentPane);
+		contentPane.setLayout(null);
+		contentPane.add(lblAnzahlSchler);
+		contentPane.add(textFieldAnz);
+		contentPane.add(btnZurck);
+		contentPane.add(lblNeuerEintragFr);
+		contentPane.add(btnNewButton);
+		
+		JLabel lblBack = new JLabel("");
+		lblBack.setBounds(0, 0, 784, 450);
+		Image img0 = new ImageIcon(this.getClass().getResource("/Hintergrund 800p.png")).getImage();
+		lblBack.setIcon(new ImageIcon(img0));
+		contentPane.add(lblBack);
 	}
 
 }

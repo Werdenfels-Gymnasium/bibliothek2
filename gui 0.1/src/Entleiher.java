@@ -1,10 +1,12 @@
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.Image;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.GroupLayout;
+import javax.swing.ImageIcon;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -12,6 +14,7 @@ import javax.swing.JComboBox;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Font;
 
 public class Entleiher extends JFrame {
 
@@ -44,6 +47,8 @@ public class Entleiher extends JFrame {
 		setContentPane(contentPane);
 		
 		JButton btnZurck = new JButton("Zurück");
+		btnZurck.setFont(new Font("Arial", Font.PLAIN, 11));
+		btnZurck.setBounds(15, 16, 85, 23);
 		btnZurck.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
@@ -51,48 +56,40 @@ public class Entleiher extends JFrame {
 		});
 		
 		JLabel lblNeuerEintargFr = new JLabel("Neuer Eintrag für Entleiher");
+		lblNeuerEintargFr.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblNeuerEintargFr.setBounds(324, 20, 153, 14);
 		
 		JLabel lblArt = new JLabel("Art");
+		lblArt.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblArt.setBounds(210, 193, 76, 14);
 		
 		String[] EntleiherArt = {"Einzelperson","Oberstufenschüler","Unter-/Mittelstufenschüler","Standort"} ;
 		JComboBox comboBox = new JComboBox(EntleiherArt);
+		comboBox.setFont(new Font("Arial", Font.PLAIN, 11));
+		comboBox.setBounds(373, 190, 187, 20);
 		
 		JButton btnAuftragErstellen = new JButton("Eintrag erstellen");
-		GroupLayout gl_contentPane = new GroupLayout(contentPane);
-		gl_contentPane.setHorizontalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(208)
-							.addComponent(lblArt, GroupLayout.PREFERRED_SIZE, 76, GroupLayout.PREFERRED_SIZE)
-							.addGap(87)
-							.addComponent(comboBox, GroupLayout.PREFERRED_SIZE, 187, GroupLayout.PREFERRED_SIZE))
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addContainerGap()
-							.addComponent(btnZurck, GroupLayout.PREFERRED_SIZE, 85, GroupLayout.PREFERRED_SIZE)
-							.addGap(224)
-							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-								.addComponent(btnAuftragErstellen)
-								.addComponent(lblNeuerEintargFr, GroupLayout.PREFERRED_SIZE, 153, GroupLayout.PREFERRED_SIZE))))
-					.addContainerGap(216, Short.MAX_VALUE))
-		);
-		gl_contentPane.setVerticalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addContainerGap()
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(btnZurck)
-						.addComponent(lblNeuerEintargFr))
-					.addGap(103)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblArt)
-						.addComponent(comboBox, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addPreferredGap(ComponentPlacement.RELATED, 210, Short.MAX_VALUE)
-					.addComponent(btnAuftragErstellen)
-					.addContainerGap())
-		);
-		contentPane.setLayout(gl_contentPane);
+		btnAuftragErstellen.setBounds(324, 372, 111, 23);
+		btnAuftragErstellen.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				EintragOK ok= new EintragOK();
+				ok.setVisible(true);
+			}
+		});
+		contentPane.setLayout(null);
+		contentPane.add(btnZurck);
+		contentPane.add(btnAuftragErstellen);
+		contentPane.add(lblNeuerEintargFr);
+		contentPane.add(lblArt);
+		contentPane.add(comboBox);
+		
+		JLabel lblBack = new JLabel("");
+		lblBack.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblBack.setBounds(0, 0, 784, 450);
+		Image img0 = new ImageIcon(this.getClass().getResource("/Hintergrund 800p.png")).getImage();
+		lblBack.setIcon(new ImageIcon(img0));
+		contentPane.add(lblBack);
 	}
 
 }

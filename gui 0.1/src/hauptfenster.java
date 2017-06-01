@@ -75,7 +75,7 @@ public class hauptfenster {
 		
 		JLabel lblAnfang = new JLabel("Wilkommen zur Bibliothek-Software v0.1");
 		lblAnfang.setFont(new Font("Arial", Font.PLAIN, 11));
-		lblAnfang.setBounds(282, 11, 221, 37);
+		lblAnfang.setBounds(294, 11, 221, 37);
 		frame.getContentPane().setLayout(null);
 		frame.getContentPane().add(btnZuDenDatenbanken);
 		frame.getContentPane().add(btnVerleih);

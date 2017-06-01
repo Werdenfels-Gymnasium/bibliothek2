@@ -5,6 +5,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.GroupLayout;
+import javax.swing.ImageIcon;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -13,15 +14,16 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
+import java.awt.Image;
 
 public class Einzelperson extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
+	private JTextField textFieldEntID;
+	private JTextField textFieldNach;
+	private JTextField textFieldVor;
+	private JTextField textFieldAdr;
+	private JTextField textFieldTele;
 
 	/**
 	 * Launch the application.
@@ -50,6 +52,7 @@ public class Einzelperson extends JFrame {
 		setContentPane(contentPane);
 		
 		JButton btnZurck = new JButton("Zurück");
+		btnZurck.setBounds(15, 16, 93, 23);
 		btnZurck.setFont(new Font("Arial", Font.PLAIN, 11));
 		btnZurck.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -58,102 +61,79 @@ public class Einzelperson extends JFrame {
 		});
 		
 		JLabel lblNeuerEintrag = new JLabel("Neuer Eintrag für Einzelperson");
+		lblNeuerEintrag.setBounds(317, 20, 170, 14);
 		lblNeuerEintrag.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		JLabel lblNewLabel = new JLabel("EintleiherID");
+		lblNewLabel.setBounds(214, 112, 95, 14);
 		lblNewLabel.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		JLabel lblNewLabel_1 = new JLabel("Nachname");
+		lblNewLabel_1.setBounds(214, 150, 95, 14);
 		lblNewLabel_1.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		JLabel lblNewLabel_2 = new JLabel("Vorname");
+		lblNewLabel_2.setBounds(214, 188, 95, 14);
 		lblNewLabel_2.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		JLabel lblNewLabel_3 = new JLabel("Adresse");
+		lblNewLabel_3.setBounds(214, 226, 42, 14);
 		lblNewLabel_3.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		JLabel lblNewLabel_4 = new JLabel("Telefonnummer");
+		lblNewLabel_4.setBounds(214, 264, 95, 14);
 		lblNewLabel_4.setFont(new Font("Arial", Font.PLAIN, 11));
 		
-		textField = new JTextField();
-		textField.setColumns(10);
+		textFieldEntID = new JTextField();
+		textFieldEntID.setBounds(456, 109, 128, 20);
+		textFieldEntID.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
+		textFieldNach = new JTextField();
+		textFieldNach.setBounds(456, 147, 128, 20);
+		textFieldNach.setColumns(10);
 		
-		textField_2 = new JTextField();
-		textField_2.setColumns(10);
+		textFieldVor = new JTextField();
+		textFieldVor.setBounds(456, 185, 128, 20);
+		textFieldVor.setColumns(10);
 		
-		textField_3 = new JTextField();
-		textField_3.setColumns(10);
+		textFieldAdr = new JTextField();
+		textFieldAdr.setBounds(456, 223, 128, 20);
+		textFieldAdr.setColumns(10);
 		
-		textField_4 = new JTextField();
-		textField_4.setColumns(10);
+		textFieldTele = new JTextField();
+		textFieldTele.setBounds(456, 261, 128, 20);
+		textFieldTele.setColumns(10);
 		
 		JButton btnEintragErstellen = new JButton("Eintrag erstellen");
+		btnEintragErstellen.setBounds(342, 372, 109, 23);
+		btnEintragErstellen.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				EintragOK ok= new EintragOK();
+				ok.setVisible(true);
+			}
+		});
 		btnEintragErstellen.setFont(new Font("Arial", Font.PLAIN, 11));
-		GroupLayout gl_contentPane = new GroupLayout(contentPane);
-		gl_contentPane.setHorizontalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addContainerGap()
-					.addComponent(btnZurck, GroupLayout.PREFERRED_SIZE, 93, GroupLayout.PREFERRED_SIZE)
-					.addGap(209)
-					.addComponent(lblNeuerEintrag, GroupLayout.PREFERRED_SIZE, 170, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(292, Short.MAX_VALUE))
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(337)
-					.addComponent(btnEintragErstellen)
-					.addContainerGap(326, Short.MAX_VALUE))
-				.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
-					.addContainerGap(209, Short.MAX_VALUE)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
-						.addComponent(lblNewLabel_2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-						.addComponent(lblNewLabel_4, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-						.addComponent(lblNewLabel, GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
-						.addComponent(lblNewLabel_1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-						.addComponent(lblNewLabel_3))
-					.addGap(147)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
-						.addComponent(textField_4, GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
-						.addComponent(textField_3)
-						.addComponent(textField_2)
-						.addComponent(textField_1)
-						.addComponent(textField))
-					.addGap(195))
-		);
-		gl_contentPane.setVerticalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addContainerGap()
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(btnZurck)
-						.addComponent(lblNeuerEintrag))
-					.addGap(70)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblNewLabel)
-						.addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(18)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblNewLabel_1)
-						.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(18)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblNewLabel_2)
-						.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(18)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblNewLabel_3)
-						.addComponent(textField_3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(18)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblNewLabel_4)
-						.addComponent(textField_4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addPreferredGap(ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
-					.addComponent(btnEintragErstellen)
-					.addContainerGap())
-		);
-		contentPane.setLayout(gl_contentPane);
+		contentPane.setLayout(null);
+		contentPane.add(btnZurck);
+		contentPane.add(lblNeuerEintrag);
+		contentPane.add(btnEintragErstellen);
+		contentPane.add(lblNewLabel_2);
+		contentPane.add(lblNewLabel_4);
+		contentPane.add(lblNewLabel);
+		contentPane.add(lblNewLabel_1);
+		contentPane.add(lblNewLabel_3);
+		contentPane.add(textFieldTele);
+		contentPane.add(textFieldAdr);
+		contentPane.add(textFieldVor);
+		contentPane.add(textFieldNach);
+		contentPane.add(textFieldEntID);
+		
+		JLabel lblBack = new JLabel("");
+		lblBack.setBounds(0, 0, 784, 450);
+		Image img0 = new ImageIcon(this.getClass().getResource("/Hintergrund 800p.png")).getImage();
+		lblBack.setIcon(new ImageIcon(img0));
+		contentPane.add(lblBack);
 	}
 
 }

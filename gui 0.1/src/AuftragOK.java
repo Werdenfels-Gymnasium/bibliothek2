@@ -50,11 +50,11 @@ public class AuftragOK extends JFrame {
 		
 		JLabel lblDerAufragWurde = new JLabel("Der Aufrag wurde erstellt!");
 		lblDerAufragWurde.setFont(new Font("Arial", Font.PLAIN, 11));
-		lblDerAufragWurde.setBounds(143, 99, 157, 14);
+		lblDerAufragWurde.setBounds(150, 114, 157, 14);
 		contentPane.add(lblDerAufragWurde);
 		
 		JLabel lblsymbol = new JLabel("(Symbol)");
-		lblsymbol.setBounds(47, 99, 56, 14);
+		lblsymbol.setBounds(46, 114, 56, 14);
 		contentPane.add(lblsymbol);
 		
 		JButton btnOk = new JButton("OK");

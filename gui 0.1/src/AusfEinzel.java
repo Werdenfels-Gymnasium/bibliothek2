@@ -24,11 +24,11 @@ import java.awt.Font;
 public class AusfEinzel extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
+	private JTextField textFieldNach;
+	private JTextField textFieldVor;
+	private JTextField textFieldAdr;
+	private JTextField textFieldTele;
+	private JTextField textFieldBu;
 
 	/**
 	 * Launch the application.
@@ -79,17 +79,17 @@ public class AusfEinzel extends JFrame {
 		lblNewLabel_1.setFont(new Font("Arial", Font.PLAIN, 11));
 		lblNewLabel_1.setBounds(59, 160, 92, 14);
 		
-		textField = new JTextField();
-		textField.setBounds(435, 119, 251, 20);
-		textField.setColumns(10);
+		textFieldNach = new JTextField();
+		textFieldNach.setBounds(435, 119, 251, 20);
+		textFieldNach.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(435, 157, 251, 20);
-		textField_1.setColumns(10);
+		textFieldVor = new JTextField();
+		textFieldVor.setBounds(435, 157, 251, 20);
+		textFieldVor.setColumns(10);
 		
-		textField_2 = new JTextField();
-		textField_2.setBounds(435, 195, 251, 20);
-		textField_2.setColumns(10);
+		textFieldAdr = new JTextField();
+		textFieldAdr.setBounds(435, 195, 251, 20);
+		textFieldAdr.setColumns(10);
 		
 		JLabel lblNewLabel_2 = new JLabel("Adresse");
 		lblNewLabel_2.setFont(new Font("Arial", Font.PLAIN, 11));
@@ -99,9 +99,9 @@ public class AusfEinzel extends JFrame {
 		lblNewLabel_3.setFont(new Font("Arial", Font.PLAIN, 11));
 		lblNewLabel_3.setBounds(59, 236, 92, 14);
 		
-		textField_3 = new JTextField();
-		textField_3.setBounds(435, 233, 251, 20);
-		textField_3.setColumns(10);
+		textFieldTele = new JTextField();
+		textFieldTele.setBounds(435, 233, 251, 20);
+		textFieldTele.setColumns(10);
 		
 		JButton btnAuftragErstellen = new JButton("Auftrag erstellen");
 		btnAuftragErstellen.setFont(new Font("Arial", Font.PLAIN, 11));
@@ -118,23 +118,23 @@ public class AusfEinzel extends JFrame {
 		lblBuch.setFont(new Font("Arial", Font.PLAIN, 11));
 		lblBuch.setBounds(59, 274, 92, 14);
 		
-		textField_4 = new JTextField();
-		textField_4.setBounds(435, 271, 251, 20);
-		textField_4.setColumns(10);
+		textFieldBu = new JTextField();
+		textFieldBu.setBounds(435, 271, 251, 20);
+		textFieldBu.setColumns(10);
 		Image img0 = new ImageIcon(this.getClass().getResource("/Hintergrund 800p.png")).getImage();
 		contentPane.setLayout(null);
 		contentPane.add(lblBuch);
-		contentPane.add(textField_4);
+		contentPane.add(textFieldBu);
 		contentPane.add(btnZurck);
 		contentPane.add(lblBitteGebenSie);
 		contentPane.add(lblNewLabel);
-		contentPane.add(textField);
+		contentPane.add(textFieldNach);
 		contentPane.add(lblNewLabel_1);
-		contentPane.add(textField_1);
+		contentPane.add(textFieldVor);
 		contentPane.add(lblNewLabel_2);
-		contentPane.add(textField_2);
+		contentPane.add(textFieldAdr);
 		contentPane.add(lblNewLabel_3);
-		contentPane.add(textField_3);
+		contentPane.add(textFieldTele);
 		contentPane.add(btnAuftragErstellen);
 		
 		JLabel lblBack = new JLabel("");
