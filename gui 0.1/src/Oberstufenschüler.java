@@ -19,7 +19,6 @@ import java.awt.Image;
 public class Oberstufenschüler extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textFieldEntID;
 	private JTextField textFieldNach;
 	private JTextField textFieldVor;
 	private JTextField textFieldAbi;
@@ -64,10 +63,6 @@ public class Oberstufenschüler extends JFrame {
 		lblNeuerEintragFr.setBounds(301, 20, 176, 14);
 		lblNeuerEintragFr.setFont(new Font("Arial", Font.PLAIN, 11));
 		
-		JLabel lblNewLabel = new JLabel("EntleiherID");
-		lblNewLabel.setBounds(215, 114, 103, 14);
-		lblNewLabel.setFont(new Font("Arial", Font.PLAIN, 11));
-		
 		JLabel lblNewLabel_1 = new JLabel("Nachname");
 		lblNewLabel_1.setBounds(215, 152, 103, 14);
 		lblNewLabel_1.setFont(new Font("Arial", Font.PLAIN, 11));
@@ -81,12 +76,8 @@ public class Oberstufenschüler extends JFrame {
 		lblNewLabel_3.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		JLabel lblNewLabel_4 = new JLabel("KursID");
-		lblNewLabel_4.setBounds(215, 266, 32, 14);
+		lblNewLabel_4.setBounds(215, 266, 103, 14);
 		lblNewLabel_4.setFont(new Font("Arial", Font.PLAIN, 11));
-		
-		textFieldEntID = new JTextField();
-		textFieldEntID.setBounds(472, 111, 110, 20);
-		textFieldEntID.setColumns(10);
 		
 		textFieldNach = new JTextField();
 		textFieldNach.setBounds(472, 149, 110, 20);
@@ -105,7 +96,7 @@ public class Oberstufenschüler extends JFrame {
 		textFieldKuID.setColumns(10);
 		
 		JButton btnEintragErstellen = new JButton("Eintrag erstellen");
-		btnEintragErstellen.setBounds(329, 372, 109, 23);
+		btnEintragErstellen.setBounds(329, 372, 123, 23);
 		btnEintragErstellen.setFont(new Font("Arial", Font.PLAIN, 11));
 		btnEintragErstellen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -117,12 +108,10 @@ public class Oberstufenschüler extends JFrame {
 		contentPane.setLayout(null);
 		contentPane.add(btnZurck);
 		contentPane.add(lblNeuerEintragFr);
-		contentPane.add(lblNewLabel);
 		contentPane.add(lblNewLabel_1);
 		contentPane.add(lblNewLabel_2);
 		contentPane.add(lblNewLabel_3);
 		contentPane.add(lblNewLabel_4);
-		contentPane.add(textFieldEntID);
 		contentPane.add(textFieldNach);
 		contentPane.add(textFieldVor);
 		contentPane.add(textFieldAbi);

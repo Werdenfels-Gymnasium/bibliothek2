@@ -88,7 +88,7 @@ public class Auftrag extends JFrame {
 		textFieldAbg.setColumns(10);
 		
 		JButton btnEintragErstellen = new JButton("Eintrag erstellen");
-		btnEintragErstellen.setBounds(335, 372, 109, 23);
+		btnEintragErstellen.setBounds(335, 372, 121, 23);
 		btnEintragErstellen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				

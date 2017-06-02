@@ -122,27 +122,6 @@ public class EintragAuswahl extends JFrame {
 			}
 		});
 		
-		JButton btnNewButton_6 = new JButton("Kurs");
-		btnNewButton_6.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				Kurs ku1=new Kurs();
-				ku1.setVisible(true);
-			}
-		});
-		btnNewButton_6.setBounds(176, 220, 131, 23);
-		btnNewButton_6.setFont(new Font("Arial", Font.PLAIN, 11));
-		
-		JButton btnNewButton_7 = new JButton("Klasse");
-		btnNewButton_7.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				Klasse kla1= new Klasse();
-				kla1.setVisible(true);
-				
-			}
-		});
-		btnNewButton_7.setBounds(325, 220, 169, 23);
-		btnNewButton_7.setFont(new Font("Arial", Font.PLAIN, 11));
-		
 		JButton btnNewButton_8 = new JButton("Standort");
 		btnNewButton_8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -150,15 +129,13 @@ public class EintragAuswahl extends JFrame {
 				st1.setVisible(true);
 			}
 		});
-		btnNewButton_8.setBounds(512, 220, 111, 23);
+		btnNewButton_8.setBounds(355, 223, 111, 23);
 		btnNewButton_8.setFont(new Font("Arial", Font.PLAIN, 11));
 		contentPane.setLayout(null);
 		contentPane.add(btnZurck);
 		contentPane.add(lblFrWelcheDatenbank);
-		contentPane.add(btnNewButton_6);
 		contentPane.add(btnNewButton);
 		contentPane.add(btnNewButton_3);
-		contentPane.add(btnNewButton_7);
 		contentPane.add(btnNewButton_1);
 		contentPane.add(btnNewButton_4);
 		contentPane.add(btnNewButton_2);

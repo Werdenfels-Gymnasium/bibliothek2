@@ -5,10 +5,13 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.GroupLayout;
+import javax.swing.ImageIcon;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.Image;
+
 import javax.swing.JTextField;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.event.ActionListener;
@@ -69,6 +72,8 @@ public class BuchEnt extends JFrame {
 		JButton btnLschen = new JButton("Löschen");
 		btnLschen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				LöschenOK ok= new LöschenOK();
+				ok.setVisible(true);
 			}
 		});
 		btnLschen.setFont(new Font("Arial", Font.PLAIN, 11));
@@ -79,5 +84,11 @@ public class BuchEnt extends JFrame {
 		contentPane.add(lblGebenSieDie);
 		contentPane.add(textField);
 		contentPane.add(btnLschen);
+		
+		JLabel lblBack = new JLabel("");
+		Image img0 = new ImageIcon(this.getClass().getResource("/Hintergrund 800p.png")).getImage();
+		lblBack.setIcon(new ImageIcon(img0));
+		lblBack.setBounds(0, 0, 784, 450);
+		contentPane.add(lblBack);
 	}
 }

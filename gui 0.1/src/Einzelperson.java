@@ -19,7 +19,6 @@ import java.awt.Image;
 public class Einzelperson extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textFieldEntID;
 	private JTextField textFieldNach;
 	private JTextField textFieldVor;
 	private JTextField textFieldAdr;
@@ -64,10 +63,6 @@ public class Einzelperson extends JFrame {
 		lblNeuerEintrag.setBounds(317, 20, 170, 14);
 		lblNeuerEintrag.setFont(new Font("Arial", Font.PLAIN, 11));
 		
-		JLabel lblNewLabel = new JLabel("EintleiherID");
-		lblNewLabel.setBounds(214, 112, 95, 14);
-		lblNewLabel.setFont(new Font("Arial", Font.PLAIN, 11));
-		
 		JLabel lblNewLabel_1 = new JLabel("Nachname");
 		lblNewLabel_1.setBounds(214, 150, 95, 14);
 		lblNewLabel_1.setFont(new Font("Arial", Font.PLAIN, 11));
@@ -83,10 +78,6 @@ public class Einzelperson extends JFrame {
 		JLabel lblNewLabel_4 = new JLabel("Telefonnummer");
 		lblNewLabel_4.setBounds(214, 264, 95, 14);
 		lblNewLabel_4.setFont(new Font("Arial", Font.PLAIN, 11));
-		
-		textFieldEntID = new JTextField();
-		textFieldEntID.setBounds(456, 109, 128, 20);
-		textFieldEntID.setColumns(10);
 		
 		textFieldNach = new JTextField();
 		textFieldNach.setBounds(456, 147, 128, 20);
@@ -105,7 +96,7 @@ public class Einzelperson extends JFrame {
 		textFieldTele.setColumns(10);
 		
 		JButton btnEintragErstellen = new JButton("Eintrag erstellen");
-		btnEintragErstellen.setBounds(342, 372, 109, 23);
+		btnEintragErstellen.setBounds(342, 372, 128, 23);
 		btnEintragErstellen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -120,14 +111,12 @@ public class Einzelperson extends JFrame {
 		contentPane.add(btnEintragErstellen);
 		contentPane.add(lblNewLabel_2);
 		contentPane.add(lblNewLabel_4);
-		contentPane.add(lblNewLabel);
 		contentPane.add(lblNewLabel_1);
 		contentPane.add(lblNewLabel_3);
 		contentPane.add(textFieldTele);
 		contentPane.add(textFieldAdr);
 		contentPane.add(textFieldVor);
 		contentPane.add(textFieldNach);
-		contentPane.add(textFieldEntID);
 		
 		JLabel lblBack = new JLabel("");
 		lblBack.setBounds(0, 0, 784, 450);

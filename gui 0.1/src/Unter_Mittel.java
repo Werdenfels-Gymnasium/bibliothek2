@@ -19,7 +19,6 @@ import java.awt.Image;
 public class Unter_Mittel extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textFieldEntID;
 	private JTextField textFieldNach;
 	private JTextField textFieldVor;
 	private JTextField textFieldAbi;
@@ -64,10 +63,6 @@ public class Unter_Mittel extends JFrame {
 		lblNeuerEintragFr.setBounds(284, 20, 209, 14);
 		lblNeuerEintragFr.setFont(new Font("Arial", Font.PLAIN, 11));
 		
-		JLabel lblNewLabel = new JLabel("EntleiherID");
-		lblNewLabel.setBounds(231, 103, 98, 14);
-		lblNewLabel.setFont(new Font("Arial", Font.PLAIN, 11));
-		
 		JLabel lblNewLabel_1 = new JLabel("Nachname");
 		lblNewLabel_1.setBounds(231, 141, 98, 14);
 		lblNewLabel_1.setFont(new Font("Arial", Font.PLAIN, 11));
@@ -83,10 +78,6 @@ public class Unter_Mittel extends JFrame {
 		JLabel lblNewLabel_4 = new JLabel("KlasseID");
 		lblNewLabel_4.setBounds(231, 255, 98, 14);
 		lblNewLabel_4.setFont(new Font("Arial", Font.PLAIN, 11));
-		
-		textFieldEntID = new JTextField();
-		textFieldEntID.setBounds(464, 100, 112, 20);
-		textFieldEntID.setColumns(10);
 		
 		textFieldNach = new JTextField();
 		textFieldNach.setBounds(464, 138, 112, 20);
@@ -105,7 +96,7 @@ public class Unter_Mittel extends JFrame {
 		textFieldKlaID.setColumns(10);
 		
 		JButton btnEintragErstellen = new JButton("Eintrag erstellen");
-		btnEintragErstellen.setBounds(347, 372, 109, 23);
+		btnEintragErstellen.setBounds(347, 372, 125, 23);
 		btnEintragErstellen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -118,7 +109,6 @@ public class Unter_Mittel extends JFrame {
 		contentPane.add(btnZurck);
 		contentPane.add(lblNeuerEintragFr);
 		contentPane.add(btnEintragErstellen);
-		contentPane.add(lblNewLabel);
 		contentPane.add(lblNewLabel_1);
 		contentPane.add(lblNewLabel_2);
 		contentPane.add(lblNewLabel_3);
@@ -127,7 +117,6 @@ public class Unter_Mittel extends JFrame {
 		contentPane.add(textFieldAbi);
 		contentPane.add(textFieldVor);
 		contentPane.add(textFieldNach);
-		contentPane.add(textFieldEntID);
 		
 		JLabel lblBack = new JLabel("");
 		lblBack.setBounds(0, 0, 784, 450);

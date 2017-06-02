@@ -53,8 +53,10 @@ public class AuftragOK extends JFrame {
 		lblDerAufragWurde.setBounds(150, 114, 157, 14);
 		contentPane.add(lblDerAufragWurde);
 		
-		JLabel lblsymbol = new JLabel("(Symbol)");
-		lblsymbol.setBounds(46, 114, 56, 14);
+		JLabel lblsymbol = new JLabel("");
+		lblsymbol.setBounds(69, 100, 48, 48);
+		Image img1 = new ImageIcon(this.getClass().getResource("/OK.png")).getImage();
+		lblsymbol.setIcon(new ImageIcon(img1));
 		contentPane.add(lblsymbol);
 		
 		JButton btnOk = new JButton("OK");

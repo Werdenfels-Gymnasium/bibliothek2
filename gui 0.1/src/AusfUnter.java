@@ -155,7 +155,7 @@ public class AusfUnter extends JFrame {
 		JLabel lblBack = new JLabel("");
 		lblBack.setBounds(0, 0, 784, 450);
 		contentPane.add(lblBack);
-		Image img0 = new ImageIcon(this.getClass().getResource("/Hintergrund 800p.png")).getImage();
+		Image img0 = new ImageIcon(this.getClass().getResource("/HintergrundGelb 800p.png")).getImage();
 		lblBack.setIcon(new ImageIcon(img0));
 	}
 }

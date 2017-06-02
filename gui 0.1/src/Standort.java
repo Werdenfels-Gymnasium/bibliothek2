@@ -20,7 +20,6 @@ import java.awt.event.ActionEvent;
 public class Standort extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textFieldEntID;
 	private JTextField textFieldSta;
 
 	/**
@@ -62,24 +61,16 @@ public class Standort extends JFrame {
 		lblNeuerEintragFr.setBounds(326, 20, 141, 14);
 		lblNeuerEintragFr.setFont(new Font("Arial", Font.PLAIN, 11));
 		
-		JLabel lblNewLabel = new JLabel("EntleiherID");
-		lblNewLabel.setBounds(254, 157, 82, 14);
-		lblNewLabel.setFont(new Font("Arial", Font.PLAIN, 11));
-		
 		JLabel lblNewLabel_1 = new JLabel("Standort");
 		lblNewLabel_1.setBounds(254, 195, 82, 14);
 		lblNewLabel_1.setFont(new Font("Arial", Font.PLAIN, 11));
-		
-		textFieldEntID = new JTextField();
-		textFieldEntID.setBounds(441, 154, 113, 20);
-		textFieldEntID.setColumns(10);
 		
 		textFieldSta = new JTextField();
 		textFieldSta.setBounds(441, 192, 113, 20);
 		textFieldSta.setColumns(10);
 		
 		JButton btnEintragErstellen = new JButton("Eintrag erstellen");
-		btnEintragErstellen.setBounds(337, 372, 109, 23);
+		btnEintragErstellen.setBounds(337, 372, 130, 23);
 		btnEintragErstellen.setFont(new Font("Arial", Font.PLAIN, 11));
 		btnEintragErstellen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -91,10 +82,8 @@ public class Standort extends JFrame {
 		contentPane.setLayout(null);
 		contentPane.add(btnZurck);
 		contentPane.add(lblNeuerEintragFr);
-		contentPane.add(lblNewLabel);
 		contentPane.add(lblNewLabel_1);
 		contentPane.add(textFieldSta);
-		contentPane.add(textFieldEntID);
 		contentPane.add(btnEintragErstellen);
 		
 		JLabel lblBack = new JLabel("");

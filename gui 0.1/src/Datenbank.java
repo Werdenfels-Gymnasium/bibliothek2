@@ -87,12 +87,19 @@ public class Datenbank extends JFrame {
 		});
 		
 		JButton btnNewButton_2 = new JButton("Eintrag löschen");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				EintragLöschen loe=new EintragLöschen();
+				loe.setVisible(true);
+			}
+		});
 		btnNewButton_2.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		JButton btnDatenbankenLaden = new JButton("Datenbanken laden");
 		btnDatenbankenLaden.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		JButton btnDatenbankenSpeichern = new JButton("Datenbanken speichern");
+		btnDatenbankenSpeichern.setFont(new Font("Arial", Font.PLAIN, 11));
 		btnDatenbankenSpeichern.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
@@ -102,8 +109,8 @@ public class Datenbank extends JFrame {
 			gl_contentPane.createParallelGroup(Alignment.TRAILING)
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addContainerGap()
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
+						.addGroup(gl_contentPane.createSequentialGroup()
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 								.addComponent(comboBox, GroupLayout.PREFERRED_SIZE, 255, GroupLayout.PREFERRED_SIZE)
 								.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING, false)
@@ -117,7 +124,8 @@ public class Datenbank extends JFrame {
 							.addGap(307)
 							.addComponent(btnDatenbankenLaden, GroupLayout.PREFERRED_SIZE, 141, GroupLayout.PREFERRED_SIZE)
 							.addGap(124)
-							.addComponent(btnDatenbankenSpeichern, GroupLayout.PREFERRED_SIZE, 165, GroupLayout.PREFERRED_SIZE)))
+							.addComponent(btnDatenbankenSpeichern, GroupLayout.PREFERRED_SIZE, 177, GroupLayout.PREFERRED_SIZE)
+							.addGap(115)))
 					.addContainerGap())
 		);
 		gl_contentPane.setVerticalGroup(

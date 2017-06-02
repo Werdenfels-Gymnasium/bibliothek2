@@ -69,7 +69,8 @@ public class Entleiher extends JFrame {
 		comboBox.setBounds(373, 190, 187, 20);
 		
 		JButton btnAuftragErstellen = new JButton("Eintrag erstellen");
-		btnAuftragErstellen.setBounds(324, 372, 111, 23);
+		btnAuftragErstellen.setFont(new Font("Arial", Font.PLAIN, 11));
+		btnAuftragErstellen.setBounds(324, 372, 130, 23);
 		btnAuftragErstellen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				

@@ -121,7 +121,7 @@ public class AusfEinzel extends JFrame {
 		textFieldBu = new JTextField();
 		textFieldBu.setBounds(435, 271, 251, 20);
 		textFieldBu.setColumns(10);
-		Image img0 = new ImageIcon(this.getClass().getResource("/Hintergrund 800p.png")).getImage();
+		Image img0 = new ImageIcon(this.getClass().getResource("/HintergrundBlau 800p.png")).getImage();
 		contentPane.setLayout(null);
 		contentPane.add(lblBuch);
 		contentPane.add(textFieldBu);

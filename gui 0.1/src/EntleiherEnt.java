@@ -5,10 +5,13 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.GroupLayout;
+import javax.swing.ImageIcon;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.Image;
+
 import javax.swing.JTextField;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.event.ActionListener;
@@ -46,6 +49,7 @@ public class EntleiherEnt extends JFrame {
 		setContentPane(contentPane);
 		
 		JButton btnZurck = new JButton("Zurück");
+		btnZurck.setBounds(15, 16, 76, 23);
 		btnZurck.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
@@ -54,63 +58,43 @@ public class EntleiherEnt extends JFrame {
 		btnZurck.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		JLabel lblEntleiherEntfernen = new JLabel("Entleiher entfernen");
+		lblEntleiherEntfernen.setBounds(337, 20, 134, 14);
 		lblEntleiherEntfernen.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		JLabel lblGebenSieDie = new JLabel("Geben sie die ID des Entleihers ein, welchen sie entfernen möchten");
+		lblGebenSieDie.setBounds(211, 159, 325, 14);
 		lblGebenSieDie.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		textField = new JTextField();
+		textField.setBounds(327, 210, 111, 20);
 		textField.setColumns(10);
 		
 		JButton btnLschen = new JButton("Löschen");
+		btnLschen.setBounds(339, 372, 99, 23);
+		btnLschen.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				LöschenOK ok= new LöschenOK();
+				ok.setVisible(true);
+			}
+		});
 		btnLschen.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		JLabel lblAchtungDerVerbundene = new JLabel("Achtung: Der verbundene Schüler/Standort/externer Ausleiher wird ebenfalls gelöscht!");
+		lblAchtungDerVerbundene.setBounds(161, 300, 499, 14);
 		lblAchtungDerVerbundene.setFont(new Font("Arial", Font.PLAIN, 11));
-		GroupLayout gl_contentPane = new GroupLayout(contentPane);
-		gl_contentPane.setHorizontalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addContainerGap()
-							.addComponent(btnZurck, GroupLayout.PREFERRED_SIZE, 76, GroupLayout.PREFERRED_SIZE)
-							.addGap(246)
-							.addComponent(lblEntleiherEntfernen, GroupLayout.PREFERRED_SIZE, 134, GroupLayout.PREFERRED_SIZE))
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(322)
-							.addComponent(textField, GroupLayout.PREFERRED_SIZE, 111, GroupLayout.PREFERRED_SIZE))
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(334)
-							.addComponent(btnLschen)))
-					.addContainerGap(115, Short.MAX_VALUE))
-				.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
-					.addContainerGap(156, Short.MAX_VALUE)
-					.addComponent(lblAchtungDerVerbundene, GroupLayout.PREFERRED_SIZE, 499, GroupLayout.PREFERRED_SIZE)
-					.addGap(119))
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(206)
-					.addComponent(lblGebenSieDie)
-					.addContainerGap(243, Short.MAX_VALUE))
-		);
-		gl_contentPane.setVerticalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addContainerGap()
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(btnZurck)
-						.addComponent(lblEntleiherEntfernen))
-					.addGap(120)
-					.addComponent(lblGebenSieDie)
-					.addGap(37)
-					.addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
-					.addComponent(lblAchtungDerVerbundene)
-					.addGap(58)
-					.addComponent(btnLschen)
-					.addContainerGap())
-		);
-		contentPane.setLayout(gl_contentPane);
+		contentPane.setLayout(null);
+		contentPane.add(btnZurck);
+		contentPane.add(lblEntleiherEntfernen);
+		contentPane.add(textField);
+		contentPane.add(btnLschen);
+		contentPane.add(lblAchtungDerVerbundene);
+		contentPane.add(lblGebenSieDie);
+		
+		JLabel lblBack = new JLabel("");
+		Image img0 = new ImageIcon(this.getClass().getResource("/Hintergrund 800p.png")).getImage();
+		lblBack.setIcon(new ImageIcon(img0));
+		lblBack.setBounds(0, 0, 784, 450);
+		contentPane.add(lblBack);
 	}
 
 }

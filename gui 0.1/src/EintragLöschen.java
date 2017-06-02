@@ -66,7 +66,7 @@ public class EintragLöschen extends JFrame {
 		btnNewButton.setBounds(176, 138, 131, 23);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Buch buch1 = new Buch();
+				BuchEnt buch1 = new BuchEnt();
 				buch1.setVisible(true);
 			}
 		});
@@ -76,7 +76,7 @@ public class EintragLöschen extends JFrame {
 		btnNewButton_1.setBounds(325, 138, 169, 23);
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Entleiher entl1= new Entleiher();
+				EntleiherEnt entl1= new EntleiherEnt();
 				entl1.setVisible(true);
 			}
 		});
@@ -87,7 +87,7 @@ public class EintragLöschen extends JFrame {
 		btnNewButton_5.setFont(new Font("Arial", Font.PLAIN, 11));
 		btnNewButton_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Auftrag auf1=new Auftrag();
+				AuftragEnt auf1=new AuftragEnt();
 				auf1.setVisible(true);
 			}
 		});
@@ -95,33 +95,23 @@ public class EintragLöschen extends JFrame {
 		JButton btnNewButton_6 = new JButton("Kurs");
 		btnNewButton_6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Kurs ku1=new Kurs();
+				KursEnt ku1=new KursEnt();
 				ku1.setVisible(true);
 			}
 		});
-		btnNewButton_6.setBounds(176, 220, 131, 23);
+		btnNewButton_6.setBounds(240, 220, 131, 23);
 		btnNewButton_6.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		JButton btnNewButton_7 = new JButton("Klasse");
 		btnNewButton_7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Klasse kla1= new Klasse();
+				KlasseEnt kla1= new KlasseEnt();
 				kla1.setVisible(true);
 				
 			}
 		});
-		btnNewButton_7.setBounds(325, 220, 169, 23);
+		btnNewButton_7.setBounds(423, 220, 169, 23);
 		btnNewButton_7.setFont(new Font("Arial", Font.PLAIN, 11));
-		
-		JButton btnNewButton_8 = new JButton("Standort");
-		btnNewButton_8.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				Standort st1=new Standort();
-				st1.setVisible(true);
-			}
-		});
-		btnNewButton_8.setBounds(512, 220, 111, 23);
-		btnNewButton_8.setFont(new Font("Arial", Font.PLAIN, 11));
 		contentPane.setLayout(null);
 		contentPane.add(btnZurck);
 		contentPane.add(lblFrWelcheDatenbank);
@@ -130,7 +120,6 @@ public class EintragLöschen extends JFrame {
 		contentPane.add(btnNewButton_7);
 		contentPane.add(btnNewButton_1);
 		contentPane.add(btnNewButton_5);
-		contentPane.add(btnNewButton_8);
 		
 		JLabel lblBack = new JLabel("");
 		lblBack.setBounds(0, 0, 784, 450);
