@@ -1,0 +1,19 @@
+package datenbank;
+
+import java.sql.SQLException;
+
+public class Main {
+
+	public static void main(String[] args) {
+		SQLite sql = new SQLite();
+		try {
+			sql.getConnection();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

@@ -1,32 +1,44 @@
 package datenbank;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class SQLite {
 	
 	private static Connection con;
 	private static boolean hasData = false;
 	
-	public void getConnection() throws ClassNotFoundException, SQLException {
+	public void test () throws ClassNotFoundException, SQLException {
+		if (con==null) {
+			getConnection();
+		}
+	}
+	
+	private void getConnection() throws ClassNotFoundException, SQLException {
 		Class.forName("org.sqlite.JDBC");
 		con = DriverManager.getConnection("jdbc:sqlite:SQLiteBibliothek.db");
+		System.out.println("Connection erfolgreich!");
 		initialise();
+		System.out.println("Initialisierung erfolgreich");
 	}
 
 	public void initialise() throws SQLException, ClassNotFoundException {
 		if (!hasData) {
 			hasData = true;
+			System.out.println("Data auf true gesetzt");
 			initialiseBuch();
+			System.out.println("Buch initialisiert");
 			initialiseEinzelperson();
+			System.out.println("Einzelperson initialisiert");
 			initialiseAusleihe();
+			System.out.println("Ausleihe initialisiert");
 			initialiseEntleiher();
-			initialiseUnterMittelstufenschüler();
+			System.out.println("Entleiher initialisiert");
+			initialiseUnterMittelstufenschueler();
+			System.out.println("UnterMittelstufenschüler initialisiert");
 			initialiseEntleiherstandort();
-			initialiseOberstufenschüler();
+			System.out.println("Entleiherstandort initialisiert");
+			initialiseOberstufenschueler();
+			System.out.println("Oberstufenschüler initialisiert");
 			
 			}
 		}
@@ -82,7 +94,7 @@ public class SQLite {
 			}
 	}
 	
-	private void initialiseUnterMittelstufenschüler() throws SQLException {
+	private void initialiseUnterMittelstufenschueler() throws SQLException {
 		Statement state = con.createStatement();
 		ResultSet res = state.executeQuery("SELECT name FROM sqlite_master WHERE type='table' AND name = 'untermittelstufenschueler';");
 		
@@ -104,9 +116,9 @@ public class SQLite {
 			}
 	}
 
-	private void initialiseOberstufenschüler() throws SQLException {
+	private void initialiseOberstufenschueler() throws SQLException {
 		Statement state = con.createStatement();
-		ResultSet res = state.executeQuery("SELECT name FROM sqlite_master WHERE type='table' AND name = 'oberstufenschüler';");
+		ResultSet res = state.executeQuery("SELECT name FROM sqlite_master WHERE type='table' AND name = 'oberstufenschueler';");
 		
 		if (!res.next()) {
 			//Tabelle nicht vorhanden --> Muss erstellt werden
