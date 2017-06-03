@@ -29,10 +29,10 @@ public class SQLite {
 			System.out.println("Buch initialisiert");
 			initialiseEntleiher();
 			System.out.println("Entleiher initialisiert");
-			initialiseAusleihe();
-			System.out.println("Ausleihe initialisiert");
 			initialiseEinzelperson();
 			System.out.println("Einzelperson initialisiert");
+			initialiseAusleihe();
+			System.out.println("Ausleihe initialisiert");
 			initialiseUnterMittelstufenschueler();
 			System.out.println("UnterMittelstufenschüler initialisiert");
 			initialiseEntleiherstandort();

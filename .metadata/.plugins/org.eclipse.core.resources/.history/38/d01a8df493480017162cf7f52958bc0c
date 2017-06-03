@@ -1,0 +1,19 @@
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class App {
+
+	public static void main(String[] args) {
+		
+		SQLite test = new SQLite();
+		try {
+			test.getConnection();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+}

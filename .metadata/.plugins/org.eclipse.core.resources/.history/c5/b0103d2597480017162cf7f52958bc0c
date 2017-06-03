@@ -27,12 +27,12 @@ public class SQLite {
 			System.out.println("Data auf true gesetzt");
 			initialiseBuch();
 			System.out.println("Buch initialisiert");
-			initialiseEntleiher();
-			System.out.println("Entleiher initialisiert");
-			initialiseAusleihe();
-			System.out.println("Ausleihe initialisiert");
 			initialiseEinzelperson();
 			System.out.println("Einzelperson initialisiert");
+			initialiseAusleihe();
+			System.out.println("Ausleihe initialisiert");
+			initialiseEntleiher();
+			System.out.println("Entleiher initialisiert");
 			initialiseUnterMittelstufenschueler();
 			System.out.println("UnterMittelstufenschüler initialisiert");
 			initialiseEntleiherstandort();
