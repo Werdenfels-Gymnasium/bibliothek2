@@ -1,0 +1,30 @@
+import java.io.*;
+import model.Storage;
+import view.*;
+
+public class main {
+	
+	static Storage storage = new Storage();
+
+	public static void main(String[] args) {
+		File file = new File ("erststart.dat");
+		if (file.isFile() && file.canWrite() && file.canRead()) {
+			System.out.println("Dateiauslesung wird initialisiert");
+		}
+		else {
+			System.out.println("Erststart wird ausgeführt! Dateien können verloren gehen!");
+			storage.erststart();
+			try {
+				file.createNewFile();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			System.out.println("Erstart abgespeichert!");
+		}
+		hauptfenster hauptfenster = new hauptfenster();
+	}
+	
+	public boolean speichern () {
+		return storage.speichern();
+	}
+}

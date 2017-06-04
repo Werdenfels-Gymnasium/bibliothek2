@@ -1,0 +1,100 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
+import javax.swing.GroupLayout;
+import javax.swing.ImageIcon;
+import javax.swing.GroupLayout.Alignment;
+import java.awt.Font;
+import java.awt.Image;
+
+import javax.swing.JTextField;
+import javax.swing.LayoutStyle.ComponentPlacement;
+
+public class AuftragEnt extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField textField;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					AuftragEnt frame = new AuftragEnt();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public AuftragEnt() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 800, 450);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		
+		JButton btnZurck = new JButton("Zurück");
+		btnZurck.setBounds(15, 15, 97, 23);
+		btnZurck.setFont(new Font("Arial", Font.PLAIN, 11));
+		btnZurck.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+			}
+		});
+		
+		JLabel lblNeuerEintragFr = new JLabel("Auftrag entfernen\r\n");
+		lblNeuerEintragFr.setBounds(335, 19, 139, 14);
+		lblNeuerEintragFr.setFont(new Font("Arial", Font.PLAIN, 11));
+		
+		JButton btnEintragErstellen = new JButton("Löschen");
+		btnEintragErstellen.setBounds(335, 372, 109, 23);
+		btnEintragErstellen.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				LöschenOK ok= new LöschenOK();
+				ok.setVisible(true);
+			}
+		});
+		btnEintragErstellen.setFont(new Font("Arial", Font.PLAIN, 11));
+		contentPane.setLayout(null);
+		contentPane.add(btnZurck);
+		contentPane.add(btnEintragErstellen);
+		contentPane.add(lblNeuerEintragFr);
+		Image img0 = new ImageIcon(this.getClass().getResource("/Hintergrund 800p.png")).getImage();
+		
+		JLabel lblGebenSieDie = new JLabel("Geben Sie die ID des Auftrags ein, welchen Sie löschen möchten\r\n");
+		lblGebenSieDie.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblGebenSieDie.setBounds(219, 119, 351, 14);
+		contentPane.add(lblGebenSieDie);
+		
+		JLabel lblAuftragid = new JLabel("AuftragID");
+		lblAuftragid.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblAuftragid.setBounds(243, 205, 81, 14);
+		contentPane.add(lblAuftragid);
+		
+		textField = new JTextField();
+		textField.setBounds(429, 202, 109, 20);
+		contentPane.add(textField);
+		textField.setColumns(10);
+		
+		JLabel lblBack = new JLabel("");
+		lblBack.setBounds(0, 0, 784, 450);
+		lblBack.setIcon(new ImageIcon(img0));
+		contentPane.add(lblBack);
+	}
+}
