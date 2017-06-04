@@ -1,0 +1,12 @@
+package model;
+
+public class Klasse {
+	int anzahl;
+	int jahrgangsstufe;
+	char buchstabe;
+	public Klasse (int anzahl, int jahrgangsstufe, char buchstabe) {
+		this.anzahl = anzahl;
+		this.jahrgangsstufe = jahrgangsstufe;
+		this.buchstabe = buchstabe;
+	}
+}

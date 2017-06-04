@@ -6,4 +6,7 @@
 <fullyQualifiedTypeName name="java.sql.Connection"/>
 <fullyQualifiedTypeName name="java.sql.Statement"/>
 <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="controller.DateiErzeugen"/>
+<fullyQualifiedTypeName name="model.UnterMittelStufe"/>
 </qualifiedTypeNameHistroy>

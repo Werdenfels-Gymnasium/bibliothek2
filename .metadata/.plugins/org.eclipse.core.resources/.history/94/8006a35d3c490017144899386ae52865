@@ -1,0 +1,19 @@
+package model;
+
+public class Buch {
+	int iSBSN;
+	String titel;
+	String kurztitel;
+	int jahrgangsstufe;
+	String fach;
+	String zweig;
+
+	public Buch (int iSBSN, String titel, String kurztitel, int jahrgangsstufe, String fach, String zweig) {
+		this.iSBSN = iSBN;
+		this.titel = titel;
+		this.kurztitel = kurztitel;
+		this.jahrgangsstufe = jahrgangsstufe;
+		this.fach = fach;
+		this.zweig = zweig;
+	}
+}
