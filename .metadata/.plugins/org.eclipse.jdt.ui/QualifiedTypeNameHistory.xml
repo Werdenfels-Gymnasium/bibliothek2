@@ -10,5 +10,8 @@
 <fullyQualifiedTypeName name="controller.DateiErzeugen"/>
 <fullyQualifiedTypeName name="model.UnterMittelStufe"/>
 <fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="model.Auftrag"/>
+<fullyQualifiedTypeName name="controller.XMLSerializer"/>
 <fullyQualifiedTypeName name="model.Storage"/>
+<fullyQualifiedTypeName name="model.Buch"/>
 </qualifiedTypeNameHistroy>

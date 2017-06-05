@@ -4,12 +4,11 @@ public class Auftrag {
 	
 	Entleiher entleiher;
 	Buch buch;
-	int anzahl;
-	int id = 0;
+	String rueckgabedatum;
 	
-	public Auftrag (Buch buch, Entleiher entleiher, int anzahl) {
+	public Auftrag (Buch buch, Entleiher entleiher, String rueckgabedatum) {
 		this.buch = buch;
 		this.entleiher = entleiher;
-		this.anzahl = anzahl;
+		this.rueckgabedatum = rueckgabedatum;
 	}
 }

@@ -1,0 +1,15 @@
+package model;
+
+public class Auftrag {
+	
+	Entleiher entleiher;
+	Buch buch;
+	int anzahl;
+	int id = 0;
+	
+	public Auftrag (Buch buch, Entleiher entleiher, String rueckgabedatum) {
+		this.buch = buch;
+		this.entleiher = entleiher;
+		this.anzahl = rueckgabedatum;
+	}
+}

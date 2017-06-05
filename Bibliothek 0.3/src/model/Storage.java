@@ -4,7 +4,7 @@ import java.io.*;
 
 public class Storage {
 	//Alles in Listen abspeichern
-	LinkedList<Auftrag> auftraege;
+	public LinkedList<Auftrag> auftraege;
 	LinkedList<Buch> buecher;
 	//Arten von Entleihern
 	LinkedList<UnterMittelSchueler> unterMittelSchueler;

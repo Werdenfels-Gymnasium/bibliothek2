@@ -1,16 +1,18 @@
 package model;
 import java.util.LinkedList;
 import java.io.*;
+import controller.*;
 
-public class Storage {
+public class Storage {	
+	
 	//Alles in Listen abspeichern
-	LinkedList<Auftrag> auftraege;
-	LinkedList<Buch> buecher;
+	public LinkedList<Auftrag> auftraege;
+	public LinkedList<Buch> buecher;
 	//Arten von Entleihern
-	LinkedList<UnterMittelSchueler> unterMittelSchueler;
-	LinkedList<Lehrer> lehrer;
+	public LinkedList<UnterMittelSchueler> unterMittelSchueler;
+	public LinkedList<Lehrer> lehrer;
 	//Klassen und Kurse
-	LinkedList<UnterMittelStufe> unterMittelStufe;
+	public LinkedList<UnterMittelStufe> unterMittelStufe;
 	
 	public Storage () {
 	}
@@ -25,35 +27,43 @@ public class Storage {
 		lehrer = new LinkedList<Lehrer>();
 		System.out.println("Lehrerliste erstellt!");
 		unterMittelStufe = new LinkedList<UnterMittelStufe>();
-		System.out.println("Klassenliste erstellt!");
-		
+		System.out.println("Klassenliste erstellt!");		
+	}
+
+	
+	//Methode für die Liste Auftraege
+	
+	public void addAuftrag (Buch buch, Entleiher entleiher, String rueckgabedatum) {
+		auftraege.add(new Auftrag (buch, entleiher, rueckgabedatum));
 	}
 	
-	public boolean speichern () {
-		if (auftraegeSpeichern()) {
-			System.out.println("Auftraege erfolgreich abgespeichert!");
-			return true;
+	public boolean deleteAuftragEntleiher (Entleiher entleiher, Buch buch) {
+		int i = 0;
+		while (i <= auftraege.size()) {
+			if (auftraege.get(i).buch == buch && auftraege.get(i).entleiher == entleiher) {
+				auftraege.remove(i);
+				System.out.println("Element erfolgreich gelöscht!");
+				return true;
+			}
+			else {
+				i++;
+			}
 		}
+		System.out.println("Element nicht gefunden!");
 		return false;
 	}
-	public boolean auftraegeSpeichern () {
-		
-		try {
-			FileOutputStream auftraegeSpeicher = new FileOutputStream ("auftraege");
-			System.out.println("FileOutputStream erstellt");
-			ObjectOutputStream o = new ObjectOutputStream (auftraegeSpeicher);
-			System.out.println("ObjectOutputStream erstellt");
-			o.writeObject(auftraege);
-			System.out.println("Listenreferenz abgespeichert");
-			for (int i = 0; i < auftraege.size(); i++) {
-				o.writeObject(auftraege.get(i));
-				System.out.println("Listenelement abgespeichert, Schritt "+i+" von"+auftraege.size());
+	
+	public String rueckgabedatum (Entleiher entleiher, Buch buch) {
+		int i = 0;
+		while (i <= auftraege.size()) {
+			if (auftraege.get(i).buch == buch && auftraege.get(i).entleiher == entleiher) {
+				return auftraege.get(i).rueckgabedatum;
 			}
-			auftraegeSpeicher.close();
-			
-		} catch (IOException e) {
-			e.printStackTrace();
+			else {
+				i++;
+			}
 		}
-		return true;
+		return "Auftrag nicht gefunden";
 	}
+
 }

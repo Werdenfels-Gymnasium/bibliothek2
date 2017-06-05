@@ -1,0 +1,32 @@
+package model;
+import java.util.LinkedList;
+import java.io.*;
+import controller.*;
+
+public class Storage {	
+	
+	//Alles in Listen abspeichern
+	public LinkedList<Auftrag> auftraege;
+	public LinkedList<Buch> buecher;
+	//Arten von Entleihern
+	public LinkedList<UnterMittelSchueler> unterMittelSchueler;
+	public LinkedList<Lehrer> lehrer;
+	//Klassen und Kurse
+	public LinkedList<UnterMittelStufe> unterMittelStufe;
+	
+	public Storage () {
+	}
+	
+	public void erststart () {
+		auftraege = new LinkedList<Auftrag>();
+		System.out.println("Auftragsliste erstellt!");
+		buecher = new LinkedList<Buch>();
+		System.out.println("Buchliste erstellt!");
+		unterMittelSchueler = new LinkedList<UnterMittelSchueler>();
+		System.out.println("Schuelerliste (Unter- & Mittelstufe) erstellt!");
+		lehrer = new LinkedList<Lehrer>();
+		System.out.println("Lehrerliste erstellt!");
+		unterMittelStufe = new LinkedList<UnterMittelStufe>();
+		System.out.println("Klassenliste erstellt!");		
+	}
+}

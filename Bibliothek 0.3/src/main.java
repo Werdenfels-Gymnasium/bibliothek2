@@ -1,4 +1,6 @@
 import java.io.*;
+
+import controller.*;
 import model.Storage;
 
 public class main {
@@ -23,6 +25,7 @@ public class main {
 	}
 	
 	public boolean speichern () {
-		return storage.speichern();
+		XMLDeserializer deserializer = new XMLDeserializer();
+		deserializer.auftraege(storage.auftraege);
 	}
 }

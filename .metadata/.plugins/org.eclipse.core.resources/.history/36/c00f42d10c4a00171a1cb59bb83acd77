@@ -1,0 +1,12 @@
+import model.*;
+
+public class test {
+
+	public static void main(String[] args) {
+		main main = new main();
+		Storage storage = main.storage;
+		storage.addAuftrag(new Buch (123, "Haha", "Ha", 9, Englisch, NuT), new Einzelperson ("Wurscht", "Hans", "Ronetsbachstr.", 08821), Anzahl, rueckgabedatum);
+		main.speichern();
+	}
+
+}
