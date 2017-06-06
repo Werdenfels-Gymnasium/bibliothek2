@@ -1,0 +1,40 @@
+import java.io.*;
+
+import controller.*;
+import model.Storage;
+
+public class main {
+	
+	static Storage storage = new Storage();
+
+	public static void main(String[] args) {
+		File file = new File ("erststart.dat");
+		if (file.isFile() && file.canWrite() && file.canRead()) {
+			System.out.println("Dateiauslesung wird initialisiert");
+			laden();
+		}
+		else {
+			System.out.println("Erststart wird ausgeführt! Dateien können verloren gehen!");
+			storage.erststart();
+			try {
+				file.createNewFile();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			System.out.println("Erstart abgespeichert!");
+			speichern();
+		}
+	}
+	
+	public static boolean speichern () {
+		XMLSerializer serializer = new XMLSerializer();
+		serializer.auftraege(storage.auftraege);
+		return true;
+	}
+	
+	public static boolean laden () {
+		XMLDeserializer deserializer = new XMLDeserializer();
+		storage.auftraege = deserializer.auftraege();
+		return true;
+	}
+}

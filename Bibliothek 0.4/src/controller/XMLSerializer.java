@@ -4,7 +4,6 @@ import java.beans.XMLEncoder;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.util.LinkedList;
 import model.*;
 
 public class XMLSerializer {
@@ -12,14 +11,14 @@ public class XMLSerializer {
 		
 	}
 	
-	public boolean auftraege (LinkedList<Auftrag> list) {
+	public boolean speichern (Storage storage) {
 		try {
-			File file = new File ("auftraege.xml");
+			File file = new File ("storage.xml");
 			XMLEncoder encoder = new XMLEncoder (new FileOutputStream(file));
-			encoder.writeObject(list);
+			encoder.writeObject(storage);
 			encoder.flush();
 			encoder.close();
-			System.out.println("Auftraege erfolgreich zwischen gespeichert");
+			System.out.println("Storage erfolgreich gespeichert");
 			return true;
 		}
 		catch (FileNotFoundException e) {

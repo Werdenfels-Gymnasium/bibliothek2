@@ -10,10 +10,14 @@ public class main {
 	public static void main(String[] args) {
 		File file = new File ("erststart.dat");
 		if (file.isFile() && file.canWrite() && file.canRead()) {
+			//Normaler Start!
 			System.out.println("Dateiauslesung wird initialisiert");
 			laden();
 		}
 		else {
+			
+			//Erststart!
+			
 			System.out.println("Erststart wird ausgeführt! Dateien können verloren gehen!");
 			storage.erststart();
 			try {
@@ -28,13 +32,13 @@ public class main {
 	
 	public static boolean speichern () {
 		XMLSerializer serializer = new XMLSerializer();
-		serializer.auftraege(storage.auftraege);
+		serializer.speichern(storage);
 		return true;
 	}
 	
 	public static boolean laden () {
 		XMLDeserializer deserializer = new XMLDeserializer();
-		storage.auftraege = deserializer.auftraege();
+		storage = deserializer.laden();
 		return true;
 	}
 }

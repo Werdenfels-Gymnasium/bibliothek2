@@ -6,12 +6,16 @@
 <fullyQualifiedTypeName name="java.sql.Connection"/>
 <fullyQualifiedTypeName name="java.sql.Statement"/>
 <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
-<fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="controller.DateiErzeugen"/>
-<fullyQualifiedTypeName name="model.UnterMittelStufe"/>
-<fullyQualifiedTypeName name="java.awt.List"/>
 <fullyQualifiedTypeName name="model.Auftrag"/>
 <fullyQualifiedTypeName name="controller.XMLSerializer"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="org.apache.poi.xssf.usermodel.XSSFWorkbook"/>
+<fullyQualifiedTypeName name="org.apache.poi.xssf.usermodel.XSSFSheet"/>
 <fullyQualifiedTypeName name="model.Storage"/>
+<fullyQualifiedTypeName name="model.Lehrer"/>
+<fullyQualifiedTypeName name="model.UnterMittelStufe"/>
 <fullyQualifiedTypeName name="model.Buch"/>
 </qualifiedTypeNameHistroy>

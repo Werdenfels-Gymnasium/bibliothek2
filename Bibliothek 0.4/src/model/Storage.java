@@ -33,8 +33,10 @@ public class Storage {
 	
 	//Methode für die Liste Auftraege
 	
-	public void addAuftrag (Buch buch, Entleiher entleiher, String rueckgabedatum) {
-		auftraege.add(new Auftrag (buch, entleiher, rueckgabedatum));
+	public Auftrag addAuftrag (Buch buch, Entleiher entleiher, String rueckgabedatum) {
+		Auftrag neuerAuftrag = new Auftrag (buch, entleiher, rueckgabedatum);
+		auftraege.add(neuerAuftrag);
+		return neuerAuftrag;
 	}
 	
 	public boolean deleteAuftragEntleiher (Entleiher entleiher, Buch buch) {
@@ -66,4 +68,19 @@ public class Storage {
 		return "Auftrag nicht gefunden";
 	}
 
+	//Methode für die Liste Klasse
+	public UnterMittelStufe addKlasse (int jahrgangsstufe, int anzahl, char klasse, Lehrer lehrer) {
+		UnterMittelStufe neueKlasse	= new UnterMittelStufe (jahrgangsstufe, anzahl, klasse, lehrer);
+		unterMittelStufe.add(neueKlasse);
+		System.out.println("Klasse "+jahrgangsstufe+klasse+" eingetragen");
+		return neueKlasse;
+	}
+
+	//Methoden für die Liste UnterMittelSchueler
+	public UnterMittelSchueler addUnterMittelSchueler (String vorname, String nachname, String gebdat, UnterMittelStufe klasse, String zweig, String religion) {
+		UnterMittelSchueler neuerSchueler = new UnterMittelSchueler (vorname, nachname, gebdat, klasse, zweig, religion);
+		unterMittelSchueler.add(neuerSchueler);
+		System.out.println("Neuer Schueler: "+vorname+" "+nachname+" eingetragen");
+		return neuerSchueler;
+	}
 }
