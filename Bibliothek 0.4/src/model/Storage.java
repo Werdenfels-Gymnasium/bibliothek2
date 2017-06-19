@@ -96,4 +96,30 @@ public class Storage {
 		}
 		return null;
 	}
+	
+	public Auftrag deleteAuftragID (int id) {
+		for (int i = 0; i <= auftraege.size(); i++) {
+			if (id == auftraege.get(i).id) {
+				Auftrag auftrag = auftraege.get(i);
+				auftraege.remove(i);
+				return auftrag;
+			}
+		}
+		return null;
+	}
+	
+	public Einzelperson deleteEinzelpersonName (String vorname, String nachname) {
+		for (int i = 0; i <= einzelpersonen.size(); i++) {
+			if (vorname.compareToIgnoreCase(einzelpersonen.get(i).vorname) == 0 && nachname.compareToIgnoreCase(einzelpersonen.get(i).nachname) == 0)  {
+				Einzelperson einzelperson = einzelpersonen.get(i);
+				auftraege.remove(i);
+				return einzelperson;
+			}
+		}
+		return null;
+	}
+	
+	
+	
+	
 }
