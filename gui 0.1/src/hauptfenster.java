@@ -77,6 +77,12 @@ public class hauptfenster {
 		lblAnfang.setFont(new Font("Arial", Font.PLAIN, 11));
 		lblAnfang.setBounds(294, 11, 221, 37);
 		frame.getContentPane().setLayout(null);
+		
+		JLabel lblIcon = new JLabel("");
+		Image img1 = new ImageIcon(this.getClass().getResource("/s.png")).getImage();
+		lblIcon.setIcon(new ImageIcon(img1));
+		lblIcon.setBounds(309, 170, 170, 180);
+		frame.getContentPane().add(lblIcon);
 		frame.getContentPane().add(btnZuDenDatenbanken);
 		frame.getContentPane().add(btnVerleih);
 		frame.getContentPane().add(lblAnfang);
@@ -87,5 +93,4 @@ public class hauptfenster {
 		Image img0 = new ImageIcon(this.getClass().getResource("/Hintergrund 800p.png")).getImage();
 		lblBack.setIcon(new ImageIcon(img0));
 	}
-
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="E:\Schule\Informatik\bibliothek2\Bibliothek 0.4" key="org.eclipse.jdt.ui.lastextjar"/>
+	<item value="E:\github\bibliothek2\Bibliothek 0.4" key="org.eclipse.jdt.ui.lastextjar"/>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item value="2" key="layout"/>
 		<item value="true" key="group_libraries"/>
