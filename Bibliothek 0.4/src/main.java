@@ -25,6 +25,13 @@ public class main {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
+			File xml = new File ("storage.xml");
+			try {
+				xml.createNewFile();
+				System.out.println("Storage/Speicher erstellt");
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 			System.out.println("Erstart abgespeichert!");
 			speichern();
 		}

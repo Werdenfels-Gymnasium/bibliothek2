@@ -8,5 +8,7 @@
 	<classpathentry kind="lib" path="E:/Schule/Informatik/bibliothek2/poi-bin-3.16-20170419/poi-3.16/poi-ooxml-3.16.jar"/>
 	<classpathentry kind="lib" path="E:/Schule/Informatik/bibliothek2/poi-bin-3.16-20170419/poi-3.16/poi-ooxml-schemas-3.16.jar"/>
 	<classpathentry kind="lib" path="E:/Schule/Informatik/bibliothek2/poi-bin-3.16-20170419/poi-3.16/poi-scratchpad-3.16.jar"/>
+	<classpathentry kind="lib" path="E:/Schule/Informatik/bibliothek2/Bibliothek 0.4/miglayout15-swing.jar"/>
+	<classpathentry kind="lib" path="E:/Schule/Informatik/bibliothek2/Bibliothek 0.4/jgoodies-forms-1.8.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

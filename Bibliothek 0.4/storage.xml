@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_131" class="java.beans.XMLDecoder">
+ <object class="model.Storage" id="Storage0">
+  <void class="model.Storage" method="getField">
+   <string>auftraege</string>
+   <void method="set">
+    <object idref="Storage0"/>
+    <object class="java.util.LinkedList"/>
+   </void>
+  </void>
+  <void class="model.Storage" method="getField">
+   <string>buecher</string>
+   <void method="set">
+    <object idref="Storage0"/>
+    <object class="java.util.LinkedList"/>
+   </void>
+  </void>
+  <void class="model.Storage" method="getField">
+   <string>unterMittelSchueler</string>
+   <void method="set">
+    <object idref="Storage0"/>
+    <object class="java.util.LinkedList"/>
+   </void>
+  </void>
+  <void class="model.Storage" method="getField">
+   <string>lehrer</string>
+   <void method="set">
+    <object idref="Storage0"/>
+    <object class="java.util.LinkedList"/>
+   </void>
+  </void>
+  <void class="model.Storage" method="getField">
+   <string>unterMittelStufe</string>
+   <void method="set">
+    <object idref="Storage0"/>
+    <object class="java.util.LinkedList"/>
+   </void>
+  </void>
+  <void class="model.Storage" method="getField">
+   <string>einzelpersonen</string>
+   <void method="set">
+    <object idref="Storage0"/>
+    <object class="java.util.LinkedList"/>
+   </void>
+  </void>
+ </object>
+</java>

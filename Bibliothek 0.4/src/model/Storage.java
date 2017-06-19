@@ -29,7 +29,7 @@ public class Storage {
 		System.out.println("Lehrerliste erstellt!");
 		unterMittelStufe = new LinkedList<UnterMittelStufe>();
 		System.out.println("Klassenliste erstellt!");
-		einzelpersonen = new LinkedList<Einzelperson>;
+		einzelpersonen = new LinkedList<Einzelperson>();
 	}
 
 	
