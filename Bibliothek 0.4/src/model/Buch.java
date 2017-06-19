@@ -1,7 +1,7 @@
 package model;
 
 public class Buch {
-	int iSBSN;
+	int iSBN;
 	String titel;
 	String kurztitel;
 	int jahrgangsstufe;
@@ -9,7 +9,7 @@ public class Buch {
 	int zweig;
 
 	public Buch (int iSBN, String titel, String kurztitel, int jahrgangsstufe, String fach, String zweig) {
-		this.iSBSN = iSBN;
+		this.iSBN = iSBN;
 		this.titel = titel;
 		this.kurztitel = kurztitel;
 		this.jahrgangsstufe = jahrgangsstufe;

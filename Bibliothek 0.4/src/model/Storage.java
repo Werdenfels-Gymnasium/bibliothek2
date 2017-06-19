@@ -13,6 +13,7 @@ public class Storage {
 	public LinkedList<Lehrer> lehrer;
 	//Klassen und Kurse
 	public LinkedList<UnterMittelStufe> unterMittelStufe;
+	public LinkedList<Einzelperson> einzelpersonen;
 	
 	public Storage () {
 	}
@@ -27,7 +28,8 @@ public class Storage {
 		lehrer = new LinkedList<Lehrer>();
 		System.out.println("Lehrerliste erstellt!");
 		unterMittelStufe = new LinkedList<UnterMittelStufe>();
-		System.out.println("Klassenliste erstellt!");		
+		System.out.println("Klassenliste erstellt!");
+		einzelpersonen = new LinkedList<Einzelperson>;
 	}
 
 	
@@ -82,5 +84,16 @@ public class Storage {
 		unterMittelSchueler.add(neuerSchueler);
 		System.out.println("Neuer Schueler: "+vorname+" "+nachname+" eingetragen");
 		return neuerSchueler;
+	}
+	
+	public Buch deleteBuchISBN (int iSBN) {
+		for (int i = 0; i <= buecher.size(); i++) {
+			if (iSBN == buecher.get(i).iSBN) {
+				Buch buch = buecher.get(i);
+				buecher.remove(i);
+				return buch;
+			}
+		}
+		return null;
 	}
 }
