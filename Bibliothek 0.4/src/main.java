@@ -2,6 +2,7 @@ import java.io.*;
 
 import controller.*;
 import model.Storage;
+import view.hauptfenster;
 
 public class main {
 	
@@ -35,6 +36,8 @@ public class main {
 			System.out.println("Erstart abgespeichert!");
 			speichern();
 		}
+		hauptfenster window = new hauptfenster(storage);
+		window.frame.setVisible(true);
 	}
 	
 	public static boolean speichern () {

@@ -8,6 +8,9 @@ import java.awt.GridLayout;
 import java.awt.Image;
 
 import javax.swing.JTextField;
+
+import model.Storage;
+
 import java.awt.BorderLayout;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -19,36 +22,27 @@ import javax.swing.GroupLayout.Alignment;
 import java.awt.Font;
 
 public class hauptfenster {
+	
+	Storage storage;
 
-	private JFrame frame;
+	public JFrame frame;
 
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					hauptfenster window = new hauptfenster();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
 	/**
 	 * Create the application.
 	 */
-	public hauptfenster() {
+	public hauptfenster(Storage storage) {
+		this.storage = storage;
 		initialize();
 	}
 
 	/**
 	 * Initialize the contents of the frame.
 	 */
-	private void initialize() {
+	public void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 800, 450);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -86,8 +80,7 @@ public class hauptfenster {
 		JLabel lblBack = new JLabel("");
 		lblBack.setBounds(0, 0, 784, 450);
 		frame.getContentPane().add(lblBack);
-		Image img0 = new ImageIcon(this.getClass().getResource("/Hintergrund 800p.png")).getImage();
-		lblBack.setIcon(new ImageIcon(img0));
+	
 	}
 
 }

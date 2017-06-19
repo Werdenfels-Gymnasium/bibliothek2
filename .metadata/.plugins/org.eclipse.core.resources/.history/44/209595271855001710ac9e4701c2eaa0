@@ -1,0 +1,92 @@
+package view;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+import java.awt.Image;
+
+import javax.swing.JTextField;
+import java.awt.BorderLayout;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.GroupLayout;
+import javax.swing.ImageIcon;
+import javax.swing.GroupLayout.Alignment;
+import java.awt.Font;
+
+public class hauptfenster {
+
+	public JFrame frame;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					hauptfenster window = new hauptfenster();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public hauptfenster() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	public void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 800, 450);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		JButton btnVerleih = new JButton("Zum Bücherverleih");
+		btnVerleih.setFont(new Font("Arial", Font.PLAIN, 11));
+		btnVerleih.setBounds(546, 247, 166, 25);
+		btnVerleih.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Ausleihfenster ausl1=new Ausleihfenster();
+				frame.dispose();
+				ausl1.setVisible(true);
+			}
+		});
+		
+		JButton btnZuDenDatenbanken = new JButton("Zu den Datenbanken");
+		btnZuDenDatenbanken.setFont(new Font("Arial", Font.PLAIN, 11));
+		btnZuDenDatenbanken.setBounds(56, 247, 184, 25);
+		btnZuDenDatenbanken.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Datenbank bank1=new Datenbank();
+				frame.dispose();
+				bank1.setVisible(true);
+			}
+		});
+		
+		JLabel lblAnfang = new JLabel("Wilkommen zur Bibliothek-Software v0.1");
+		lblAnfang.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblAnfang.setBounds(294, 11, 221, 37);
+		frame.getContentPane().setLayout(null);
+		frame.getContentPane().add(btnZuDenDatenbanken);
+		frame.getContentPane().add(btnVerleih);
+		frame.getContentPane().add(lblAnfang);
+		
+		JLabel lblBack = new JLabel("");
+		lblBack.setBounds(0, 0, 784, 450);
+		frame.getContentPane().add(lblBack);
+	
+	}
+
+}
