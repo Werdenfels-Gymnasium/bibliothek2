@@ -9,10 +9,10 @@ public class Storage {
 	public LinkedList<Auftrag> auftraege;
 	public LinkedList<Buch> buecher;
 	//Arten von Entleihern
-	public LinkedList<UnterMittelSchueler> unterMittelSchueler;
-	public LinkedList<Lehrer> lehrer;
+	public LinkedList<UnterMittelSchueler> unterMittelSchuelerListe;
+	public LinkedList<Lehrer> lehrerListe;
 	//Klassen und Kurse
-	public LinkedList<UnterMittelStufe> unterMittelStufe;
+	public LinkedList<UnterMittelStufe> unterMittelStufeListe;
 	public LinkedList<Einzelperson> einzelpersonen;
 	
 	public Storage () {
@@ -23,11 +23,11 @@ public class Storage {
 		System.out.println("Auftragsliste erstellt!");
 		buecher = new LinkedList<Buch>();
 		System.out.println("Buchliste erstellt!");
-		unterMittelSchueler = new LinkedList<UnterMittelSchueler>();
+		unterMittelSchuelerListe = new LinkedList<UnterMittelSchueler>();
 		System.out.println("Schuelerliste (Unter- & Mittelstufe) erstellt!");
-		lehrer = new LinkedList<Lehrer>();
+		lehrerListe = new LinkedList<Lehrer>();
 		System.out.println("Lehrerliste erstellt!");
-		unterMittelStufe = new LinkedList<UnterMittelStufe>();
+		unterMittelStufeListe = new LinkedList<UnterMittelStufe>();
 		System.out.println("Klassenliste erstellt!");
 		einzelpersonen = new LinkedList<Einzelperson>();
 	}
@@ -81,7 +81,7 @@ public class Storage {
 	//Methoden für die Liste UnterMittelSchueler
 	public UnterMittelSchueler addUnterMittelSchueler (String vorname, String nachname, String gebdat, UnterMittelStufe klasse, String zweig, String religion) {
 		UnterMittelSchueler neuerSchueler = new UnterMittelSchueler (vorname, nachname, gebdat, klasse, zweig, religion);
-		unterMittelSchueler.add(neuerSchueler);
+		unterMittelSchuelerListe.add(neuerSchueler);
 		System.out.println("Neuer Schueler: "+vorname+" "+nachname+" eingetragen");
 		return neuerSchueler;
 	}
@@ -118,6 +118,31 @@ public class Storage {
 		}
 		return null;
 	}
+	
+	public Lehrer deleteLehrerName (String vorname, String nachname) {
+		for (int i = 0; i <= lehrerListe.size(); i++) {
+			if (vorname.compareToIgnoreCase(lehrerListe.get(i).vorname) == 0 && nachname.compareToIgnoreCase(lehrerListe.get(i).nachname) == 0)  {
+				Lehrer lehrer = lehrerListe.get(i);
+				lehrerListe.remove(i);
+				return lehrer;
+			}
+		}
+		return null;
+	}
+		
+			
+	public UnterMittelStufe deleteUnterMittelStufeKlasse (int jahrgangsstufe, char klasse ) {
+		for (int i = 0; i <= unterMittelStufeListe.size(); i++) {
+			if (jahrgangsstufe ==)  && nachname.compareToIgnoreCase(unterMittelStufeListe.get(i).nachname) == 0)  {
+				UnterMittelSchueler unterMittelSchueler = unterMittelSchuelerListe.get(i);
+				auftraege.remove(i);
+				return unterMittelSchueler;
+			}
+		}
+		return null;
+	}
+			
+					
 	
 	
 	
