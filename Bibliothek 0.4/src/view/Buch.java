@@ -6,6 +6,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import model.Storage;
+
 import javax.swing.GroupLayout;
 import javax.swing.ImageIcon;
 import javax.swing.GroupLayout.Alignment;
@@ -27,32 +30,20 @@ public class Buch extends JFrame {
 	private JTextField textFieldJgst;
 	private JTextField textFieldISBN;
 	private JTextField textFieldZweig;
+	Storage storage;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Buch frame = new Buch();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	
 
 	/**
 	 * Create the frame.
 	 */
-	public Buch() {
+	public Buch(Storage storage) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 450);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
+		this.storage=storage;
 		
 		JLabel lblNeuerEintragFr = new JLabel("Neuer Eintrag für Buch");
 		lblNeuerEintragFr.setBounds(331, 20, 136, 14);

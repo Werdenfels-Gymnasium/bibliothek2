@@ -1,5 +1,9 @@
 package model;
 import java.util.LinkedList;
+
+import javax.swing.JTable;
+import javax.swing.table.TableColumn;
+
 import java.io.*;
 import controller.*;
 
@@ -140,6 +144,21 @@ public class Storage {
 			}
 		}
 		return null;
+	}
+	
+	public JTable einzelpersonenAusgeben () {
+		String [] [] rowData = new String [4] [einzelpersonen.size()];
+		for (int i = 0; i < einzelpersonen.size(); i++) {
+			Einzelperson einzelperson = einzelpersonen.get(i);
+			rowData [0] [i] = einzelperson.vorname;
+			rowData [1] [i] = einzelperson.nachname;
+			rowData [2] [i] = einzelperson.adresse;
+			rowData [3] [i] = einzelperson.telefonnummer;
+		}
+		String [] beschriftung = {
+				"Vorname", "Nachname", "Adresse", "Telefonnummer"
+		};
+		return new JTable (rowData, beschriftung);
 	}
 			
 					

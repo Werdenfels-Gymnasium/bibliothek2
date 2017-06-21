@@ -16,27 +16,6 @@
    </void>
   </void>
   <void class="model.Storage" method="getField">
-   <string>unterMittelSchueler</string>
-   <void method="set">
-    <object idref="Storage0"/>
-    <object class="java.util.LinkedList"/>
-   </void>
-  </void>
-  <void class="model.Storage" method="getField">
-   <string>lehrer</string>
-   <void method="set">
-    <object idref="Storage0"/>
-    <object class="java.util.LinkedList"/>
-   </void>
-  </void>
-  <void class="model.Storage" method="getField">
-   <string>unterMittelStufe</string>
-   <void method="set">
-    <object idref="Storage0"/>
-    <object class="java.util.LinkedList"/>
-   </void>
-  </void>
-  <void class="model.Storage" method="getField">
    <string>einzelpersonen</string>
    <void method="set">
     <object idref="Storage0"/>

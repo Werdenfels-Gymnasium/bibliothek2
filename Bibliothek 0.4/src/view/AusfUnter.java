@@ -7,6 +7,9 @@ import java.awt.Image;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import model.Storage;
+
 import javax.swing.GroupLayout;
 import javax.swing.ImageIcon;
 import javax.swing.GroupLayout.Alignment;
@@ -22,6 +25,7 @@ import java.awt.Font;
 public class AusfUnter extends JFrame {
 
 	private JPanel contentPane;
+	Storage storage;
 	private JTextField textFieldLeh;
 	private JTextField textFieldLat;
 	private JTextField textFieldFra;
@@ -30,25 +34,10 @@ public class AusfUnter extends JFrame {
 	private JTextField textFieldEth;
 
 	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					AusfUnter frame = new AusfUnter();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
 	 * Create the frame.
 	 */
-	public AusfUnter() {
+	public AusfUnter(Storage storage) {
+		this.storage=storage;
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 450);
 		contentPane = new JPanel();
@@ -126,9 +115,9 @@ public class AusfUnter extends JFrame {
 		btnZurck.setBounds(15, 16, 96, 23);
 		btnZurck.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				contentPane.setVisible(false);
 				dispose();
-				Ausleihfenster.main(null);
+				Ausleihfenster ausl1 =new Ausleihfenster(storage);
+				ausl1.setVisible(true);
 			}
 		});
 		String[] Klassen= {"10a","10b","10c"};

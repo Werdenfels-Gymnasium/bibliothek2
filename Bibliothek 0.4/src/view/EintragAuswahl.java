@@ -6,6 +6,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import model.Storage;
+
 import javax.swing.GroupLayout;
 import javax.swing.ImageIcon;
 import javax.swing.GroupLayout.Alignment;
@@ -22,32 +25,19 @@ import java.awt.Image;
 public class EintragAuswahl extends JFrame {
 
 	private JPanel contentPane;
+	Storage storage;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					EintragAuswahl frame = new EintragAuswahl();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
 	/**
 	 * Create the frame.
 	 */
-	public EintragAuswahl() {
+	public EintragAuswahl(Storage storage) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 450);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
+		this.storage=storage;
 		
 		JLabel lblFrWelcheDatenbank = new JLabel("Für welche Datenbank möchten sie einen neuen Eintrag erstellen?");
 		lblFrWelcheDatenbank.setBounds(226, 18, 318, 14);
@@ -68,7 +58,7 @@ public class EintragAuswahl extends JFrame {
 		btnNewButton.setBounds(176, 138, 131, 23);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Buch buch1 = new Buch();
+				Buch buch1 = new Buch(storage);
 				buch1.setVisible(true);
 			}
 		});
@@ -78,7 +68,7 @@ public class EintragAuswahl extends JFrame {
 		btnNewButton_1.setBounds(325, 138, 169, 23);
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Entleiher entl1= new Entleiher();
+				Entleiher entl1= new Entleiher(storage);
 				entl1.setVisible(true);
 			}
 		});
@@ -89,7 +79,7 @@ public class EintragAuswahl extends JFrame {
 		btnNewButton_2.setFont(new Font("Arial", Font.PLAIN, 11));
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Einzelperson einz1=new Einzelperson();
+				EinzelpersonGUI einz1=new EinzelpersonGUI(storage);
 				einz1.setVisible(true);
 			}
 		});
@@ -98,7 +88,7 @@ public class EintragAuswahl extends JFrame {
 		btnNewButton_3.setBounds(176, 179, 131, 23);
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Oberstufenschüler ob1= new Oberstufenschüler();
+				Oberstufenschüler ob1= new Oberstufenschüler(storage);
 				ob1.setVisible(true);
 			}
 		});
@@ -108,7 +98,7 @@ public class EintragAuswahl extends JFrame {
 		btnNewButton_4.setBounds(325, 179, 169, 23);
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Unter_Mittel um1 = new Unter_Mittel();
+				Unter_Mittel um1 = new Unter_Mittel(storage);
 				um1.setVisible(true);
 			}
 		});
@@ -119,7 +109,7 @@ public class EintragAuswahl extends JFrame {
 		btnNewButton_5.setFont(new Font("Arial", Font.PLAIN, 11));
 		btnNewButton_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Auftrag auf1=new Auftrag();
+				Auftrag auf1=new Auftrag(storage);
 				auf1.setVisible(true);
 			}
 		});
@@ -127,11 +117,11 @@ public class EintragAuswahl extends JFrame {
 		JButton btnNewButton_8 = new JButton("Standort");
 		btnNewButton_8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Standort st1=new Standort();
+				Standort st1=new Standort(storage);
 				st1.setVisible(true);
 			}
 		});
-		btnNewButton_8.setBounds(355, 223, 111, 23);
+		btnNewButton_8.setBounds(176, 223, 131, 23);
 		btnNewButton_8.setFont(new Font("Arial", Font.PLAIN, 11));
 		contentPane.setLayout(null);
 		contentPane.add(btnZurck);
@@ -143,6 +133,17 @@ public class EintragAuswahl extends JFrame {
 		contentPane.add(btnNewButton_2);
 		contentPane.add(btnNewButton_5);
 		contentPane.add(btnNewButton_8);
+		
+		JButton btnNewButton_6 = new JButton("Lehrer");
+		btnNewButton_6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				LehrerGUI lehr1=new LehrerGUI(storage);
+				lehr1.setVisible(true);
+			}
+		});
+		btnNewButton_6.setFont(new Font("Arial", Font.PLAIN, 11));
+		btnNewButton_6.setBounds(512, 223, 111, 23);
+		contentPane.add(btnNewButton_6);
 		
 		JLabel lblBack = new JLabel("");
 		lblBack.setBounds(0, 0, 784, 450);

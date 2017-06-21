@@ -6,6 +6,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import model.Storage;
+
 import javax.swing.GroupLayout;
 import javax.swing.ImageIcon;
 import javax.swing.GroupLayout.Alignment;
@@ -22,32 +25,19 @@ import java.awt.Image;
 public class EintragLöschen extends JFrame {
 
 	private JPanel contentPane;
+	Storage storage;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					EintragLöschen frame = new EintragLöschen();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
 	/**
 	 * Create the frame.
 	 */
-	public EintragLöschen() {
+	public EintragLöschen(Storage storage) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 450);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
+		this.storage=storage;
 		
 		JLabel lblFrWelcheDatenbank = new JLabel("Aus welcher Datenbank möchten sie einen Eintrag entfernen?");
 		lblFrWelcheDatenbank.setBounds(244, 18, 318, 14);

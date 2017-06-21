@@ -65,7 +65,7 @@ public class Ausleihfenster extends JFrame {
 		lblU.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				AusfUnter ausfu1=new AusfUnter();
+				AusfUnter ausfu1=new AusfUnter(storage);
 				dispose();
 				ausfu1.setVisible(true);
 			}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Bibliothek 0.4/src/view/Einzelperson.java&apos; to &apos;EinzelpersonGUI.java&apos;" description="Rename resource &apos;Einzelperson.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/view/Einzelperson.java" name="EinzelpersonGUI.java" stamp="1498068232226" updateReferences="true"/>
+</session>

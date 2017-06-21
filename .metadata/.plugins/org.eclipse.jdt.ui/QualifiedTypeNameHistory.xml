@@ -8,7 +8,6 @@
 <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
 <fullyQualifiedTypeName name="controller.DateiErzeugen"/>
 <fullyQualifiedTypeName name="model.Auftrag"/>
-<fullyQualifiedTypeName name="controller.XMLSerializer"/>
 <fullyQualifiedTypeName name="java.awt.List"/>
 <fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="java.io.FileInputStream"/>
@@ -20,4 +19,10 @@
 <fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
 <fullyQualifiedTypeName name="java.awt.Image"/>
 <fullyQualifiedTypeName name="model.Storage"/>
+<fullyQualifiedTypeName name="model.Einzelperson"/>
+<fullyQualifiedTypeName name="controller.XMLSerializer"/>
+<fullyQualifiedTypeName name="javax.swing.table.TableColumn"/>
+<fullyQualifiedTypeName name="javax.swing.JFrame"/>
+<fullyQualifiedTypeName name="javax.swing.JTable"/>
+<fullyQualifiedTypeName name="javax.swing.JScrollPane"/>
 </qualifiedTypeNameHistroy>
