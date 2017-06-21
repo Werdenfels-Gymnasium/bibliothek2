@@ -7,6 +7,9 @@ import java.awt.Image;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import model.Storage;
+
 import javax.swing.BoxLayout;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
@@ -26,32 +29,15 @@ import java.awt.Font;
 public class Ausleihfenster extends JFrame {
 
 	private JPanel contentPane;
+	Storage storage;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Ausleihfenster frame = new Ausleihfenster();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the frame.
-	 */
-	public Ausleihfenster() {
+	public Ausleihfenster(Storage storage) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 450);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
+		this.storage = storage;
 	
 			
 		JLabel lblTitel1 = new JLabel("Wilkommen zum Buchverleih");
@@ -68,9 +54,9 @@ public class Ausleihfenster extends JFrame {
 		btnback1.setBounds(15, 16, 89, 23);
 		btnback1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-			contentPane.setVisible(false);
 			dispose();
-			hauptfenster.main(null);
+			hauptfenster haupt1 =new hauptfenster(storage);
+			haupt1.frame.setVisible(true);
 			}
 		});
 		
@@ -125,7 +111,7 @@ public class Ausleihfenster extends JFrame {
 		JLabel lblBack = new JLabel("");
 		lblBack.setBounds(0, 0, 784, 450);
 		contentPane.add(lblBack);
-		Image img0 = new ImageIcon(this.getClass().getResource("../img/Hintergrund 800p.png")).getImage();
+		Image img0 = new ImageIcon(this.getClass().getResource("/Hintergrund 800p.png")).getImage();
 		lblBack.setIcon(new ImageIcon(img0));
 	}
 }

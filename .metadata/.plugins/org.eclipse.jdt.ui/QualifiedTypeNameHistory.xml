@@ -14,8 +14,10 @@
 <fullyQualifiedTypeName name="java.io.FileInputStream"/>
 <fullyQualifiedTypeName name="org.apache.poi.xssf.usermodel.XSSFWorkbook"/>
 <fullyQualifiedTypeName name="org.apache.poi.xssf.usermodel.XSSFSheet"/>
-<fullyQualifiedTypeName name="model.Storage"/>
 <fullyQualifiedTypeName name="model.Lehrer"/>
 <fullyQualifiedTypeName name="model.UnterMittelStufe"/>
 <fullyQualifiedTypeName name="model.Buch"/>
+<fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
+<fullyQualifiedTypeName name="java.awt.Image"/>
+<fullyQualifiedTypeName name="model.Storage"/>
 </qualifiedTypeNameHistroy>

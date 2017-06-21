@@ -52,7 +52,7 @@ public class hauptfenster {
 		btnVerleih.setBounds(546, 247, 166, 25);
 		btnVerleih.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Ausleihfenster ausl1=new Ausleihfenster();
+				Ausleihfenster ausl1 = new Ausleihfenster(storage);
 				frame.dispose();
 				ausl1.setVisible(true);
 			}
@@ -78,7 +78,8 @@ public class hauptfenster {
 		frame.getContentPane().add(lblAnfang);
 		
 		JLabel lblBack = new JLabel("");
-		
+		Image img0 = new ImageIcon(this.getClass().getResource("/Hintergrund 800p.png")).getImage();
+		lblBack.setIcon(new ImageIcon(img0));
 		lblBack.setBounds(0, 0, 784, 450);
 		frame.getContentPane().add(lblBack);
 	
