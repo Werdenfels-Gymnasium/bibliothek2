@@ -48,13 +48,11 @@ public class EintragAuswahl extends JFrame {
 		setContentPane(contentPane);
 		
 		JLabel lblFrWelcheDatenbank = new JLabel("Für welche Datenbank möchten sie einen neuen Eintrag erstellen?");
-		lblFrWelcheDatenbank.setBounds(226, 18, 318, 14);
 		lblFrWelcheDatenbank.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		String[] Datenbanken= {"Bitte wählen sie die Datenbank aus","Buch","Entleiher","Einzelperson","Oberstufenschüler","Unter-/Mittelstufenschüler","Aufträge","Kurs","Klasse","Lehrer"};
 		
 		JButton btnZurck = new JButton("Zurück");
-		btnZurck.setBounds(15, 14, 81, 23);
 		btnZurck.setFont(new Font("Arial", Font.PLAIN, 11));
 		btnZurck.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -63,7 +61,6 @@ public class EintragAuswahl extends JFrame {
 		});
 		
 		JButton btnNewButton = new JButton("Buch");
-		btnNewButton.setBounds(176, 138, 131, 23);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Buch buch1 = new Buch();
@@ -73,7 +70,6 @@ public class EintragAuswahl extends JFrame {
 		btnNewButton.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		JButton btnNewButton_1 = new JButton("Entleiher");
-		btnNewButton_1.setBounds(325, 138, 169, 23);
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Entleiher entl1= new Entleiher();
@@ -83,7 +79,6 @@ public class EintragAuswahl extends JFrame {
 		btnNewButton_1.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		JButton btnNewButton_2 = new JButton("Einzelperson");
-		btnNewButton_2.setBounds(512, 138, 111, 23);
 		btnNewButton_2.setFont(new Font("Arial", Font.PLAIN, 11));
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -93,7 +88,6 @@ public class EintragAuswahl extends JFrame {
 		});
 		
 		JButton btnNewButton_3 = new JButton("Oberstufenschüler");
-		btnNewButton_3.setBounds(176, 179, 131, 23);
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Oberstufenschüler ob1= new Oberstufenschüler();
@@ -103,7 +97,6 @@ public class EintragAuswahl extends JFrame {
 		btnNewButton_3.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		JButton btnNewButton_4 = new JButton("Unter/Mittelstufenschüler");
-		btnNewButton_4.setBounds(325, 179, 169, 23);
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Unter_Mittel um1 = new Unter_Mittel();
@@ -113,7 +106,6 @@ public class EintragAuswahl extends JFrame {
 		btnNewButton_4.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		JButton btnNewButton_5 = new JButton("Aufträge");
-		btnNewButton_5.setBounds(512, 179, 111, 23);
 		btnNewButton_5.setFont(new Font("Arial", Font.PLAIN, 11));
 		btnNewButton_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -129,23 +121,84 @@ public class EintragAuswahl extends JFrame {
 				st1.setVisible(true);
 			}
 		});
-		btnNewButton_8.setBounds(355, 223, 111, 23);
 		btnNewButton_8.setFont(new Font("Arial", Font.PLAIN, 11));
-		contentPane.setLayout(null);
-		contentPane.add(btnZurck);
-		contentPane.add(lblFrWelcheDatenbank);
-		contentPane.add(btnNewButton);
-		contentPane.add(btnNewButton_3);
-		contentPane.add(btnNewButton_1);
-		contentPane.add(btnNewButton_4);
-		contentPane.add(btnNewButton_2);
-		contentPane.add(btnNewButton_5);
-		contentPane.add(btnNewButton_8);
 		
-		JLabel lblBack = new JLabel("");
-		lblBack.setBounds(0, 0, 784, 450);
-		contentPane.add(lblBack);
-		Image img0 = new ImageIcon(this.getClass().getResource("/Hintergrund 800p.png")).getImage();
-		lblBack.setIcon(new ImageIcon(img0));
+		JButton btnLehrer = new JButton("Lehrer");
+		btnLehrer.setFont(new Font("Arial", Font.PLAIN, 11));
+		btnLehrer.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				LehrerGUI lehr= new LehrerGUI();
+				lehr.setVisible(true);
+			}
+		});
+		GroupLayout gl_contentPane = new GroupLayout(contentPane);
+		gl_contentPane.setHorizontalGroup(
+			gl_contentPane.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_contentPane.createSequentialGroup()
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addGap(226)
+							.addComponent(lblFrWelcheDatenbank))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addGap(512)
+							.addComponent(btnNewButton_2, GroupLayout.PREFERRED_SIZE, 111, GroupLayout.PREFERRED_SIZE))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addGap(15)
+							.addComponent(btnZurck, GroupLayout.PREFERRED_SIZE, 81, GroupLayout.PREFERRED_SIZE))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addGap(176)
+							.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 131, GroupLayout.PREFERRED_SIZE))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addGap(325)
+							.addComponent(btnNewButton_1, GroupLayout.PREFERRED_SIZE, 169, GroupLayout.PREFERRED_SIZE))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addGap(176)
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
+								.addComponent(btnNewButton_3, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
+								.addComponent(btnNewButton_8, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+							.addGap(18)
+							.addComponent(btnNewButton_4, GroupLayout.PREFERRED_SIZE, 169, GroupLayout.PREFERRED_SIZE)
+							.addGap(18)
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING, false)
+								.addComponent(btnLehrer, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+								.addComponent(btnNewButton_5, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE))))
+					.addContainerGap(151, Short.MAX_VALUE))
+		);
+		gl_contentPane.setVerticalGroup(
+			gl_contentPane.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_contentPane.createSequentialGroup()
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addGap(14)
+							.addComponent(btnZurck))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+								.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+									.addGroup(gl_contentPane.createSequentialGroup()
+										.addGap(18)
+										.addComponent(lblFrWelcheDatenbank)
+										.addGap(106)
+										.addComponent(btnNewButton_2))
+									.addGroup(gl_contentPane.createSequentialGroup()
+										.addGap(138)
+										.addComponent(btnNewButton))
+									.addGroup(gl_contentPane.createSequentialGroup()
+										.addGap(179)
+										.addComponent(btnNewButton_3))
+									.addGroup(gl_contentPane.createSequentialGroup()
+										.addGap(138)
+										.addComponent(btnNewButton_1)))
+								.addGroup(gl_contentPane.createSequentialGroup()
+									.addGap(179)
+									.addComponent(btnNewButton_5)))
+							.addGap(18)
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+								.addComponent(btnNewButton_8)
+								.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+									.addComponent(btnLehrer)
+									.addComponent(btnNewButton_4)))))
+					.addContainerGap(158, Short.MAX_VALUE))
+		);
+		contentPane.setLayout(gl_contentPane);
 	}
 }

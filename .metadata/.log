@@ -3605,3 +3605,177 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2017-06-21 17:17:31.352 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jdt.core 4 0 2017-06-21 17:17:38.787
+!MESSAGE Invalid ZIP archive: poi-bin-3.16-20170419/poi-3.16/poi-3.16.jar [in Bibliothek 0.4]
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-06-21 17:17:39.707
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Johannes'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-06-21 17:17:40.305
+!MESSAGE Removing part descriptor with the 'org.jkiss.dbeaver.core.databaseNavigator' id and the 'Database Navigator' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-06-21 17:17:40.306
+!MESSAGE Removing part descriptor with the 'org.jkiss.dbeaver.core.projectNavigator' id and the 'Projects' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-06-21 17:17:40.307
+!MESSAGE Removing part descriptor with the 'org.jkiss.dbeaver.core.projectExplorer' id and the 'Project Explorer' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-06-21 17:17:40.307
+!MESSAGE Removing part descriptor with the 'org.jkiss.dbeaver.core.queryManager' id and the 'Query Manager' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-06-21 17:17:40.308
+!MESSAGE Removing part descriptor with the 'org.jkiss.dbeaver.core.shellProcess' id and the 'Process' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-06-21 17:17:40.308
+!MESSAGE Removing part descriptor with the 'org.jkiss.dbeaver.core.sqlResults' id and the 'Data' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.jdt.core 4 0 2017-06-21 17:17:42.460
+!MESSAGE Invalid ZIP archive: poi-bin-3.16-20170419/poi-3.16/poi-3.16.jar [in Bibliothek 0.4]
+!SESSION 2017-06-21 17:21:22.527 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jdt.core 4 0 2017-06-21 17:21:30.254
+!MESSAGE Invalid ZIP archive: poi-bin-3.16-20170419/poi-3.16/poi-3.16.jar [in Bibliothek 0.4]
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-06-21 17:21:31.480
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Johannes'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jdt.core 4 0 2017-06-21 17:22:51.015
+!MESSAGE Invalid ZIP archive: poi-bin-3.16-20170419/poi-3.16/poi-3.16.jar [in Bibliothek 0.4]
+
+!ENTRY org.eclipse.jdt.core 4 0 2017-06-21 17:23:46.201
+!MESSAGE Invalid ZIP archive: lib/poi-3.16.jar [in Bibliothek 0.4]
+
+!ENTRY org.eclipse.jdt.core 4 0 2017-06-21 17:41:38.427
+!MESSAGE Invalid ZIP archive: E:\github\bibliothek2\Bibliothek 0.4\poi-3.16.jar
+!SESSION 2017-06-21 17:42:08.579 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jdt.core 4 0 2017-06-21 17:42:19.269
+!MESSAGE Invalid ZIP archive: E:\github\bibliothek2\Bibliothek 0.4\poi-3.16.jar
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-06-21 17:42:20.238
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Johannes'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2017-06-21 17:43:34.921
+!MESSAGE Internal Error
+!STACK 1
+org.eclipse.core.runtime.CoreException: error in opening zip file
+	at org.eclipse.jdt.internal.ui.jarpackager.JarPackagerUtil.getArchiveFile(JarPackagerUtil.java:319)
+	at org.eclipse.jdt.internal.ui.jarpackager.JarFileExportOperation.countSelectedElements(JarFileExportOperation.java:218)
+	at org.eclipse.jdt.internal.ui.jarpackager.JarFileExportOperation.singleRun(JarFileExportOperation.java:999)
+	at org.eclipse.jdt.internal.ui.jarpackager.JarFileExportOperation.execute(JarFileExportOperation.java:988)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.lambda$0(WorkspaceModifyOperation.java:107)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:128)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Caused by: java.util.zip.ZipException: error in opening zip file
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at org.eclipse.jdt.internal.ui.jarpackager.JarPackagerUtil.getArchiveFile(JarPackagerUtil.java:317)
+	... 8 more
+!SUBENTRY 1 org.eclipse.jdt.ui 4 0 2017-06-21 17:43:34.922
+!MESSAGE error in opening zip file
+!STACK 0
+java.util.zip.ZipException: error in opening zip file
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at org.eclipse.jdt.internal.ui.jarpackager.JarPackagerUtil.getArchiveFile(JarPackagerUtil.java:317)
+	at org.eclipse.jdt.internal.ui.jarpackager.JarFileExportOperation.countSelectedElements(JarFileExportOperation.java:218)
+	at org.eclipse.jdt.internal.ui.jarpackager.JarFileExportOperation.singleRun(JarFileExportOperation.java:999)
+	at org.eclipse.jdt.internal.ui.jarpackager.JarFileExportOperation.execute(JarFileExportOperation.java:988)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.lambda$0(WorkspaceModifyOperation.java:107)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:128)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+
+!ENTRY org.eclipse.jdt.core 4 0 2017-06-21 17:45:10.003
+!MESSAGE Invalid ZIP archive: E:\github\bibliothek2\poi-bin-3.16-20170419\poi-3.16\poi-3.16.jar
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2017-06-21 17:45:52.234
+!MESSAGE Internal Error
+!STACK 1
+org.eclipse.core.runtime.CoreException: error in opening zip file
+	at org.eclipse.jdt.internal.ui.jarpackager.JarPackagerUtil.getArchiveFile(JarPackagerUtil.java:319)
+	at org.eclipse.jdt.internal.ui.jarpackager.JarFileExportOperation.countSelectedElements(JarFileExportOperation.java:218)
+	at org.eclipse.jdt.internal.ui.jarpackager.JarFileExportOperation.singleRun(JarFileExportOperation.java:999)
+	at org.eclipse.jdt.internal.ui.jarpackager.JarFileExportOperation.execute(JarFileExportOperation.java:988)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.lambda$0(WorkspaceModifyOperation.java:107)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:128)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Caused by: java.util.zip.ZipException: error in opening zip file
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at org.eclipse.jdt.internal.ui.jarpackager.JarPackagerUtil.getArchiveFile(JarPackagerUtil.java:317)
+	... 8 more
+!SUBENTRY 1 org.eclipse.jdt.ui 4 0 2017-06-21 17:45:52.235
+!MESSAGE error in opening zip file
+!STACK 0
+java.util.zip.ZipException: error in opening zip file
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at java.util.zip.ZipFile.<init>(Unknown Source)
+	at org.eclipse.jdt.internal.ui.jarpackager.JarPackagerUtil.getArchiveFile(JarPackagerUtil.java:317)
+	at org.eclipse.jdt.internal.ui.jarpackager.JarFileExportOperation.countSelectedElements(JarFileExportOperation.java:218)
+	at org.eclipse.jdt.internal.ui.jarpackager.JarFileExportOperation.singleRun(JarFileExportOperation.java:999)
+	at org.eclipse.jdt.internal.ui.jarpackager.JarFileExportOperation.execute(JarFileExportOperation.java:988)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.lambda$0(WorkspaceModifyOperation.java:107)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:128)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+!SESSION 2017-06-21 18:04:59.243 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-06-21 18:05:08.787
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Johannes'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
