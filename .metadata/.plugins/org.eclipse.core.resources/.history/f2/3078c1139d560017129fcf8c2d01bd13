@@ -78,7 +78,6 @@ public class hauptfenster {
 		frame.getContentPane().add(lblAnfang);
 		
 		JLabel lblBack = new JLabel("");
-		
 		lblBack.setBounds(0, 0, 784, 450);
 		frame.getContentPane().add(lblBack);
 	

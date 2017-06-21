@@ -78,7 +78,8 @@ public class hauptfenster {
 		frame.getContentPane().add(lblAnfang);
 		
 		JLabel lblBack = new JLabel("");
-		
+		Image img0 = new ImageIcon(this.getClass().getResource("../img/Hintergrund 800p.png")).getImage();
+		lblBack.setIcon(new ImageIcon(img0));
 		lblBack.setBounds(0, 0, 784, 450);
 		frame.getContentPane().add(lblBack);
 	
