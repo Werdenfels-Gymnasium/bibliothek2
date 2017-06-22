@@ -6,9 +6,6 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-
-import model.Storage;
-
 import javax.swing.GroupLayout;
 import javax.swing.ImageIcon;
 import javax.swing.GroupLayout.Alignment;
@@ -22,65 +19,73 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class EntleiherEnt extends JFrame {
+public class BuchEnt extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
-	Storage storage;
 
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					BuchEnt frame = new BuchEnt();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
 
 	/**
 	 * Create the frame.
 	 */
-	public EntleiherEnt(Storage storage) {
+	public BuchEnt() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 450);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		this.storage=storage;
 		
 		JButton btnZurck = new JButton("Zurück");
-		btnZurck.setBounds(15, 16, 76, 23);
 		btnZurck.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
 			}
 		});
+		btnZurck.setBounds(15, 16, 80, 23);
 		btnZurck.setFont(new Font("Arial", Font.PLAIN, 11));
 		
-		JLabel lblEntleiherEntfernen = new JLabel("Entleiher entfernen");
-		lblEntleiherEntfernen.setBounds(337, 20, 134, 14);
-		lblEntleiherEntfernen.setFont(new Font("Arial", Font.PLAIN, 11));
+		JLabel lblEintragAusBuch = new JLabel("Eintrag aus Buch entfernen");
+		lblEintragAusBuch.setBounds(335, 20, 132, 14);
+		lblEintragAusBuch.setFont(new Font("Arial", Font.PLAIN, 11));
 		
-		JLabel lblGebenSieDie = new JLabel("Geben sie die ID des Entleihers ein, welchen sie entfernen möchten");
-		lblGebenSieDie.setBounds(211, 159, 325, 14);
+		JLabel lblGebenSieDie = new JLabel("Geben sie die ISBN des Buches ein, welches Sie entfernen möchten");
+		lblGebenSieDie.setBounds(225, 152, 428, 14);
 		lblGebenSieDie.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		textField = new JTextField();
-		textField.setBounds(327, 210, 111, 20);
+		textField.setBounds(316, 214, 161, 20);
 		textField.setColumns(10);
 		
 		JButton btnLschen = new JButton("Löschen");
-		btnLschen.setBounds(339, 372, 99, 23);
 		btnLschen.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
+			public void actionPerformed(ActionEvent e) {
 				LöschenOK ok= new LöschenOK();
 				ok.setVisible(true);
 			}
 		});
 		btnLschen.setFont(new Font("Arial", Font.PLAIN, 11));
-		
-		JLabel lblAchtungDerVerbundene = new JLabel("Achtung: Der verbundene Schüler/Standort/externer Ausleiher wird ebenfalls gelöscht!");
-		lblAchtungDerVerbundene.setBounds(161, 300, 499, 14);
-		lblAchtungDerVerbundene.setFont(new Font("Arial", Font.PLAIN, 11));
+		btnLschen.setBounds(335, 377, 110, 23);
 		contentPane.setLayout(null);
 		contentPane.add(btnZurck);
-		contentPane.add(lblEntleiherEntfernen);
+		contentPane.add(lblEintragAusBuch);
+		contentPane.add(lblGebenSieDie);
 		contentPane.add(textField);
 		contentPane.add(btnLschen);
-		contentPane.add(lblAchtungDerVerbundene);
-		contentPane.add(lblGebenSieDie);
 		
 		JLabel lblBack = new JLabel("");
 		Image img0 = new ImageIcon(this.getClass().getResource("/Hintergrund 800p.png")).getImage();
@@ -88,5 +93,4 @@ public class EntleiherEnt extends JFrame {
 		lblBack.setBounds(0, 0, 784, 450);
 		contentPane.add(lblBack);
 	}
-
 }

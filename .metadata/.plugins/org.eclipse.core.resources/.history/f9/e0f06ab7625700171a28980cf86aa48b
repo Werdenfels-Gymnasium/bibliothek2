@@ -58,7 +58,7 @@ public class EintragAuswahl extends JFrame {
 		btnNewButton.setBounds(176, 138, 131, 23);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				BuchGUI buch1 = new BuchGUI(storage);
+				Buch buch1 = new Buch(storage);
 				buch1.setVisible(true);
 			}
 		});

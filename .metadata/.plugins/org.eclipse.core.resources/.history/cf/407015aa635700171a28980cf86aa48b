@@ -106,10 +106,9 @@ public class EintragLöschen extends JFrame {
 		contentPane.setLayout(null);
 		
 		JButton btnNewButton_2 = new JButton("Lehrer");
-		btnNewButton_2.setFont(new Font("Arial", Font.PLAIN, 11));
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				LehrerEnt lehr1=new LehrerEnt(storage);
+				LehrerGUI lehr1=new LehrerGUI(storage);
 				lehr1.setVisible(true);
 				
 			}

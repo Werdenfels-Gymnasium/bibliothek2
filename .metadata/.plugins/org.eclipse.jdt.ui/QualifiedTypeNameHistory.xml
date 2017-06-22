@@ -18,11 +18,11 @@
 <fullyQualifiedTypeName name="model.Buch"/>
 <fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
 <fullyQualifiedTypeName name="java.awt.Image"/>
-<fullyQualifiedTypeName name="model.Storage"/>
 <fullyQualifiedTypeName name="model.Einzelperson"/>
 <fullyQualifiedTypeName name="controller.XMLSerializer"/>
 <fullyQualifiedTypeName name="javax.swing.table.TableColumn"/>
 <fullyQualifiedTypeName name="javax.swing.JFrame"/>
 <fullyQualifiedTypeName name="javax.swing.JTable"/>
 <fullyQualifiedTypeName name="javax.swing.JScrollPane"/>
+<fullyQualifiedTypeName name="model.Storage"/>
 </qualifiedTypeNameHistroy>

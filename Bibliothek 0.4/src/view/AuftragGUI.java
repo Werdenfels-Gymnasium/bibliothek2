@@ -22,17 +22,19 @@ import java.awt.Image;
 import javax.swing.JTextField;
 import javax.swing.LayoutStyle.ComponentPlacement;
 
-public class AuftragEnt extends JFrame {
+public class AuftragGUI extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
+	private JTextField textFieldISBN;
+	private JTextField textFieldEntID;
+	private JTextField textFieldAbg;
 	Storage storage;
 
 
 	/**
 	 * Create the frame.
 	 */
-	public AuftragEnt(Storage storage) {
+	public AuftragGUI(Storage storage) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 450);
 		contentPane = new JPanel();
@@ -49,44 +51,60 @@ public class AuftragEnt extends JFrame {
 			}
 		});
 		
-		JLabel lblNeuerEintragFr = new JLabel("Auftrag entfernen\r\n");
+		JLabel lblNeuerEintragFr = new JLabel("Neuer Eintrag für Auftrag");
 		lblNeuerEintragFr.setBounds(335, 19, 139, 14);
 		lblNeuerEintragFr.setFont(new Font("Arial", Font.PLAIN, 11));
 		
-		JButton btnEintragErstellen = new JButton("Löschen");
-		btnEintragErstellen.setBounds(335, 372, 109, 23);
+		JLabel lblNewLabel_1 = new JLabel("ISBN");
+		lblNewLabel_1.setBounds(228, 161, 76, 14);
+		lblNewLabel_1.setFont(new Font("Arial", Font.PLAIN, 11));
+		
+		JLabel lblNewLabel_2 = new JLabel("EntleiherID");
+		lblNewLabel_2.setBounds(228, 199, 76, 14);
+		lblNewLabel_2.setFont(new Font("Arial", Font.PLAIN, 11));
+		
+		JLabel lblNewLabel_3 = new JLabel("Abgabe");
+		lblNewLabel_3.setBounds(228, 237, 76, 14);
+		lblNewLabel_3.setFont(new Font("Arial", Font.PLAIN, 11));
+		
+		textFieldISBN = new JTextField();
+		textFieldISBN.setBounds(441, 158, 86, 20);
+		textFieldISBN.setColumns(10);
+		
+		textFieldEntID = new JTextField();
+		textFieldEntID.setBounds(441, 196, 86, 20);
+		textFieldEntID.setColumns(10);
+		
+		textFieldAbg = new JTextField();
+		textFieldAbg.setBounds(441, 234, 86, 20);
+		textFieldAbg.setColumns(10);
+		
+		JButton btnEintragErstellen = new JButton("Eintrag erstellen");
+		btnEintragErstellen.setBounds(335, 372, 121, 23);
 		btnEintragErstellen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				LöschenOK ok= new LöschenOK();
+				EintragOK ok= new EintragOK();
 				ok.setVisible(true);
 			}
 		});
 		btnEintragErstellen.setFont(new Font("Arial", Font.PLAIN, 11));
 		contentPane.setLayout(null);
+		contentPane.add(lblNewLabel_3);
+		contentPane.add(lblNewLabel_2);
+		contentPane.add(lblNewLabel_1);
+		contentPane.add(textFieldISBN);
+		contentPane.add(textFieldEntID);
+		contentPane.add(textFieldAbg);
 		contentPane.add(btnZurck);
 		contentPane.add(btnEintragErstellen);
 		contentPane.add(lblNeuerEintragFr);
-		Image img0 = new ImageIcon(this.getClass().getResource("/Hintergrund 800p.png")).getImage();
-		
-		JLabel lblGebenSieDie = new JLabel("Geben Sie die ID des Auftrags ein, welchen Sie löschen möchten\r\n");
-		lblGebenSieDie.setFont(new Font("Arial", Font.PLAIN, 11));
-		lblGebenSieDie.setBounds(219, 119, 351, 14);
-		contentPane.add(lblGebenSieDie);
-		
-		JLabel lblAuftragid = new JLabel("AuftragID");
-		lblAuftragid.setFont(new Font("Arial", Font.PLAIN, 11));
-		lblAuftragid.setBounds(243, 205, 81, 14);
-		contentPane.add(lblAuftragid);
-		
-		textField = new JTextField();
-		textField.setBounds(429, 202, 109, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
 		
 		JLabel lblBack = new JLabel("");
 		lblBack.setBounds(0, 0, 784, 450);
+		Image img0 = new ImageIcon(this.getClass().getResource("/Hintergrund 800p.png")).getImage();
 		lblBack.setIcon(new ImageIcon(img0));
 		contentPane.add(lblBack);
 	}
+
 }

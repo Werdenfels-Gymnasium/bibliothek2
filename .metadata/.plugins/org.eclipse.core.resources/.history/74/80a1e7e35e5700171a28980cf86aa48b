@@ -6,9 +6,6 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-
-import model.Storage;
-
 import java.awt.GridBagLayout;
 import java.awt.Image;
 
@@ -34,20 +31,32 @@ public class AusfEinzel extends JFrame {
 	private JTextField textFieldAdr;
 	private JTextField textFieldTele;
 	private JTextField textFieldBu;
-	Storage storage;
-	
-	
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					AusfEinzel frame = new AusfEinzel();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
 
 	/**
 	 * Create the frame.
 	 */
-	public AusfEinzel(Storage storage) {
+	public AusfEinzel() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 450);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		this.storage=storage;
 		
 		JLabel lblBitteGebenSie = new JLabel("Bitte geben Sie Ihre Daten ein!");
 		lblBitteGebenSie.setFont(new Font("Arial", Font.PLAIN, 11));
@@ -58,9 +67,9 @@ public class AusfEinzel extends JFrame {
 		btnZurck.setBounds(10, 17, 102, 23);
 		btnZurck.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				contentPane.setVisible(false);
 				dispose();
-				Ausleihfenster ausl1 =new Ausleihfenster(storage);
-				ausl1.setVisible(true);
+				Ausleihfenster.main(null);
 			}
 		});
 		

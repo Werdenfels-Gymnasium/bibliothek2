@@ -36,7 +36,6 @@ public class main {
 			speichern();
 		}
 		hauptfenster haupt1 = new hauptfenster(storage);
-		haupt1.frame.setVisible(true);
 	}
 	
 	public static boolean speichern () {

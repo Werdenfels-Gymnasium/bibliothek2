@@ -35,8 +35,6 @@ public class main {
 			System.out.println("Erstart abgespeichert!");
 			speichern();
 		}
-		hauptfenster haupt1 = new hauptfenster(storage);
-		haupt1.frame.setVisible(true);
 	}
 	
 	public static boolean speichern () {

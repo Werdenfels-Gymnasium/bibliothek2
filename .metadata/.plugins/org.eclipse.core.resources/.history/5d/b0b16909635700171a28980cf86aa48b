@@ -90,7 +90,7 @@ public class EintragLöschen extends JFrame {
 				ku1.setVisible(true);
 			}
 		});
-		btnNewButton_6.setBounds(176, 220, 131, 23);
+		btnNewButton_6.setBounds(240, 220, 131, 23);
 		btnNewButton_6.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		JButton btnNewButton_7 = new JButton("Klasse");
@@ -101,21 +101,9 @@ public class EintragLöschen extends JFrame {
 				
 			}
 		});
-		btnNewButton_7.setBounds(512, 220, 111, 23);
+		btnNewButton_7.setBounds(423, 220, 169, 23);
 		btnNewButton_7.setFont(new Font("Arial", Font.PLAIN, 11));
 		contentPane.setLayout(null);
-		
-		JButton btnNewButton_2 = new JButton("Lehrer");
-		btnNewButton_2.setFont(new Font("Arial", Font.PLAIN, 11));
-		btnNewButton_2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				LehrerEnt lehr1=new LehrerEnt(storage);
-				lehr1.setVisible(true);
-				
-			}
-		});
-		btnNewButton_2.setBounds(325, 220, 169, 23);
-		contentPane.add(btnNewButton_2);
 		contentPane.add(btnZurck);
 		contentPane.add(lblFrWelcheDatenbank);
 		contentPane.add(btnNewButton_6);
