@@ -92,11 +92,6 @@ public class LehrerGUI extends JFrame {
 		JButton btnEintragErstellen = new JButton("Eintrag erstellen");
 		btnEintragErstellen.setBounds(347, 363, 132, 23);
 		btnEintragErstellen.setFont(new Font("Arial", Font.PLAIN, 11));
-			
-			
-			
-			
-				
 		contentPane.setLayout(null);
 		contentPane.add(lblNeuerEintragFr);
 		contentPane.add(btnZurck);
