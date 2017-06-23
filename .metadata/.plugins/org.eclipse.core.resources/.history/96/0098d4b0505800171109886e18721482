@@ -96,7 +96,6 @@ public class AusfEinzel extends JFrame {
 				Buch buch = storage.searchBuchISBN (iSBN);
 				Auftrag auftrag = new Auftrag ();
 				auftrag.set(buch, einzelperson, rueckgabedatum);
-				storage.auftraege.add(auftrag);
 				AuftragOK ok=new AuftragOK();
 				ok.setVisible(true);
 				

@@ -89,14 +89,12 @@ public class AusfEinzel extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				String nachname=textFieldNach.getText();
 				String vorname=textFieldVor.getText();
-				String iSBN=textFieldBu.getText();
-				String rueckgabedatum=textField.getText();
+				String iSBN =textFieldBu.getText();
 				
 				Einzelperson einzelperson = storage.searchEinzelpersonName (vorname, nachname);
 				Buch buch = storage.searchBuchISBN (iSBN);
 				Auftrag auftrag = new Auftrag ();
 				auftrag.set(buch, einzelperson, rueckgabedatum);
-				storage.auftraege.add(auftrag);
 				AuftragOK ok=new AuftragOK();
 				ok.setVisible(true);
 				

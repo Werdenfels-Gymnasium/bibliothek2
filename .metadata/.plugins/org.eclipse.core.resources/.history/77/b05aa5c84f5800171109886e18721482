@@ -1,14 +1,14 @@
 package model;
 
 public class Buch {
-	String iSBN;
+	int iSBN;
 	String titel;
 	String kurztitel;
 	public int jahrgangsstufe;
 	public String fach;
 	int zweig;
 
-	public Buch (String iSBN, String titel, String kurztitel, int jahrgangsstufe, String fach, String zweig) {
+	public Buch (int iSBN, String titel, String kurztitel, int jahrgangsstufe, String fach, String zweig) {
 		this.iSBN = iSBN;
 		this.titel = titel;
 		this.kurztitel = kurztitel;

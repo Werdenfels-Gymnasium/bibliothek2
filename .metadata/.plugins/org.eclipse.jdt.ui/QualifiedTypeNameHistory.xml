@@ -7,7 +7,6 @@
 <fullyQualifiedTypeName name="java.sql.Statement"/>
 <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
 <fullyQualifiedTypeName name="controller.DateiErzeugen"/>
-<fullyQualifiedTypeName name="model.Auftrag"/>
 <fullyQualifiedTypeName name="java.awt.List"/>
 <fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="java.io.FileInputStream"/>
@@ -20,11 +19,12 @@
 <fullyQualifiedTypeName name="javax.swing.JFrame"/>
 <fullyQualifiedTypeName name="javax.swing.JTable"/>
 <fullyQualifiedTypeName name="javax.swing.JScrollPane"/>
-<fullyQualifiedTypeName name="model.Buch"/>
 <fullyQualifiedTypeName name="model.UnterMittelStufe"/>
 <fullyQualifiedTypeName name="model.Storage"/>
 <fullyQualifiedTypeName name="model.UnterMittelSchueler"/>
 <fullyQualifiedTypeName name="model.Lehrer"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="model.Einzelperson"/>
+<fullyQualifiedTypeName name="model.Buch"/>
+<fullyQualifiedTypeName name="model.Auftrag"/>
 </qualifiedTypeNameHistroy>
