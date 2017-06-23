@@ -90,60 +90,83 @@ public class Storage {
 		return neuerSchueler;
 	}
 	
-	public Buch deleteBuchISBN (int iSBN) {
+	public Buch searchBuchISBN (int iSBN) {
 		for (int i = 0; i <= buecher.size(); i++) {
 			if (iSBN == buecher.get(i).iSBN) {
 				Buch buch = buecher.get(i);
-				buecher.remove(i);
 				return buch;
 			}
 		}
 		return null;
 	}
 	
-	public Auftrag deleteAuftragID (int id) {
+	public Buch deleteBuch (Buch buch) {
+		buecher.remove(buch);
+		return buch;
+	}
+	
+	
+	
+	public Auftrag searchAuftragID (int id) {
 		for (int i = 0; i <= auftraege.size(); i++) {
 			if (id == auftraege.get(i).id) {
 				Auftrag auftrag = auftraege.get(i);
-				auftraege.remove(i);
 				return auftrag;
 			}
 		}
 		return null;
 	}
 	
-	public Einzelperson deleteEinzelpersonName (String vorname, String nachname) {
+	public Auftrag deleteAuftrag(Auftrag auftrag) {
+		auftraege.remove(auftrag);
+		return auftrag;
+	}
+	
+	
+	public Einzelperson searchEinzelpersonName (String vorname, String nachname) {
 		for (int i = 0; i <= einzelpersonen.size(); i++) {
 			if (vorname.compareToIgnoreCase(einzelpersonen.get(i).vorname) == 0 && nachname.compareToIgnoreCase(einzelpersonen.get(i).nachname) == 0)  {
 				Einzelperson einzelperson = einzelpersonen.get(i);
-				auftraege.remove(i);
 				return einzelperson;
 			}
 		}
 		return null;
 	}
 	
-	public Lehrer deleteLehrerName (String vorname, String nachname) {
+	public Einzelperson deleteEinzelperson(Einzelperson einzelperson) {
+		einzelpersonen.remove(einzelperson);
+		return einzelperson;
+	}
+	
+	public Lehrer searchLehrerName (String vorname, String nachname) {
 		for (int i = 0; i <= lehrerListe.size(); i++) {
 			if (vorname.compareToIgnoreCase(lehrerListe.get(i).vorname) == 0 && nachname.compareToIgnoreCase(lehrerListe.get(i).nachname) == 0)  {
 				Lehrer lehrer = lehrerListe.get(i);
-				lehrerListe.remove(i);
 				return lehrer;
 			}
 		}
 		return null;
 	}
+	
+	public Lehrer deleteLehrer(Lehrer lehrer) {
+		lehrerListe.remove(lehrer);
+		return lehrer;
+	}
 		
 			
-	public UnterMittelStufe deleteUnterMittelStufeKlasse (int jahrgangsstufe, char klasse ) {
+	public UnterMittelStufe searchUnterMittelStufeKlasse (int jahrgangsstufe, char klasse ) {
 		for (int i = 0; i <= unterMittelStufeListe.size(); i++) {
-			if (jahrgangsstufe ==)  && nachname.compareToIgnoreCase(unterMittelStufeListe.get(i).nachname) == 0)  {
-				UnterMittelSchueler unterMittelSchueler = unterMittelSchuelerListe.get(i);
-				auftraege.remove(i);
-				return unterMittelSchueler;
+			if (jahrgangsstufe == unterMittelStufeListe.get(i).jahrgangsstufe  && klasse == unterMittelStufeListe.get(i).klasse)  {
+				UnterMittelStufe unterMittelStufe = unterMittelStufeListe.get(i);
+				return unterMittelStufe;
 			}
 		}
 		return null;
+	}
+	
+	public UnterMittelStufe deleteUnterMittelStufe(UnterMittelStufe stufe) {
+		unterMittelStufeListe.remove(stufe);
+		return stufe;
 	}
 	
 	public JTable einzelpersonenAusgeben () {
