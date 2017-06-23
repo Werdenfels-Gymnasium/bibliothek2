@@ -4,12 +4,12 @@ public class Lehrer extends Entleiher {
 	String vorname;
 	String nachname;
 	String kuerzel;
-	String telefonnummer;
+	int telefonnummer;
 	
 	public Lehrer () {
 	}
 	
-	public Lehrer set (String vorname, String nachname, String kuerzel, String telefonnummer) {
+	public Lehrer set (String vorname, String nachname, String kuerzel, int telefonnummer) {
 		this.vorname = vorname;
 		this.nachname = nachname;
 		this.kuerzel = kuerzel;

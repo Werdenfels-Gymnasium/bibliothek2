@@ -7,7 +7,6 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import model.Einzelperson;
 import model.Storage;
 
 import java.awt.GridBagLayout;
@@ -84,11 +83,6 @@ public class AusfEinzel extends JFrame {
 		btnAuftragErstellen.setFont(new Font("Arial", Font.PLAIN, 11));
 		btnAuftragErstellen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				String nachname=textFieldNach.getText();
-				String vorname=textFieldVor.getText();
-				
-				Einzelperson einzelperson = storage.searchEinzelpersonName (vorname, nachname);
-				Buch buch = searchBuchISBN (iSBN);
 				AuftragOK ok=new AuftragOK();
 				ok.setVisible(true);
 				

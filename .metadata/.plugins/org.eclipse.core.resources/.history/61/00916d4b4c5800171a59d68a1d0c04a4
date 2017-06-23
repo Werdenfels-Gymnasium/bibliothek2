@@ -7,7 +7,6 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import model.Einzelperson;
 import model.Storage;
 
 import java.awt.GridBagLayout;
@@ -32,6 +31,8 @@ public class AusfEinzel extends JFrame {
 	private JPanel contentPane;
 	private JTextField textFieldNach;
 	private JTextField textFieldVor;
+	private JTextField textFieldAdr;
+	private JTextField textFieldTele;
 	private JTextField textFieldBu;
 	Storage storage;
 	
@@ -49,12 +50,12 @@ public class AusfEinzel extends JFrame {
 		this.storage=storage;
 		
 		JLabel lblBitteGebenSie = new JLabel("Bitte geben Sie Ihre Daten ein!");
-		lblBitteGebenSie.setBounds(302, 25, 260, 14);
 		lblBitteGebenSie.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblBitteGebenSie.setBounds(302, 21, 260, 14);
 		
 		JButton btnZurck = new JButton("Zurück");
-		btnZurck.setBounds(15, 21, 102, 23);
 		btnZurck.setFont(new Font("Arial", Font.PLAIN, 11));
+		btnZurck.setBounds(10, 17, 102, 23);
 		btnZurck.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				dispose();
@@ -64,31 +65,42 @@ public class AusfEinzel extends JFrame {
 		});
 		
 		JLabel lblNewLabel = new JLabel("Nachname");
-		lblNewLabel.setBounds(106, 131, 92, 14);
 		lblNewLabel.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblNewLabel.setBounds(59, 122, 92, 14);
 		
 		JLabel lblNewLabel_1 = new JLabel("Vorname");
-		lblNewLabel_1.setBounds(106, 169, 92, 14);
 		lblNewLabel_1.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblNewLabel_1.setBounds(59, 160, 92, 14);
 		
 		textFieldNach = new JTextField();
-		textFieldNach.setBounds(435, 128, 251, 20);
+		textFieldNach.setBounds(435, 119, 251, 20);
 		textFieldNach.setColumns(10);
 		
 		textFieldVor = new JTextField();
-		textFieldVor.setBounds(435, 166, 251, 20);
+		textFieldVor.setBounds(435, 157, 251, 20);
 		textFieldVor.setColumns(10);
 		
+		textFieldAdr = new JTextField();
+		textFieldAdr.setBounds(435, 195, 251, 20);
+		textFieldAdr.setColumns(10);
+		
+		JLabel lblNewLabel_2 = new JLabel("Adresse");
+		lblNewLabel_2.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblNewLabel_2.setBounds(59, 198, 92, 14);
+		
+		JLabel lblNewLabel_3 = new JLabel("Telefonnummer");
+		lblNewLabel_3.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblNewLabel_3.setBounds(59, 236, 92, 14);
+		
+		textFieldTele = new JTextField();
+		textFieldTele.setBounds(435, 233, 251, 20);
+		textFieldTele.setColumns(10);
+		
 		JButton btnAuftragErstellen = new JButton("Auftrag erstellen");
-		btnAuftragErstellen.setBounds(322, 372, 134, 23);
 		btnAuftragErstellen.setFont(new Font("Arial", Font.PLAIN, 11));
+		btnAuftragErstellen.setBounds(318, 377, 134, 23);
 		btnAuftragErstellen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				String nachname=textFieldNach.getText();
-				String vorname=textFieldVor.getText();
-				
-				Einzelperson einzelperson = storage.searchEinzelpersonName (vorname, nachname);
-				Buch buch = searchBuchISBN (iSBN);
 				AuftragOK ok=new AuftragOK();
 				ok.setVisible(true);
 				
@@ -96,12 +108,13 @@ public class AusfEinzel extends JFrame {
 		});
 		
 		JLabel lblBuch = new JLabel("BuchISBN");
-		lblBuch.setBounds(106, 207, 92, 14);
 		lblBuch.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblBuch.setBounds(59, 274, 92, 14);
 		
 		textFieldBu = new JTextField();
-		textFieldBu.setBounds(435, 204, 251, 20);
+		textFieldBu.setBounds(435, 271, 251, 20);
 		textFieldBu.setColumns(10);
+		Image img0 = new ImageIcon(this.getClass().getResource("/HintergrundBlau 800p.png")).getImage();
 		contentPane.setLayout(null);
 		contentPane.add(lblBuch);
 		contentPane.add(textFieldBu);
@@ -111,12 +124,16 @@ public class AusfEinzel extends JFrame {
 		contentPane.add(textFieldNach);
 		contentPane.add(lblNewLabel_1);
 		contentPane.add(textFieldVor);
+		contentPane.add(lblNewLabel_2);
+		contentPane.add(textFieldAdr);
+		contentPane.add(lblNewLabel_3);
+		contentPane.add(textFieldTele);
 		contentPane.add(btnAuftragErstellen);
 		
 		JLabel lblBack = new JLabel("");
-		lblBack.setBounds(0, 0, 800, 450);
+		lblBack.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblBack.setBounds(0, 0, 784, 450);
+		lblBack.setIcon(new ImageIcon(img0));
 		contentPane.add(lblBack);
-		Image img1 = new ImageIcon(this.getClass().getResource("/HintergrundBlau 800p.png")).getImage();
-		lblBack.setIcon(new ImageIcon(img1));
 	}
 }

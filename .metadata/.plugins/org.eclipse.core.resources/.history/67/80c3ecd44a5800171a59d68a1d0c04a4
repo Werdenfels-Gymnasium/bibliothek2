@@ -100,8 +100,6 @@ public class LehrerGUI extends JFrame {
 				Lehrer lehrerneu =new Lehrer();
 				lehrerneu.set(vorname, nachname, kuerzel, telefonnummer);
 				storage.lehrerListe.add(lehrerneu);
-				EintragOK ok= new EintragOK();
-				ok.setVisible(true);
 			}
 		});
 		btnEintragErstellen.setBounds(347, 363, 132, 23);

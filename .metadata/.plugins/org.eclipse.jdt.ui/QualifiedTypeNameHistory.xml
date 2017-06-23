@@ -13,10 +13,8 @@
 <fullyQualifiedTypeName name="java.io.FileInputStream"/>
 <fullyQualifiedTypeName name="org.apache.poi.xssf.usermodel.XSSFWorkbook"/>
 <fullyQualifiedTypeName name="org.apache.poi.xssf.usermodel.XSSFSheet"/>
-<fullyQualifiedTypeName name="model.Lehrer"/>
 <fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
 <fullyQualifiedTypeName name="java.awt.Image"/>
-<fullyQualifiedTypeName name="model.Einzelperson"/>
 <fullyQualifiedTypeName name="controller.XMLSerializer"/>
 <fullyQualifiedTypeName name="javax.swing.table.TableColumn"/>
 <fullyQualifiedTypeName name="javax.swing.JFrame"/>
@@ -26,4 +24,7 @@
 <fullyQualifiedTypeName name="model.UnterMittelStufe"/>
 <fullyQualifiedTypeName name="model.Storage"/>
 <fullyQualifiedTypeName name="model.UnterMittelSchueler"/>
+<fullyQualifiedTypeName name="model.Lehrer"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="model.Einzelperson"/>
 </qualifiedTypeNameHistroy>

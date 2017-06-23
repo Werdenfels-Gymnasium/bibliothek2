@@ -7,7 +7,6 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import model.Lehrer;
 import model.Storage;
 
 import javax.swing.GroupLayout;
@@ -91,19 +90,6 @@ public class LehrerGUI extends JFrame {
 		textField_3.setColumns(10);
 		
 		JButton btnEintragErstellen = new JButton("Eintrag erstellen");
-		btnEintragErstellen.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				String nachname=textField_1.getText();
-				String vorname=textField.getText();
-				String kuerzel=textField_2.getText();
-				String telefonnummer=textField_3.getText();
-				Lehrer lehrerneu =new Lehrer();
-				lehrerneu.set(vorname, nachname, kuerzel, telefonnummer);
-				storage.lehrerListe.add(lehrerneu);
-				EintragOK ok= new EintragOK();
-				ok.setVisible(true);
-			}
-		});
 		btnEintragErstellen.setBounds(347, 363, 132, 23);
 		btnEintragErstellen.setFont(new Font("Arial", Font.PLAIN, 11));
 			

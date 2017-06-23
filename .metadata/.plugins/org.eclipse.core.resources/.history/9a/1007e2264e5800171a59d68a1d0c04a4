@@ -12,7 +12,7 @@ public class main {
 		if (file.isFile() && file.canWrite() && file.canRead()) {
 			//Normaler Start!
 			System.out.println("Dateiauslesung wird initialisiert");
-			storage = new XMLDeserializer ().laden();
+			laden();
 		}
 		else {
 			
@@ -33,11 +33,22 @@ public class main {
 				e.printStackTrace();
 			}
 			System.out.println("Erstart abgespeichert!");
-			XMLSerializer serializer = new XMLSerializer();
-			serializer.speichern(storage);
+			speichern();
 		}
 		hauptfenster haupt1 = new hauptfenster(storage);
 		haupt1.frame.setVisible(true);
 		System.out.println(storage.einzelpersonen.get(0).vorname);
+	}
+	
+	public static boolean speichern () {
+		XMLSerializer serializer = new XMLSerializer();
+		serializer.speichern(storage);
+		return true;
+	}
+	
+	public static boolean laden () {
+		XMLDeserializer deserializer = new XMLDeserializer();
+		storage = deserializer.laden();
+		return true;
 	}
 }

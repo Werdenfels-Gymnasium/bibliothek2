@@ -7,14 +7,10 @@ public class Auftrag {
 	Buch buch;
 	String rueckgabedatum;
 	
-	public Auftrag () {
-	}
-	
-	public Auftrag set (Buch buch, Entleiher entleiher, String rueckgabedatum) {
+	public Auftrag (Buch buch, Entleiher entleiher, String rueckgabedatum) {
 		this.buch = buch;
 		this.entleiher = entleiher;
 		this.rueckgabedatum = rueckgabedatum;
-		return this;
 	}
 	
 	public boolean setID (int id) {
