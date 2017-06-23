@@ -9,7 +9,7 @@ public class Einzelperson extends Entleiher {
 	public Einzelperson () {
 	}
 	
-	public Einzelperson set (String vorname, String nachname, String adresse, String telefonnummer) {
+	public Einzelperson setEinzelperson (String vorname, String nachname, String adresse, String telefonnummer) {
 		this.vorname = vorname;
 		this.nachname = nachname;
 		this.adresse = adresse;
