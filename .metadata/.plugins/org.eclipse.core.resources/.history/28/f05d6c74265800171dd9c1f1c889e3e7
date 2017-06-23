@@ -1,0 +1,39 @@
+package controller;
+
+import model.Buch;
+import model.Storage;
+import model.UnterMittelSchueler;
+import model.UnterMittelStufe;
+
+public class AutoAufraege {
+	
+	Storage storage;
+	
+	public AutoAufraege (Storage storage) {
+		this.storage = storage;
+	}
+	
+	public String [] [] klassenAuftrag (Buch buch, UnterMittelStufe klasse) {
+		int jahrgangsstufe = buch.jahrgangsstufe;
+		String fach = buch.fach;
+		int religion;
+		
+		if (fach.compareToIgnoreCase("katholisch") == 0) {
+			religion = 0;
+		}
+		if (fach.compareToIgnoreCase("evangelisch") == 0) {
+			religion = 1;
+		}
+		if (fach.compareToIgnoreCase("ethik") == 0) {
+			religion = 2;
+		}
+		else {
+			religion = 3;
+			for (int i = 0; i < storage.unterMittelSchuelerListe.size(); i++) {
+				UnterMittelSchueler schueler = storage.unterMittelSchuelerListe.get(i);
+						if (schueler.klasse.
+			}
+		}
+		return null;
+	}
+}

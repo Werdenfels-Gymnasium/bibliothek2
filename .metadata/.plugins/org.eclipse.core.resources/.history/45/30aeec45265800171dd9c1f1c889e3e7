@@ -4,7 +4,7 @@ public class UnterMittelSchueler extends Entleiher {
 	String vorname;
 	String nachname;
 	String gebDat;
-	public UnterMittelStufe klasse;
+	UnterMittelStufe klasse;
 	int zweig;
 	int religion;
 	

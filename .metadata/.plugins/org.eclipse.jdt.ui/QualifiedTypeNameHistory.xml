@@ -14,8 +14,6 @@
 <fullyQualifiedTypeName name="org.apache.poi.xssf.usermodel.XSSFWorkbook"/>
 <fullyQualifiedTypeName name="org.apache.poi.xssf.usermodel.XSSFSheet"/>
 <fullyQualifiedTypeName name="model.Lehrer"/>
-<fullyQualifiedTypeName name="model.UnterMittelStufe"/>
-<fullyQualifiedTypeName name="model.Buch"/>
 <fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
 <fullyQualifiedTypeName name="java.awt.Image"/>
 <fullyQualifiedTypeName name="model.Einzelperson"/>
@@ -24,5 +22,8 @@
 <fullyQualifiedTypeName name="javax.swing.JFrame"/>
 <fullyQualifiedTypeName name="javax.swing.JTable"/>
 <fullyQualifiedTypeName name="javax.swing.JScrollPane"/>
+<fullyQualifiedTypeName name="model.Buch"/>
+<fullyQualifiedTypeName name="model.UnterMittelStufe"/>
 <fullyQualifiedTypeName name="model.Storage"/>
+<fullyQualifiedTypeName name="model.UnterMittelSchueler"/>
 </qualifiedTypeNameHistroy>

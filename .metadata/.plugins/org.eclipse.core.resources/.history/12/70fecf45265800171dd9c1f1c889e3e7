@@ -4,8 +4,8 @@ public class Buch {
 	int iSBN;
 	String titel;
 	String kurztitel;
-	public int jahrgangsstufe;
-	public String fach;
+	int jahrgangsstufe;
+	String fach;
 	int zweig;
 
 	public Buch (int iSBN, String titel, String kurztitel, int jahrgangsstufe, String fach, String zweig) {
@@ -13,7 +13,6 @@ public class Buch {
 		this.titel = titel;
 		this.kurztitel = kurztitel;
 		this.jahrgangsstufe = jahrgangsstufe;
-		//Bei Religion: ethik, evangelisch, katholisch nicht anders geschrieben wegen vergleichen!!!
 		this.fach = fach;
 		if (zweig.compareToIgnoreCase("nut") == 0) {
 			this.zweig = 1;
