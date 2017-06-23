@@ -26,8 +26,4 @@ public class XMLSerializer {
             return false;
 		}
 	}
-	
-//	public boolean speichern (Storage storage) {
-//		
-//	}
 }

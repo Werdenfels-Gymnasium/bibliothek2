@@ -77,7 +77,7 @@ public class Storage {
 	//Methode für die Liste Klasse
 	public UnterMittelStufe addKlasse (int jahrgangsstufe, int anzahl, char klasse, Lehrer lehrer) {
 		UnterMittelStufe neueKlasse	= new UnterMittelStufe (jahrgangsstufe, anzahl, klasse, lehrer);
-		unterMittelStufeListe.add(neueKlasse);
+		unterMittelStufe.add(neueKlasse);
 		System.out.println("Klasse "+jahrgangsstufe+klasse+" eingetragen");
 		return neueKlasse;
 	}
