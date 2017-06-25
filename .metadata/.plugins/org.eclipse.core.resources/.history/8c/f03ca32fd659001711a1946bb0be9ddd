@@ -70,7 +70,7 @@ public class AusfUnter extends JFrame {
 		
 		JLabel lblAnzahlFranzsisch = new JLabel("Anzahl Französisch");
 		lblAnzahlFranzsisch.setFont(new Font("Arial", Font.PLAIN, 11));
-		lblAnzahlFranzsisch.setBounds(70, 188, 119, 14);
+		lblAnzahlFranzsisch.setBounds(70, 188, 91, 14);
 		
 		JLabel lblAnzahlKatholisch = new JLabel("Anzahl katholisch");
 		lblAnzahlKatholisch.setFont(new Font("Arial", Font.PLAIN, 11));
