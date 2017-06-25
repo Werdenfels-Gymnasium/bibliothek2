@@ -90,9 +90,9 @@ public class Storage {
 		return neuerSchueler;
 	}
 	
-	public Buch searchBuchISBN (int iSBN) {
+	public Buch searchBuchISBN (String iSBN) {
 		for (int i = 0; i <= buecher.size(); i++) {
-			if (iSBN == buecher.get(i).iSBN) {
+			if (iSBN.compareToIgnoreCase(buecher.get(i).iSBN) == 0) {
 				Buch buch = buecher.get(i);
 				return buch;
 			}
@@ -138,19 +138,19 @@ public class Storage {
 		return einzelperson;
 	}
 	
-	public Lehrer searchLehrerName (String vorname, String nachname) {
-		for (int i = 0; i <= lehrerListe.size(); i++) {
-			if (vorname.compareToIgnoreCase(lehrerListe.get(i).vorname) == 0 && nachname.compareToIgnoreCase(lehrerListe.get(i).nachname) == 0)  {
-				Lehrer lehrer = lehrerListe.get(i);
-				return lehrer;
+	public UnterMittelSchueler searchUnterMittelSchuelerName (String vorname, String nachname) {
+		for (int i = 0; i <= unterMittelSchuelerListe.size(); i++) {
+			if (vorname.compareToIgnoreCase(unterMittelSchuelerListe.get(i).vorname) == 0 && nachname.compareToIgnoreCase(unterMittelSchuelerListe.get(i).nachname) == 0)  {
+				UnterMittelSchueler unterMittelSchueler = unterMittelSchuelerListe.get(i);
+				return unterMittelSchueler;
 			}
 		}
 		return null;
 	}
 	
-	public Lehrer deleteLehrer(Lehrer lehrer) {
-		lehrerListe.remove(lehrer);
-		return lehrer;
+	public UnterMittelSchueler deleteUnterMittelSchueler(UnterMittelSchueler unterMittelSchueler) {
+		unterMittelSchuelerListe.remove(unterMittelSchueler);
+		return unterMittelSchueler;
 	}
 		
 			
@@ -167,6 +167,22 @@ public class Storage {
 	public UnterMittelStufe deleteUnterMittelStufe(UnterMittelStufe stufe) {
 		unterMittelStufeListe.remove(stufe);
 		return stufe;
+	}
+	
+	
+	public Lehrer searchLehrerName (String vorname, String nachname) {
+		for (int i = 0; i <= lehrerListe.size(); i++) {
+			if (vorname.compareToIgnoreCase(lehrerListe.get(i).vorname) == 0 && nachname.compareToIgnoreCase(lehrerListe.get(i).nachname) == 0)  {
+				Lehrer lehrer = lehrerListe.get(i);
+				return lehrer;
+			}
+		}
+		return null;
+	}
+	
+	public Lehrer deleteLehrer(Lehrer lehrer) {
+		lehrerListe.remove(lehrer);
+		return lehrer;
 	}
 	
 	public JTable einzelpersonenAusgeben () {
