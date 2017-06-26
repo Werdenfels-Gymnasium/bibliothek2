@@ -1,3 +1,4 @@
+
 package model;
 import java.util.LinkedList;
 
@@ -18,6 +19,7 @@ public class Storage {
 	//Klassen und Kurse
 	public LinkedList<UnterMittelStufe> unterMittelStufeListe;
 	public LinkedList<Einzelperson> einzelpersonen;
+	public LinkedList<Einzelausleihe> einzelausleihe;
 	
 	public Storage () {
 	}
