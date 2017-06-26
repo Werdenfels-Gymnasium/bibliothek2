@@ -187,6 +187,7 @@ public class Storage {
 	
 	public Lehrer deleteLehrer(Lehrer lehrer) {
 		lehrerListe.remove(lehrer);
+
 		return lehrer;
 	}
 	
@@ -226,6 +227,7 @@ public class Storage {
 		for (int i = 0; i <= einzelausleihe.size(); i++) {
 			if (vorname == einzelausleihe.get(i).vorname && nachname == einzelausleihe.get(i).nachname && ISBN == einzelausleihe.get(i).iSBN)  {
 				Einzelausleihe einzel1 = einzelausleihe.get(i);
+				einzelausleihe.remove(einzel1);
 				return einzel1;
 			}
 		}
