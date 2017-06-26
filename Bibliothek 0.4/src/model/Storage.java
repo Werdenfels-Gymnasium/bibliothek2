@@ -1,4 +1,3 @@
-
 package model;
 import java.util.LinkedList;
 
@@ -21,6 +20,7 @@ public class Storage {
 	public LinkedList<Einzelperson> einzelpersonen;
 	public LinkedList<Einzelausleihe> einzelausleihe;
 	
+	
 	public Storage () {
 	}
 	
@@ -36,6 +36,9 @@ public class Storage {
 		unterMittelStufeListe = new LinkedList<UnterMittelStufe>();
 		System.out.println("Klassenliste erstellt!");
 		einzelpersonen = new LinkedList<Einzelperson>();
+		System.out.ptintln("Einzelpersonenliste erstellt")
+		einzelausleihe = new LinkedList<Einzelausleihe>();
+		System.out.println("Einzelausleiheliste erstellen")
 	}
 
 	
@@ -207,7 +210,7 @@ public class Storage {
 	public Einzelausleihe addEinzelausleihe (String vorname, String nachname, String adresse, String telefonnummer, int ISBN){
 		Einzelperson e1 = new Einzelperson (vorname, nachname, adresse, telefonnummer);
 		for (int i = 0; i <= buecher.size(); i++) {
-			if (ISBN.compareToIgnoreCase(buecher.get(i).iSBN) == 0)  {
+			if (ISBN == buecher.get(i).iSBN)  {
 				Buch b1 = buecher.get(i);
 			}
 			else {
@@ -221,9 +224,8 @@ public class Storage {
 	
 	public Einzelausleihe deleteEinzelausleihe (String vorname, String nachname, int ISBN){
 		for (int i = 0; i <= einzelausleihe.size(); i++) {
-			if (vorname.compareToIgnoreCase(einzelausleihe.get(i).vorname) == 0 && nachname.compareToIgnoreCase(einzelausleihe.get(i).nachname) == 0 && ISBN.compareToIgnoreCase(einzelausleihe.get(i).iSBN) == 0)  {
+			if (vorname == einzelausleihe.get(i).vorname && nachname == einzelausleihe.get(i).nachname && ISBN == einzelausleihe.get(i).iSBN)  {
 				Einzelausleihe einzel1 = einzelausleihe.get(i);
-				auftraege.remove(i);
 				return einzel1;
 			}
 		}
