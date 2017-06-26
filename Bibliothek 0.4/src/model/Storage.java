@@ -201,8 +201,40 @@ public class Storage {
 	}
 			
 					
+	//Methoden fÃ¼r die Einzelausleihe
+	public Einzelausleihe addEinzelausleihe (String vorname, String nachname, String adresse, String telefonnummer, int ISBN){
+		Einzelperson e1 = new Einzelperson (vorname, nachname, adresse, telefonnummer);
+		for (int i = 0; i <= buecher.size(); i++) {
+			if (ISBN.compareToIgnoreCase(buecher.get(i).iSBN) == 0)  {
+				Buch b1 = buecher.get(i);
+			}
+			else {
+				System.out.println("Buch mit der ISBN-Nummer "+ISBN+" nicht gefunden.");
+			}
+		}
+		Einzelausleihe einzel1 = new Einzelausleihe (e1, b1);
+		einzelausleihe.add (einzel1);
+		return einzel1;
+	}
 	
+	public Einzelausleihe deleteEinzelausleihe (String vorname, String nachname, int ISBN){
+		for (int i = 0; i <= einzelausleihe.size(); i++) {
+			if (vorname.compareToIgnoreCase(einzelausleihe.get(i).vorname) == 0 && nachname.compareToIgnoreCase(einzelausleihe.get(i).nachname) == 0 && ISBN.compareToIgnoreCase(einzelausleihe.get(i).iSBN) == 0)  {
+				Einzelausleihe einzel1 = einzelausleihe.get(i);
+				auftraege.remove(i);
+				return einzel1;
+			}
+		}
+		return null;
+	}
 	
-	
+	public Einzelausleihe searchEinzelausleihe (String vorname, String nachname){
+		for (int i = 0; i <= einzelausleihe.size(); i++){
+			if (vorname.compareToIgnoreCase(einzelausleihe.get(i).vorname) == 0 && nachname.compareToIgnoreCase(einzelausleihe.get(i).nachname) == 0) {
+				Einzelausleihe sEinzel = new einzelausleihe.get(i);
+				return sEinzel;
+			}
+		}
+	}
 	
 }
