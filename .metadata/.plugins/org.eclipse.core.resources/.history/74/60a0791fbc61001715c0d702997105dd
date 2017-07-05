@@ -116,7 +116,6 @@ public class EintragLöschen extends JFrame {
 		});
 		
 		JButton btnNewButton_3 = new JButton("Einzelperson");
-		btnNewButton_3.setFont(new Font("Arial", Font.PLAIN, 11));
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				EinzelpersonEnt einz = new EinzelpersonEnt(storage);
