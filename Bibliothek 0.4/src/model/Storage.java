@@ -18,6 +18,8 @@ public class Storage {
 	//Klassen und Kurse
 	public LinkedList<UnterMittelStufe> unterMittelStufeListe;
 	public LinkedList<Einzelperson> einzelpersonen;
+	public LinkedList<Einzelausleihe> einzelausleihe;
+	
 	
 	public Storage () {
 	}
@@ -34,6 +36,9 @@ public class Storage {
 		unterMittelStufeListe = new LinkedList<UnterMittelStufe>();
 		System.out.println("Klassenliste erstellt!");
 		einzelpersonen = new LinkedList<Einzelperson>();
+		System.out.ptintln("Einzelpersonenliste erstellt")
+		einzelausleihe = new LinkedList<Einzelausleihe>();
+		System.out.println("Einzelausleiheliste erstellen")
 	}
 
 	
@@ -182,6 +187,7 @@ public class Storage {
 	
 	public Lehrer deleteLehrer(Lehrer lehrer) {
 		lehrerListe.remove(lehrer);
+
 		return lehrer;
 	}
 	
@@ -201,8 +207,40 @@ public class Storage {
 	}
 			
 					
+	//Methoden fÃ¼r die Einzelausleihe
+	public Einzelausleihe addEinzelausleihe (String vorname, String nachname, String adresse, String telefonnummer, int ISBN){
+		Einzelperson e1 = new Einzelperson (vorname, nachname, adresse, telefonnummer);
+		for (int i = 0; i <= buecher.size(); i++) {
+			if (ISBN == buecher.get(i).iSBN)  {
+				Buch b1 = buecher.get(i);
+			}
+			else {
+				System.out.println("Buch mit der ISBN-Nummer "+ISBN+" nicht gefunden.");
+			}
+		}
+		Einzelausleihe einzel1 = new Einzelausleihe (e1, b1);
+		einzelausleihe.add (einzel1);
+		return einzel1;
+	}
 	
+	public Einzelausleihe deleteEinzelausleihe (String vorname, String nachname, int ISBN){
+		for (int i = 0; i <= einzelausleihe.size(); i++) {
+			if (vorname == einzelausleihe.get(i).vorname && nachname == einzelausleihe.get(i).nachname && ISBN == einzelausleihe.get(i).iSBN)  {
+				Einzelausleihe einzel1 = einzelausleihe.get(i);
+				einzelausleihe.remove(einzel1);
+				return einzel1;
+			}
+		}
+		return null;
+	}
 	
-	
+	public Einzelausleihe searchEinzelausleihe (String vorname, String nachname){
+		for (int i = 0; i <= einzelausleihe.size(); i++){
+			if (vorname.compareToIgnoreCase(einzelausleihe.get(i).vorname) == 0 && nachname.compareToIgnoreCase(einzelausleihe.get(i).nachname) == 0) {
+				Einzelausleihe sEinzel = new einzelausleihe.get(i);
+				return sEinzel;
+			}
+		}
+	}
 	
 }
