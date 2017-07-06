@@ -98,7 +98,10 @@ public class EinzelpersonGUI extends JFrame {
 				String telefonnummer=textFieldTele.getText();
 				
 				Einzelperson neueEinzelperson = new Einzelperson();
-				neueEinzelperson.set(vorname, nachname, adresse, telefonnummer);
+				neueEinzelperson.setVorname(vorname);
+				neueEinzelperson.setNachname(nachname);
+				neueEinzelperson.setAdresse(adresse);
+				neueEinzelperson.setTelefonnummer(telefonnummer);
 				storage.einzelpersonen.add(neueEinzelperson);
 				
 				EintragOK ok= new EintragOK();

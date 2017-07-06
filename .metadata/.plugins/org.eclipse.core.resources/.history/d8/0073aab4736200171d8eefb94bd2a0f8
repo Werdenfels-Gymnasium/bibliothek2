@@ -1,0 +1,61 @@
+import java.io.*;
+
+import javax.swing.JFrame;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+
+import controller.*;
+import model.Storage;
+import view.hauptfenster;
+
+public class main {
+	
+	static Storage storage = new Storage();
+
+	public static void main(String[] args) {
+		File file = new File ("erststart.dat");
+		if (file.isFile() && file.canWrite() && file.canRead()) {
+			//Normaler Start!
+			System.out.println("Dateiauslesung wird initialisiert");
+			storage = new XMLDeserializer ().laden();
+		}
+		else {
+			
+			//Erststart!
+			
+			System.out.println("Erststart wird ausgeführt! Dateien können verloren gehen!");
+			storage.erststart();
+			try {
+				file.createNewFile();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			File xml = new File ("storage.xml");
+			try {
+				xml.createNewFile();
+				System.out.println("Storage/Speicher erstellt");
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			System.out.println("Erstart abgespeichert!");
+			XMLSerializer serializer = new XMLSerializer();
+			serializer.speichern(storage);
+			
+		}
+		hauptfenster haupt1 = new hauptfenster(storage);
+		haupt1.frame.setVisible(true);
+		System.out.println(storage.einzelpersonen.get(0).vorname);
+		
+		int size = storage.einzelpersonen.size();
+		System.out.println(size);
+//		JFrame f = new JFrame();
+//	    f.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
+//
+//	    f.add( new JScrollPane( storage.einzelpersonenAusgeben() ) );
+//
+//	    f.pack();
+//	    f.setVisible( true );
+		
+
+	}
+}

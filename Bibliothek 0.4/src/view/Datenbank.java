@@ -145,7 +145,7 @@ public class Datenbank extends JFrame {
 					.addContainerGap())
 		);
 		
-		table = new JTable();
+		table = storage.einzelpersonenAusgeben();
 		table.setFont(new Font("Arial", Font.PLAIN, 11));
 		scrollPane.setViewportView(table);
 		contentPane.setLayout(gl_contentPane);

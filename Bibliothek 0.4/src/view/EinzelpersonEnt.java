@@ -74,7 +74,7 @@ public class EinzelpersonEnt extends JFrame {
 		btnEintragErstellen.setBounds(342, 372, 128, 23);
 		btnEintragErstellen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				storage.deleteEinzelperson(storage.searchEinzelpersonName(textFieldVor.getText(), textFieldNach.getText()));
 			}
 		});
 		btnEintragErstellen.setFont(new Font("Arial", Font.PLAIN, 11));

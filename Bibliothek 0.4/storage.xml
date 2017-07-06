@@ -47,7 +47,62 @@
         <string>vorname</string>
         <void method="set">
          <object idref="Einzelperson0"/>
-         <string>Es haette geklappt</string>
+         <string>vorname</string>
+        </void>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="model.Einzelperson" id="Einzelperson1">
+       <void class="model.Einzelperson" method="getField">
+        <string>vorname</string>
+        <void method="set">
+         <object idref="Einzelperson1"/>
+         <string>vorname 2</string>
+        </void>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="model.Einzelperson" id="Einzelperson2">
+       <void class="model.Einzelperson" method="getField">
+        <string>vorname</string>
+        <void method="set">
+         <object idref="Einzelperson2"/>
+         <string>vorname 2</string>
+        </void>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="model.Einzelperson" id="Einzelperson3">
+       <void class="model.Einzelperson" method="getField">
+        <string>vorname</string>
+        <void method="set">
+         <object idref="Einzelperson3"/>
+         <string>vorname3</string>
+        </void>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="model.Einzelperson" id="Einzelperson4">
+       <void class="model.Einzelperson" method="getField">
+        <string>vorname</string>
+        <void method="set">
+         <object idref="Einzelperson4"/>
+         <string>Einzelperson4T</string>
+        </void>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="model.Einzelperson" id="Einzelperson5">
+       <void class="model.Einzelperson" method="getField">
+        <string>vorname</string>
+        <void method="set">
+         <object idref="Einzelperson5"/>
+         <string>Telefonnummer</string>
         </void>
        </void>
       </object>

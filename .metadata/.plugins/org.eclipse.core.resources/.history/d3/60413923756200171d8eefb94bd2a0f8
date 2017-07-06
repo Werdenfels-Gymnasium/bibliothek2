@@ -1,0 +1,23 @@
+package model;
+
+public class Einzelperson extends Entleiher {
+	public String vorname;
+	String nachname;
+	String adresse;
+	String telefonnummer;
+	
+	public Einzelperson () {
+	}
+	
+	public Einzelperson set (String vorname, String nachname, String adresse, String telefonnummer) {
+		this.vorname = vorname;
+		this.nachname = nachname;
+		this.adresse = adresse;
+		this.telefonnummer = telefonnummer;
+		return this;
+	}
+	
+	public void setAdresse (String neueAdresse) {
+		adresse = neueAdresse;
+	}
+}
