@@ -120,7 +120,7 @@ public class EinzelpersonGUI extends JFrame {
 		contentPane.add(textFieldNach);
 		
 		JLabel lblBack = new JLabel("");
-		lblBack.setBounds(0, 0, 784, 450);
+		lblBack.setBounds(0, 0, 836, 450);
 		Image img0 = new ImageIcon(this.getClass().getResource("/Hintergrund 800p.png")).getImage();
 		lblBack.setIcon(new ImageIcon(img0));
 		contentPane.add(lblBack);

@@ -85,7 +85,7 @@ public class AuftragEnt extends JFrame {
 		textField.setColumns(10);
 		
 		JLabel lblBack = new JLabel("");
-		lblBack.setBounds(0, 0, 784, 450);
+		lblBack.setBounds(0, 0, 839, 450);
 		lblBack.setIcon(new ImageIcon(img0));
 		contentPane.add(lblBack);
 	}

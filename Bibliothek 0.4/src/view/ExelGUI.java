@@ -1,0 +1,99 @@
+package view;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+import java.awt.Image;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.GroupLayout;
+import javax.swing.ImageIcon;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.LayoutStyle.ComponentPlacement;
+import javax.swing.JTextField;
+
+public class ExelGUI extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField textField;
+	private JTextField textField_1;
+	private JTextField textField_2;
+
+
+
+	/**
+	 * Create the frame.
+	 */
+	public ExelGUI() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 800, 450);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		
+		JButton btnZurck = new JButton("Zurück");
+		btnZurck.setBounds(15, 16, 85, 23);
+		
+		JLabel lblExeltabelleEinerKlassenliste = new JLabel("Exeltabelle einer Klassenliste einlesen");
+		lblExeltabelleEinerKlassenliste.setBounds(305, 20, 179, 14);
+		
+		JLabel lblStellenSieSicher = new JLabel("Stellen Sie sicher, dass die Exel Datei folgenden Aufbau hat: ");
+		lblStellenSieSicher.setBounds(233, 106, 320, 14);
+		
+		JLabel lblSpalteNachname = new JLabel("1. Spalte Nachname, 2. Spalte Vorname, 3. Spalte Zweig, 4. Spalte Religion, 5. Spalte Geburtsdatum");
+		lblSpalteNachname.setBounds(144, 131, 510, 14);
+		
+		JLabel lblPfad = new JLabel("Pfad");
+		lblPfad.setBounds(258, 190, 96, 14);
+		
+		textField = new JTextField();
+		textField.setBounds(432, 187, 145, 20);
+		textField.setColumns(10);
+		
+		JLabel lblKlasse = new JLabel("Klasse");
+		lblKlasse.setBounds(258, 260, 96, 14);
+		
+		JLabel lblLehrerkrzel = new JLabel("Lehrerkürzel");
+		lblLehrerkrzel.setBounds(258, 298, 86, 14);
+		
+		JLabel lblBeispielpfad = new JLabel("Beispielpfad");
+		lblBeispielpfad.setBounds(258, 225, 96, 14);
+		
+		JLabel lblNewLabel = new JLabel("\"beispielpfad\"\r\n");
+		lblNewLabel.setBounds(432, 225, 145, 14);
+		
+		textField_1 = new JTextField();
+		textField_1.setBounds(432, 257, 145, 20);
+		textField_1.setColumns(10);
+		
+		textField_2 = new JTextField();
+		textField_2.setBounds(432, 295, 145, 20);
+		textField_2.setColumns(10);
+		
+		JButton btnZurck_1 = new JButton("Zurück");
+		btnZurck_1.setBounds(356, 377, 90, 23);
+		contentPane.setLayout(null);
+		contentPane.add(btnZurck);
+		contentPane.add(lblExeltabelleEinerKlassenliste);
+		contentPane.add(lblStellenSieSicher);
+		contentPane.add(lblSpalteNachname);
+		contentPane.add(lblPfad);
+		contentPane.add(textField);
+		contentPane.add(lblKlasse);
+		contentPane.add(lblLehrerkrzel);
+		contentPane.add(lblBeispielpfad);
+		contentPane.add(lblNewLabel);
+		contentPane.add(textField_1);
+		contentPane.add(textField_2);
+		contentPane.add(btnZurck_1);
+		
+		JLabel lblBack = new JLabel("");
+		lblBack.setBounds(0, 0, 825, 450);
+		contentPane.add(lblBack);
+		Image img0 = new ImageIcon(this.getClass().getResource("/Hintergrund 800p.png")).getImage();
+		lblBack.setIcon(new ImageIcon(img0));
+	}
+}

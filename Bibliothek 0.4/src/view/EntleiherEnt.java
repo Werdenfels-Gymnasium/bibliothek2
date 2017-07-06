@@ -85,7 +85,7 @@ public class EntleiherEnt extends JFrame {
 		JLabel lblBack = new JLabel("");
 		Image img0 = new ImageIcon(this.getClass().getResource("/Hintergrund 800p.png")).getImage();
 		lblBack.setIcon(new ImageIcon(img0));
-		lblBack.setBounds(0, 0, 784, 450);
+		lblBack.setBounds(0, 0, 846, 450);
 		contentPane.add(lblBack);
 	}
 

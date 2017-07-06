@@ -114,7 +114,7 @@ public class AusfOber extends JFrame {
 		contentPane.add(btnAuftragErstellen);
 		
 		JLabel lblBack = new JLabel("");
-		lblBack.setBounds(0, 0, 784, 450);
+		lblBack.setBounds(0, 0, 871, 450);
 		contentPane.add(lblBack);
 		Image img0 = new ImageIcon(this.getClass().getResource("/HintergrundRot 800p.png")).getImage();
 		lblBack.setIcon(new ImageIcon(img0));

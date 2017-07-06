@@ -136,7 +136,7 @@ public class BuchGUI extends JFrame {
 		contentPane.add(textFieldZweig);
 		
 		JLabel lblBack = new JLabel("");
-		lblBack.setBounds(0, 0, 784, 450);
+		lblBack.setBounds(0, 0, 861, 450);
 		Image img0 = new ImageIcon(this.getClass().getResource("/Hintergrund 800p.png")).getImage();
 		lblBack.setIcon(new ImageIcon(img0));
 		contentPane.add(lblBack);

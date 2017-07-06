@@ -80,7 +80,7 @@ public class EinzelpersonEnt extends JFrame {
 		btnEintragErstellen.setFont(new Font("Arial", Font.PLAIN, 11));
 		contentPane.setLayout(null);
 		
-		JLabel lblGebenSieDie = new JLabel("Geben Sie die Daten der Einzelperson ein, welche Sie entfernen möchten");
+		JLabel lblGebenSieDie = new JLabel("Geben Sie die Daten der Einzelperson ein, welchen Sie entfernen möchten");
 		lblGebenSieDie.setFont(new Font("Arial", Font.PLAIN, 11));
 		lblGebenSieDie.setBounds(212, 100, 370, 14);
 		contentPane.add(lblGebenSieDie);
@@ -93,7 +93,7 @@ public class EinzelpersonEnt extends JFrame {
 		contentPane.add(textFieldNach);
 		
 		JLabel lblBack = new JLabel("");
-		lblBack.setBounds(0, 0, 846, 450);
+		lblBack.setBounds(0, 0, 784, 450);
 		Image img0 = new ImageIcon(this.getClass().getResource("/Hintergrund 800p.png")).getImage();
 		lblBack.setIcon(new ImageIcon(img0));
 		contentPane.add(lblBack);

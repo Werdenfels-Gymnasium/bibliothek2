@@ -79,7 +79,7 @@ public class Standort extends JFrame {
 		contentPane.add(btnEintragErstellen);
 		
 		JLabel lblBack = new JLabel("");
-		lblBack.setBounds(0, 0, 784, 450);
+		lblBack.setBounds(0, 0, 846, 450);
 		Image img0 = new ImageIcon(this.getClass().getResource("/Hintergrund 800p.png")).getImage();
 		lblBack.setIcon(new ImageIcon(img0));
 		contentPane.add(lblBack);

@@ -73,6 +73,11 @@ public class hauptfenster {
 		lblAnfang.setFont(new Font("Arial", Font.PLAIN, 11));
 		lblAnfang.setBounds(294, 11, 221, 37);
 		frame.getContentPane().setLayout(null);
+		
+		JButton btnNewButton = new JButton("Exeltabelle einlesen\r\n");
+		btnNewButton.setFont(new Font("Arial", Font.PLAIN, 11));
+		btnNewButton.setBounds(318, 248, 157, 23);
+		frame.getContentPane().add(btnNewButton);
 		frame.getContentPane().add(btnZuDenDatenbanken);
 		frame.getContentPane().add(btnVerleih);
 		frame.getContentPane().add(lblAnfang);
@@ -80,9 +85,8 @@ public class hauptfenster {
 		JLabel lblBack = new JLabel("");
 		Image img0 = new ImageIcon(this.getClass().getResource("/Hintergrund 800p.png")).getImage();
 		lblBack.setIcon(new ImageIcon(img0));
-		lblBack.setBounds(0, 0, 784, 450);
+		lblBack.setBounds(0, 0, 837, 450);
 		frame.getContentPane().add(lblBack);
 	
 	}
-
 }

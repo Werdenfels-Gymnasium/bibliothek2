@@ -131,7 +131,7 @@ public class AusfEinzel extends JFrame {
 		contentPane.add(textField);
 		
 		JLabel lblBack = new JLabel("");
-		lblBack.setBounds(0, 0, 800, 450);
+		lblBack.setBounds(0, 0, 850, 450);
 		contentPane.add(lblBack);
 		Image img1 = new ImageIcon(this.getClass().getResource("/HintergrundBlau 800p.png")).getImage();
 		lblBack.setIcon(new ImageIcon(img1));

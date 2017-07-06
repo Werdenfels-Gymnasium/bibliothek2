@@ -109,7 +109,7 @@ public class Ausleihfenster extends JFrame {
 		contentPane.add(lblText1);
 		
 		JLabel lblBack = new JLabel("");
-		lblBack.setBounds(0, 0, 784, 450);
+		lblBack.setBounds(0, 0, 841, 450);
 		contentPane.add(lblBack);
 		Image img0 = new ImageIcon(this.getClass().getResource("/Hintergrund 800p.png")).getImage();
 		lblBack.setIcon(new ImageIcon(img0));

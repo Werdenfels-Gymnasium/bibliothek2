@@ -84,7 +84,7 @@ public class KursEnt extends JFrame {
 		contentPane.add(lblGebenSieDie);
 		
 		JLabel lblBack = new JLabel("");
-		lblBack.setBounds(0, 0, 784, 450);
+		lblBack.setBounds(0, 0, 863, 450);
 		lblBack.setIcon(new ImageIcon(img0));
 		contentPane.add(lblBack);
 	}

@@ -46,6 +46,7 @@ public class Unter_MittelGUI extends JFrame {
 		this.storage=storage;
 		
 		JButton btnZurck = new JButton("Zurück");
+		btnZurck.setBounds(15, 16, 94, 23);
 		btnZurck.setFont(new Font("Arial", Font.PLAIN, 11));
 		btnZurck.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -54,33 +55,43 @@ public class Unter_MittelGUI extends JFrame {
 		});
 		
 		JLabel lblNeuerEintragFr = new JLabel("Neuer Eintrag für Unter-/Mittelstufenschüler");
+		lblNeuerEintragFr.setBounds(284, 20, 209, 14);
 		lblNeuerEintragFr.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		JLabel lblNewLabel_1 = new JLabel("Nachname");
+		lblNewLabel_1.setBounds(231, 111, 98, 14);
 		lblNewLabel_1.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		JLabel lblNewLabel_2 = new JLabel("Vorname");
+		lblNewLabel_2.setBounds(231, 149, 98, 14);
 		lblNewLabel_2.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		JLabel lblNewLabel_3 = new JLabel("Geburtsdatum");
+		lblNewLabel_3.setBounds(231, 187, 98, 14);
 		lblNewLabel_3.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		JLabel lblNewLabel_4 = new JLabel("Klasse");
+		lblNewLabel_4.setBounds(231, 225, 98, 14);
 		lblNewLabel_4.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		textFieldNach = new JTextField();
+		textFieldNach.setBounds(464, 108, 112, 20);
 		textFieldNach.setColumns(10);
 		
 		textFieldVor = new JTextField();
+		textFieldVor.setBounds(464, 146, 112, 20);
 		textFieldVor.setColumns(10);
 		
 		textFieldAbi = new JTextField();
+		textFieldAbi.setBounds(464, 184, 112, 20);
 		textFieldAbi.setColumns(10);
 		
 		textFieldKlaID = new JTextField();
+		textFieldKlaID.setBounds(464, 222, 112, 20);
 		textFieldKlaID.setColumns(10);
 		
 		JButton btnEintragErstellen = new JButton("Eintrag erstellen");
+		btnEintragErstellen.setBounds(326, 373, 125, 23);
 		btnEintragErstellen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -91,84 +102,39 @@ public class Unter_MittelGUI extends JFrame {
 		btnEintragErstellen.setFont(new Font("Arial", Font.PLAIN, 11));
 		
 		JLabel lblZweig = new JLabel("Zweig");
+		lblZweig.setBounds(231, 263, 98, 14);
 		
 		JLabel lblNewLabel = new JLabel("Religion\r\n");
+		lblNewLabel.setBounds(231, 301, 98, 14);
 		
 		textField = new JTextField();
+		textField.setBounds(464, 260, 112, 20);
 		textField.setColumns(10);
 		
 		textField_1 = new JTextField();
+		textField_1.setBounds(464, 298, 112, 20);
 		textField_1.setColumns(10);
-		GroupLayout gl_contentPane = new GroupLayout(contentPane);
-		gl_contentPane.setHorizontalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(10)
-							.addComponent(btnZurck, GroupLayout.PREFERRED_SIZE, 94, GroupLayout.PREFERRED_SIZE)
-							.addGap(175)
-							.addComponent(lblNeuerEintragFr))
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(226)
-							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
-								.addComponent(lblNewLabel_1, GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
-								.addComponent(lblNewLabel_2, GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
-								.addComponent(lblNewLabel_3, GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
-								.addComponent(lblNewLabel_4, GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
-								.addComponent(lblZweig, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-								.addComponent(lblNewLabel, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-							.addGap(135)
-							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
-								.addComponent(textField_1)
-								.addComponent(textFieldKlaID, GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
-								.addComponent(textFieldAbi, GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
-								.addComponent(textFieldVor, GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
-								.addComponent(textFieldNach, GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
-								.addComponent(textField)))
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(321)
-							.addComponent(btnEintragErstellen, GroupLayout.PREFERRED_SIZE, 125, GroupLayout.PREFERRED_SIZE)))
-					.addContainerGap(203, Short.MAX_VALUE))
-		);
-		gl_contentPane.setVerticalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(11)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addComponent(btnZurck)
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(4)
-							.addComponent(lblNeuerEintragFr)))
-					.addGap(69)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblNewLabel_1)
-						.addComponent(textFieldNach, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(18)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblNewLabel_2)
-						.addComponent(textFieldVor, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(18)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblNewLabel_3)
-						.addComponent(textFieldAbi, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(18)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblNewLabel_4)
-						.addComponent(textFieldKlaID, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(18)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblZweig)
-						.addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(18)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblNewLabel)
-						.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(55)
-					.addComponent(btnEintragErstellen)
-					.addContainerGap())
-		);
-		contentPane.setLayout(gl_contentPane);
+		contentPane.setLayout(null);
+		contentPane.add(btnZurck);
+		contentPane.add(lblNeuerEintragFr);
+		contentPane.add(lblNewLabel_1);
+		contentPane.add(lblNewLabel_2);
+		contentPane.add(lblNewLabel_3);
+		contentPane.add(lblNewLabel_4);
+		contentPane.add(lblZweig);
+		contentPane.add(lblNewLabel);
+		contentPane.add(textField_1);
+		contentPane.add(textFieldKlaID);
+		contentPane.add(textFieldAbi);
+		contentPane.add(textFieldVor);
+		contentPane.add(textFieldNach);
+		contentPane.add(textField);
+		contentPane.add(btnEintragErstellen);
+		
+		JLabel lblBack = new JLabel("");
+		lblBack.setBounds(0, 0, 838, 450);
+		contentPane.add(lblBack);
 		Image img0 = new ImageIcon(this.getClass().getResource("/Hintergrund 800p.png")).getImage();
+		lblBack.setIcon(new ImageIcon(img0));
 	}
 }

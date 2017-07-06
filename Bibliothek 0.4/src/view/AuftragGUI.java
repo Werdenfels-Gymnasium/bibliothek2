@@ -101,7 +101,7 @@ public class AuftragGUI extends JFrame {
 		contentPane.add(lblNeuerEintragFr);
 		
 		JLabel lblBack = new JLabel("");
-		lblBack.setBounds(0, 0, 784, 450);
+		lblBack.setBounds(0, 0, 871, 450);
 		Image img0 = new ImageIcon(this.getClass().getResource("/Hintergrund 800p.png")).getImage();
 		lblBack.setIcon(new ImageIcon(img0));
 		contentPane.add(lblBack);
