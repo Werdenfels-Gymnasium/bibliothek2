@@ -19,7 +19,6 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JTextField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import java.awt.Font;
 
 public class ExelGUI extends JFrame {
 
@@ -28,7 +27,6 @@ public class ExelGUI extends JFrame {
 	private JTextField textField_1;
 	private JTextField textField_2;
 	Storage storage;
-	private JTextField textField_3;
 
 
 
@@ -45,77 +43,49 @@ public class ExelGUI extends JFrame {
 		
 		JButton btnZurck = new JButton("Zurück");
 		btnZurck.setBounds(15, 16, 85, 23);
-		btnZurck.setFont(new Font("Arial", Font.PLAIN, 11));
-		btnZurck.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				dispose();
-				hauptfenster haupt1 =new hauptfenster(storage);
-				haupt1.frame.setVisible(true);
-			}
-		});
 		
 		JLabel lblExeltabelleEinerKlassenliste = new JLabel("Exeltabelle einer Klassenliste einlesen");
-		lblExeltabelleEinerKlassenliste.setBounds(305, 20, 195, 14);
-		lblExeltabelleEinerKlassenliste.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblExeltabelleEinerKlassenliste.setBounds(305, 20, 179, 14);
 		
 		JLabel lblStellenSieSicher = new JLabel("Stellen Sie sicher, dass die Exel Datei folgenden Aufbau hat: ");
-		lblStellenSieSicher.setBounds(234, 89, 320, 14);
-		lblStellenSieSicher.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblStellenSieSicher.setBounds(233, 106, 320, 14);
 		
 		JLabel lblSpalteNachname = new JLabel("1. Spalte Nachname, 2. Spalte Vorname, 3. Spalte Zweig, 4. Spalte Religion, 5. Spalte Geburtsdatum");
-		lblSpalteNachname.setBounds(145, 114, 510, 14);
-		lblSpalteNachname.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblSpalteNachname.setBounds(144, 131, 510, 14);
 		
 		JLabel lblPfad = new JLabel("Pfad");
-		lblPfad.setBounds(258, 163, 96, 14);
-		lblPfad.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblPfad.setBounds(258, 190, 96, 14);
 		
 		textField = new JTextField();
-		textField.setBounds(432, 160, 145, 20);
+		textField.setBounds(432, 187, 145, 20);
 		textField.setColumns(10);
 		
 		JLabel lblKlasse = new JLabel("Klasse");
-		lblKlasse.setBounds(258, 233, 96, 14);
-		lblKlasse.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblKlasse.setBounds(258, 260, 96, 14);
 		
-		JLabel lblLehrerkrzel = new JLabel("Jahrgangstufe");
-		lblLehrerkrzel.setBounds(258, 271, 86, 14);
-		lblLehrerkrzel.setFont(new Font("Arial", Font.PLAIN, 11));
+		JLabel lblLehrerkrzel = new JLabel("Lehrerkürzel");
+		lblLehrerkrzel.setBounds(258, 298, 86, 14);
 		
 		JLabel lblBeispielpfad = new JLabel("Beispielpfad");
-		lblBeispielpfad.setBounds(258, 198, 96, 14);
-		lblBeispielpfad.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblBeispielpfad.setBounds(258, 225, 96, 14);
 		
 		JLabel lblNewLabel = new JLabel("\"beispielpfad\"\r\n");
-		lblNewLabel.setBounds(432, 198, 145, 14);
-		lblNewLabel.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblNewLabel.setBounds(432, 225, 145, 14);
 		
 		textField_1 = new JTextField();
-		textField_1.setBounds(432, 230, 145, 20);
-		textField_1.setFont(new Font("Arial", Font.PLAIN, 11));
+		textField_1.setBounds(432, 257, 145, 20);
 		textField_1.setColumns(10);
 		
 		textField_2 = new JTextField();
-		textField_2.setBounds(432, 268, 145, 20);
-		textField_2.setFont(new Font("Arial", Font.PLAIN, 11));
+		textField_2.setBounds(432, 295, 145, 20);
 		textField_2.setColumns(10);
 		
 		JButton btnZurck_1 = new JButton("Einlesen");
-		btnZurck_1.setBounds(366, 372, 90, 23);
-		btnZurck_1.setFont(new Font("Arial", Font.PLAIN, 11));
 		btnZurck_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				String Pfad=textField_1.getText();
-				
 			}
 		});
-		
-		JLabel lblLehrerkrzel_1 = new JLabel("Lehrerkürzel");
-		lblLehrerkrzel_1.setBounds(258, 309, 78, 14);
-		
-		textField_3 = new JTextField();
-		textField_3.setBounds(432, 306, 145, 20);
-		textField_3.setColumns(10);
+		btnZurck_1.setBounds(356, 377, 90, 23);
 		contentPane.setLayout(null);
 		contentPane.add(btnZurck);
 		contentPane.add(lblExeltabelleEinerKlassenliste);
@@ -130,11 +100,9 @@ public class ExelGUI extends JFrame {
 		contentPane.add(textField_1);
 		contentPane.add(textField_2);
 		contentPane.add(btnZurck_1);
-		contentPane.add(lblLehrerkrzel_1);
-		contentPane.add(textField_3);
 		
 		JLabel lblBack = new JLabel("");
-		lblBack.setBounds(0, 0, 819, 450);
+		lblBack.setBounds(0, 0, 825, 450);
 		contentPane.add(lblBack);
 		Image img0 = new ImageIcon(this.getClass().getResource("/Hintergrund 800p.png")).getImage();
 		lblBack.setIcon(new ImageIcon(img0));

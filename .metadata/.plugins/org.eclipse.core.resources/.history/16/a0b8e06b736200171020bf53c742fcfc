@@ -28,7 +28,10 @@ public class AusfUnter extends JFrame {
 	Storage storage;
 	private JTextField textFieldLeh;
 	private JTextField textFieldLat;
-	private JTextField textField;
+	private JTextField textFieldFra;
+	private JTextField textFieldKath;
+	private JTextField textFieldEva;
+	private JTextField textFieldEth;
 
 	/**
 	 * Create the frame.
@@ -42,31 +45,62 @@ public class AusfUnter extends JFrame {
 		setContentPane(contentPane);
 		
 		JLabel lblNewLabel = new JLabel("Lehrerkürzel");
-		lblNewLabel.setBounds(69, 161, 228, 14);
 		lblNewLabel.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblNewLabel.setBounds(70, 83, 228, 14);
 		
 		textFieldLeh = new JTextField();
-		textFieldLeh.setBounds(467, 158, 212, 20);
+		textFieldLeh.setBounds(468, 80, 212, 20);
 		textFieldLeh.setColumns(10);
 		
-		JLabel lblNewLabel_1 = new JLabel("Jahrgangsstufe\r\n");
-		lblNewLabel_1.setBounds(69, 193, 228, 14);
+		JLabel lblNewLabel_1 = new JLabel("Klasse");
 		lblNewLabel_1.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblNewLabel_1.setBounds(70, 115, 228, 14);
 		
-		JLabel lblNewLabel_2 = new JLabel("Zusatz (z.B. a, b, c, d)");
-		lblNewLabel_2.setBounds(69, 228, 394, 14);
+		JLabel lblNewLabel_2 = new JLabel("Anzahl Latein");
 		lblNewLabel_2.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblNewLabel_2.setBounds(70, 150, 394, 14);
 		
 		textFieldLat = new JTextField();
-		textFieldLat.setBounds(467, 225, 212, 20);
+		textFieldLat.setBounds(468, 147, 212, 20);
 		textFieldLat.setColumns(10);
 		
 		JLabel lblBitteGebenSie = new JLabel("Bitte geben sie ihre Daten ein!");
-		lblBitteGebenSie.setBounds(296, 20, 302, 14);
 		lblBitteGebenSie.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblBitteGebenSie.setBounds(296, 20, 302, 14);
+		
+		JLabel lblAnzahlFranzsisch = new JLabel("Anzahl Französisch");
+		lblAnzahlFranzsisch.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblAnzahlFranzsisch.setBounds(70, 188, 119, 14);
+		
+		JLabel lblAnzahlKatholisch = new JLabel("Anzahl katholisch");
+		lblAnzahlKatholisch.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblAnzahlKatholisch.setBounds(70, 226, 91, 14);
+		
+		textFieldFra = new JTextField();
+		textFieldFra.setBounds(468, 185, 212, 20);
+		textFieldFra.setColumns(10);
+		
+		textFieldKath = new JTextField();
+		textFieldKath.setBounds(468, 223, 212, 20);
+		textFieldKath.setColumns(10);
+		
+		JLabel lblAnzahlEvangelisch = new JLabel("Anzahl evangelisch");
+		lblAnzahlEvangelisch.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblAnzahlEvangelisch.setBounds(70, 264, 140, 14);
+		
+		JLabel lblAnzahlEthik = new JLabel("Anzahl Ethik");
+		lblAnzahlEthik.setFont(new Font("Arial", Font.PLAIN, 11));
+		lblAnzahlEthik.setBounds(70, 302, 119, 14);
+		
+		textFieldEva = new JTextField();
+		textFieldEva.setBounds(468, 261, 212, 20);
+		textFieldEva.setColumns(10);
+		
+		textFieldEth = new JTextField();
+		textFieldEth.setBounds(468, 299, 212, 20);
+		textFieldEth.setColumns(10);
 		
 		JButton btnAuftragErstellen = new JButton("Auftrag erstellen");
-		btnAuftragErstellen.setBounds(301, 380, 162, 18);
 		btnAuftragErstellen.setFont(new Font("Arial", Font.PLAIN, 11));
 		btnAuftragErstellen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -74,10 +108,11 @@ public class AusfUnter extends JFrame {
 				ok.setVisible(true);
 			}
 		});
+		btnAuftragErstellen.setBounds(302, 382, 162, 18);
 		
 		JButton btnZurck = new JButton("Zurück");
-		btnZurck.setBounds(15, 16, 96, 23);
 		btnZurck.setFont(new Font("Arial", Font.PLAIN, 11));
+		btnZurck.setBounds(15, 16, 96, 23);
 		btnZurck.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				dispose();
@@ -87,30 +122,29 @@ public class AusfUnter extends JFrame {
 		});
 		String[] Klassen= {"10a","10b","10c"};
 		JComboBox comboBox = new JComboBox(Klassen);
-		comboBox.setBounds(467, 187, 212, 20);
 		comboBox.setFont(new Font("Arial", Font.PLAIN, 11));
-		
-		JLabel lblBuch = new JLabel("Buch");
-		lblBuch.setBounds(69, 266, 23, 14);
-		
-		textField = new JTextField();
-		textField.setBounds(467, 263, 212, 20);
-		textField.setColumns(10);
+		comboBox.setBounds(468, 109, 212, 20);
 		contentPane.setLayout(null);
 		contentPane.add(btnZurck);
 		contentPane.add(lblBitteGebenSie);
 		contentPane.add(lblNewLabel_1);
 		contentPane.add(lblNewLabel);
 		contentPane.add(lblNewLabel_2);
+		contentPane.add(lblAnzahlEvangelisch);
+		contentPane.add(lblAnzahlEthik);
+		contentPane.add(lblAnzahlKatholisch);
+		contentPane.add(lblAnzahlFranzsisch);
+		contentPane.add(textFieldEva);
 		contentPane.add(textFieldLat);
 		contentPane.add(textFieldLeh);
+		contentPane.add(textFieldFra);
+		contentPane.add(textFieldKath);
+		contentPane.add(textFieldEth);
 		contentPane.add(comboBox);
 		contentPane.add(btnAuftragErstellen);
-		contentPane.add(lblBuch);
-		contentPane.add(textField);
 		
-		JLabel lblBack = new JLabel("\r\n");
-		lblBack.setBounds(0, 0, 863, 450);
+		JLabel lblBack = new JLabel("");
+		lblBack.setBounds(0, 0, 825, 450);
 		contentPane.add(lblBack);
 		Image img0 = new ImageIcon(this.getClass().getResource("/HintergrundGelb 800p.png")).getImage();
 		lblBack.setIcon(new ImageIcon(img0));
