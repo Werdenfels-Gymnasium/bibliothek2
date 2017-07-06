@@ -1,9 +1,4 @@
 import java.io.*;
-
-import javax.swing.JFrame;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
-
 import controller.*;
 import model.Storage;
 import view.hauptfenster;
@@ -40,20 +35,9 @@ public class main {
 			System.out.println("Erstart abgespeichert!");
 			XMLSerializer serializer = new XMLSerializer();
 			serializer.speichern(storage);
-			
 		}
 		hauptfenster haupt1 = new hauptfenster(storage);
 		haupt1.frame.setVisible(true);
 		System.out.println(storage.einzelpersonen.get(0).vorname);
-		
-		JFrame f = new JFrame();
-	    f.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
-
-	    f.add( new JScrollPane( storage.einzelpersonenAusgeben() ) );
-
-	    f.pack();
-	    f.setVisible( true );
-		
-
 	}
 }

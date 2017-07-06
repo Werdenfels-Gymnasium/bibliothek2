@@ -46,14 +46,6 @@ public class main {
 		haupt1.frame.setVisible(true);
 		System.out.println(storage.einzelpersonen.get(0).vorname);
 		
-		JFrame f = new JFrame();
-	    f.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
-
-	    f.add( new JScrollPane( storage.einzelpersonenAusgeben() ) );
-
-	    f.pack();
-	    f.setVisible( true );
-		
 
 	}
 }

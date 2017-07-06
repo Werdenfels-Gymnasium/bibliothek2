@@ -7,9 +7,6 @@ import java.awt.Image;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-
-import model.Storage;
-
 import javax.swing.GroupLayout;
 import javax.swing.ImageIcon;
 import javax.swing.GroupLayout.Alignment;
@@ -17,8 +14,6 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JTextField;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 public class ExelGUI extends JFrame {
 
@@ -26,20 +21,18 @@ public class ExelGUI extends JFrame {
 	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_2;
-	Storage storage;
 
 
 
 	/**
 	 * Create the frame.
 	 */
-	public ExelGUI(Storage storage) {
+	public ExelGUI() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 450);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		this.storage=storage;
 		
 		JButton btnZurck = new JButton("Zurück");
 		btnZurck.setBounds(15, 16, 85, 23);
@@ -80,11 +73,7 @@ public class ExelGUI extends JFrame {
 		textField_2.setBounds(432, 295, 145, 20);
 		textField_2.setColumns(10);
 		
-		JButton btnZurck_1 = new JButton("Einlesen");
-		btnZurck_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
+		JButton btnZurck_1 = new JButton("Zurück");
 		btnZurck_1.setBounds(356, 377, 90, 23);
 		contentPane.setLayout(null);
 		contentPane.add(btnZurck);

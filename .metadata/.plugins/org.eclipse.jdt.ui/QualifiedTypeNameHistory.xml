@@ -16,15 +16,15 @@
 <fullyQualifiedTypeName name="java.awt.Image"/>
 <fullyQualifiedTypeName name="controller.XMLSerializer"/>
 <fullyQualifiedTypeName name="javax.swing.table.TableColumn"/>
-<fullyQualifiedTypeName name="javax.swing.JFrame"/>
-<fullyQualifiedTypeName name="javax.swing.JTable"/>
-<fullyQualifiedTypeName name="javax.swing.JScrollPane"/>
 <fullyQualifiedTypeName name="model.UnterMittelStufe"/>
-<fullyQualifiedTypeName name="model.Storage"/>
 <fullyQualifiedTypeName name="model.UnterMittelSchueler"/>
 <fullyQualifiedTypeName name="model.Lehrer"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="model.Einzelperson"/>
 <fullyQualifiedTypeName name="model.Buch"/>
 <fullyQualifiedTypeName name="model.Auftrag"/>
+<fullyQualifiedTypeName name="javax.swing.JFrame"/>
+<fullyQualifiedTypeName name="javax.swing.JTable"/>
+<fullyQualifiedTypeName name="javax.swing.JScrollPane"/>
+<fullyQualifiedTypeName name="model.Storage"/>
 </qualifiedTypeNameHistroy>

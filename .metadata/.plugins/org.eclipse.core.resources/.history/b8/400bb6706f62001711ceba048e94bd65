@@ -187,30 +187,18 @@ public class Storage {
 	}
 	
 	public JTable einzelpersonenAusgeben () {
-//		String [] [] rowData = new String [4] [einzelpersonen.size()];
-//		for (int i = 0; i < einzelpersonen.size(); i++) {
-//			Einzelperson einzelperson = einzelpersonen.get(i);
-//			rowData [0] [i] = einzelperson.vorname;
-//			rowData [1] [i] = einzelperson.nachname;
-//			rowData [2] [i] = einzelperson.adresse;
-//			rowData [3] [i] = einzelperson.telefonnummer;
-//		}
-//		String [] beschriftung = {
-//				"Vorname", "Nachname", "Adresse", "Telefonnummer"
-//		};
-		
-		String[][] rowData = {
-			    { "Japan", "245" }, { "USA", "240" }, { "Italien", "220" },
-			    { "Spanien", "217" }, {"Türkei", "215"} ,{ "England", "214" },
-			    { "Frankreich", "190" }, {"Griechenland", "185" },
-			    { "Deutschland", "180" }, {"Portugal", "170" }
-			    };
-
-			    String[] columnNames =  {
-			      "Land", "Durchschnittliche Fernsehdauer pro Tag in Minuten"
-			    };
-		return new JTable (rowData, columnNames);
-		
+		String [] [] rowData = new String [4] [einzelpersonen.size()];
+		for (int i = 0; i < einzelpersonen.size(); i++) {
+			Einzelperson einzelperson = einzelpersonen.get(i);
+			rowData [0] [i] = einzelperson.vorname;
+			rowData [1] [i] = einzelperson.nachname;
+			rowData [2] [i] = einzelperson.adresse;
+			rowData [3] [i] = einzelperson.telefonnummer;
+		}
+		String [] beschriftung = {
+				"Vorname", "Nachname", "Adresse", "Telefonnummer"
+		};
+		return new JTable (rowData, beschriftung);
 	}
 			
 					
