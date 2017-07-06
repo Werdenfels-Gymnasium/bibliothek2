@@ -74,13 +74,7 @@ public class hauptfenster {
 		lblAnfang.setBounds(294, 11, 221, 37);
 		frame.getContentPane().setLayout(null);
 		
-		JButton btnNewButton = new JButton("Exceltabelle einlesen\r\n");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				ExelGUI ex= new ExelGUI(storage);
-				ex.setVisible(true);
-			}
-		});
+		JButton btnNewButton = new JButton("Exeltabelle einlesen\r\n");
 		btnNewButton.setFont(new Font("Arial", Font.PLAIN, 11));
 		btnNewButton.setBounds(318, 248, 157, 23);
 		frame.getContentPane().add(btnNewButton);
