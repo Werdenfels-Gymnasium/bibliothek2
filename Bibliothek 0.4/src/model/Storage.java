@@ -187,30 +187,31 @@ public class Storage {
 	}
 	
 	public JTable einzelpersonenAusgeben () {
-//		String [] [] rowData = new String [4] [einzelpersonen.size()];
-//		for (int i = 0; i < einzelpersonen.size(); i++) {
-//			Einzelperson einzelperson = einzelpersonen.get(i);
-//			rowData [0] [i] = einzelperson.vorname;
-//			rowData [1] [i] = einzelperson.nachname;
-//			rowData [2] [i] = einzelperson.adresse;
-//			rowData [3] [i] = einzelperson.telefonnummer;
-//		}
-//		String [] beschriftung = {
-//				"Vorname", "Nachname", "Adresse", "Telefonnummer"
-//		};
-		
-		String[][] rowData = {
-			    { "Japan", "245" }, { "USA", "240" }, { "Italien", "220" },
-			    { "Spanien", "217" }, {"Türkei", "215"} ,{ "England", "214" },
-			    { "Frankreich", "190" }, {"Griechenland", "185" },
-			    { "Deutschland", "180" }, {"Portugal", "170" }
-			    };
-
-			    String[] columnNames =  {
-			      "Land", "Durchschnittliche Fernsehdauer pro Tag in Minuten"
-			    };
+		if (einzelpersonen.size() <=2 ) {
+			return new JTable ();
+		}
+		String [] [] rowData = new String [einzelpersonen.size()+10] [4];
+		for (int i = 0; i < einzelpersonen.size(); i++) {
+			Einzelperson einzelperson = einzelpersonen.get(i);
+			rowData [i] [0] = nullUeberpruefung(einzelperson.vorname);
+			rowData [i] [1] = nullUeberpruefung(einzelperson.nachname);
+			rowData [i] [2] = nullUeberpruefung(einzelperson.adresse);
+			rowData [i] [3] = nullUeberpruefung(einzelperson.telefonnummer);
+		}
+		String [] columnNames = {
+				"Vorname", "Nachname", "Adresse", "Telefonnummer"
+		};
+		System.out.println(einzelpersonen.get(0).vorname + einzelpersonen.get(0).nachname + einzelpersonen.get(0).adresse + einzelpersonen.get(0).telefonnummer);
 		return new JTable (rowData, columnNames);
-		
+	}
+	
+	public String nullUeberpruefung (String test) {
+		if (test == null) {
+			return "fehlerhafter Datensatz";
+		}
+		else {
+			return test;
+		}
 	}
 			
 					
